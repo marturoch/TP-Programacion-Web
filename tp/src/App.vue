@@ -1,17 +1,28 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="HOLAHGNREJOLAPILAR"/>
+    <Home msg="TITLE"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // eslint-disable-next-line vue/no-unused-components
+    Footer,
+    // eslint-disable-next-line vue/no-unused-components
+    Header,
+    // eslint-disable-next-line vue/no-unused-components
+    Home,
+    // eslint-disable-next-line vue/no-unused-components
+    NavBar
+
   }
 }
 </script>
