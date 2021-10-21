@@ -10,6 +10,8 @@
       <Main v-if="menu.inicio" v-on:menuEvent="showMenuOption($event)"></Main>
       <Productos v-if="menu.productos" v-on:menuEvent="showMenuOption($event)"></Productos>
       <Servicios v-if="menu.servicios" v-on:menuEvent="showMenuOption($event)"></Servicios>
+      <Planes v-if="menu.planes" v-on:menuEvent="showMenuOption($event)"></Planes>
+      <Red v-if="menu.red" v-on:menuEvent="showMenuOption($event)"></Red>
     </div>
 
     <Footer></Footer>
@@ -24,16 +26,20 @@ import Main from "@/components/Main";
 import Footer from "@/components/Footer";
 import Productos from "@/components/Productos"
 import Servicios from "@/components/Servicios"
+import Planes from "@/components/Planes";
+import Red from "@/components/Red";
 
 export default {
-  name: 'Home',
+  name: 'Home.vue',
   components: {
     Header,
     NavBar,
     Main,
     Footer,
     Productos,
-    Servicios
+    Servicios,
+    Planes,
+    Red
   },
   data() {
     return {
@@ -41,7 +47,9 @@ export default {
         activeOption: 'inicio',
         inicio: true,
         productos: false,
-        servicios: false
+        servicios: false,
+        planes: false,
+        red: false
       }
     }
   },

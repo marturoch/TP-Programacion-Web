@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Header</h1>
+    <img src="../assets/img/logo_size.jpg">
   </div>
 </template>
 

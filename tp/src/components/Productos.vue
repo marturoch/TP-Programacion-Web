@@ -1,12 +1,14 @@
 <template>
   <div>
-    <h1>PRODUCTOS</h1>
+    <header></header>
+    <h1>Productos</h1>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 export default {
-  name: "productos.vue"
+  name: "Productos"
 }
 </script>
 

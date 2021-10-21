@@ -3,8 +3,8 @@
     <p class="menu" v-on:click="$emit('menuEvent', 'inicio')">Inicio</p>
     <p class="menu" v-on:click="$emit('menuEvent', 'productos')">Productos</p>
     <p class="menu" v-on:click="$emit('menuEvent', 'servicios')">Servicios</p>
-    <p class="menu">Planes</p>
-    <p class="menu">Red de Mascotas</p>
+    <p class="menu" v-on:click="$emit('menuEvent', 'planes')">Planes</p>
+    <p class="menu" v-on:click="$emit('menuEvent', 'red')">Red de Mascotas</p>
   </div>
 </template>
 
