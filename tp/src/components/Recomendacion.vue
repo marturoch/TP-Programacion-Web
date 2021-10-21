@@ -1,5 +1,5 @@
 <template>
-  <div class="Cotizar">
+  <div class="Recomendar">
       <h4>Quiero una recomendación</h4>
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped>
-.Cotizar {
+.Recomendar {
   font-size: 15px;
   text-align: center;
   width: 20%;
