@@ -1,0 +1,43 @@
+const productos = [
+    {
+        name:"medicamentos",
+        image:"medicamentos.jpg",
+        description:"descripcion"
+    },
+    {
+        name:"alimentos",
+        image:"alimentos.jpg",
+        description:"descripcion"
+    },
+    {
+        name:"Vacunas",
+        image:"vacuna.png",
+        description:"descripcion"
+    },
+    {
+        name:"PetFind",
+        image:"petfind.jpg",
+        description:"descripcion"
+    }
+]
+const servicios = [
+    {
+        name:"peluqueria",
+        image:"peluquera.jpg",
+        description:"descripcion"
+    },
+    {
+        name:"paseador",
+        image:"paseador.png",
+        description:"descripcion"
+    },
+    {
+        name:"Adiestrador",
+        image:"adiestrador.jpg",
+        description:"descripcion"
+    }
+]
+export{
+    productos,
+    servicios
+}

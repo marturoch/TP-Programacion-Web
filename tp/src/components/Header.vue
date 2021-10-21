@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="../assets/img/logo_size.jpg">
+    <img src="../assets/img/logo.jpg" alt="logo" width="150px">
   </div>
 </template>
 
