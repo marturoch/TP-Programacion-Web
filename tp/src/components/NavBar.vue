@@ -19,7 +19,24 @@ export default {
 <style scoped>
 #navbar-container{
   display:flex;
+  background-color: darksalmon;
   justify-content:space-around;
+  margin-top: 10px;
   align-items: center;
+  color: black;
+  width: auto;
+  height: auto;
+
 }
+.menu:hover {
+  background-color: lightsalmon;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 4px;
+  position: relative;
+}
+
 </style>
+
+
+

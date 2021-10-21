@@ -3,7 +3,7 @@ const planes = [
         name: "Frida",
         image: "",
         tipo: "Básico",
-        item1: "Contratacion microseguros en el momento puntual de necesidad respondiendo a la exigencia de contar con coberturas a medida y de facil adquisición ",
+        item1: " Contratacion microseguros en el momento puntual de necesidad respondiendo a la exigencia de contar con coberturas a medida y de facil adquisición ",
         item2: "Se puede activar y desactivar en cualquier momento ",
         item3:"",
         precio:""
