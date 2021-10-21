@@ -13,7 +13,7 @@
       <Planes v-if="menu.planes" v-on:menuEvent="showMenuOption($event)"></Planes>
       <Red v-if="menu.red" v-on:menuEvent="showMenuOption($event)"></Red>
     </div>
-    <Cotizacion></Cotizacion>
+    <Recomendacion></Recomendacion>
     <Footer></Footer>
   </div>
 </template>
@@ -28,12 +28,12 @@ import Productos from "@/components/Productos"
 import Servicios from "@/components/Servicios"
 import Planes from "@/components/Planes";
 import Red from "@/components/Red";
-import Cotizacion from "@/components/Cotizacion";
+import Recomendacion from "@/components/Recomendacion";
 
 export default {
   name: 'Home.vue',
   components: {
-    Cotizacion,
+    Recomendacion,
     Header,
     NavBar,
     Main,

@@ -1,18 +1,18 @@
 <template>
   <div class="Cotizar">
-      <h4>Cotizar ahora</h4>
+      <h4>Quiero una recomendación</h4>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Cotizacion"
+  name: "Recomendacion"
 }
 </script>
 
 <style scoped>
 .Cotizar {
-  font-size: 25px;
+  font-size: 15px;
   text-align: center;
   width: 20%;
   background-color: #42b983;
