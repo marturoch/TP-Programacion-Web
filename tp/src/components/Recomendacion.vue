@@ -1,6 +1,6 @@
 <template>
   <div class="Recomendar">
-      <h4 v-on:click="$emit('recomendacionEvent', 'planes')">Quiero una recomendación</h4>
+      <router-link to="/planes/formulario">Quiero una recomendacion</router-link>
   </div>
 </template>
 

@@ -1,6 +1,8 @@
 <template>
   <div id="header">
-    <img src="../assets/img/logo.jpg" alt="logo" width="150px">
+    <router-link to="/">
+      <img src="../assets/img/logo.jpg" alt="logo" width="150px">
+    </router-link>
   </div>
 </template>
 
