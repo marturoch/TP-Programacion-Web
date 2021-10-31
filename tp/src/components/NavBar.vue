@@ -1,8 +1,8 @@
 <template>
   <div id="navbar-container">
-    <p class="menu" v-on:click="$emit('menuEvent', 'inicio')">Inicio</p>
-    <p class="menu" v-on:click="$emit('menuEvent', 'productos')">Productos</p>
-    <p class="menu" v-on:click="$emit('menuEvent', 'servicios')">Servicios</p>
+    <router-link to="/">Inicio</router-link>
+    <router-link to="/productos">Productos</router-link>
+    <router-link to="/servicios">Servicios</router-link>
     <router-link to="/planes">Planes</router-link>
     <router-link to="/red-de-mascotas">Red de Mascotas</router-link>
   </div>
@@ -10,9 +10,7 @@
 
 <script>
 export default {
-  name: "NavBar.vue",
-  data(){
-  }
+  name: "NavBar.vue"
 }
 </script>
 
@@ -37,6 +35,9 @@ export default {
 }
 
 </style>
+
+
+
 
 
 

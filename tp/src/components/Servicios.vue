@@ -1,6 +1,7 @@
 <template>
   <div>
-    <header></header>
+    <Header></Header>
+    <NavBar></NavBar>
     <h1>Servicios</h1>
     <div class="servicios-container">
       <ProdServMenu v-for="(servicio, index) in servicios" v-bind:key="index"
@@ -9,18 +10,24 @@
                     v-bind:description="servicio.description">
       </ProdServMenu>
     </div>
-    <footer></footer>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Header from "./Header";
+import NavBar from "./NavBar"
 import ProdServMenu from "@/components/ProdServMenu";
 import {servicios} from "@/assets/js/ProdServ";
+import Footer from "./Footer";
 
 export default {
   name: "Servicios",
   components: {
-    ProdServMenu
+    NavBar,
+    Header,
+    ProdServMenu,
+    Footer
   },
   data(){
     return{

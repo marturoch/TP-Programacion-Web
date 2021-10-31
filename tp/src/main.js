@@ -12,7 +12,7 @@ import Planes from "./components/Planes";
 import Productos from "./components/Productos";
 import Servicios from "./components/Servicios";
 import Red from "./components/Red";
-import Formulario from "./components/Formulario";
+import Recomendacion from "./components/Recomendacion";
 
 const routes = [
   {path: '/', name: "Home", component:Home},
@@ -20,11 +20,12 @@ const routes = [
   {path: '/productos', name: "Productos", component:Productos},
   {path: '/servicios', name: "Servicios", component:Servicios},
   {path: '/red-de-mascotas', name: "Red", component:Red},
-  {path: '/planes/formulario', name: "Formulario", component:Formulario},
+  {path: '/recomendacion', name: "Recomendacion", component:Recomendacion},
   {path: '/*', component:NotFound}
 ]
 
 const router = new VueRouter({
+  mode: "history",
   routes
 })
 

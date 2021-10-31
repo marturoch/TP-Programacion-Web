@@ -1,6 +1,7 @@
 <template>
   <div>
-    <header></header>
+    <Header></Header>
+    <NavBar></NavBar>
     <h1>Planes</h1>
     <div class="planes-container">
       <Plan v-for="(plan, index) in planes" v-bind:key="index"
@@ -12,19 +13,25 @@
                     v-bind:item3="plan.item3">
       </Plan>
     </div>
+    <RecomendacionBoton></RecomendacionBoton>
     <Footer></Footer>
   </div>
 </template>
 
 <script>
-
+import Header from "@/components/Header";
+import NavBar from "@/components/NavBar";
 import Plan from "@/components/Plan";
 import {planes} from "@/assets/js/planes";
+import RecomendacionBoton from "./RecomendacionBoton";
 
 export default {
   name: "Planes.vue",
   components: {
-    Plan
+    RecomendacionBoton,
+    Plan,
+    Header,
+    NavBar,
   },
   data(){
     return {
