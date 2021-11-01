@@ -1,8 +1,17 @@
 #form-container{
     padding:20px;
+    background-color: #FFF5E1;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 7px;
+    color: black;
+
+
 }
 .form-data{
     margin:20px;
+
 }
+
 
 
