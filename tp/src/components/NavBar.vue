@@ -1,10 +1,11 @@
 <template>
   <div id="navbar-container">
-    <router-link to="/">Inicio</router-link>
-    <router-link to="/productos">Productos</router-link>
-    <router-link to="/servicios">Servicios</router-link>
-    <router-link to="/planes">Planes</router-link>
-    <router-link to="/red-de-mascotas">Red de Mascotas</router-link>
+    <router-link class="menu" to="/">Inicio</router-link>
+    <router-link class="menu" to="/productos">Productos</router-link>
+    <router-link class="menu" to="/servicios">Servicios</router-link>
+    <router-link class="menu" to="/planes">Planes</router-link>
+    <router-link class="menu" to="/red-de-mascotas">Red de Mascotas</router-link>
+    <router-link class="login" to="/login">LOG IN</router-link>
   </div>
 </template>
 

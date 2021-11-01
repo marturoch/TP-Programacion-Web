@@ -13,6 +13,8 @@ import Productos from "./components/Productos";
 import Servicios from "./components/Servicios";
 import Red from "./components/Red";
 import Recomendacion from "./components/Recomendacion";
+import LogIn from "./components/LogIn";
+import Perfil from "./components/Perfil";
 
 const routes = [
   {path: '/', name: "Home", component:Home},
@@ -21,6 +23,8 @@ const routes = [
   {path: '/servicios', name: "Servicios", component:Servicios},
   {path: '/red-de-mascotas', name: "Red", component:Red},
   {path: '/recomendacion', name: "Recomendacion", component:Recomendacion},
+  {path: '/login', name:"Login", component:LogIn},
+  {path: '/perfil', name:"Perfil", component:Perfil},
   {path: '/*', component:NotFound}
 ]
 

@@ -2,19 +2,35 @@
   <div>
     <Header></Header>
     <NavBar></NavBar>
-    <h1>Red de Mascotas</h1>
+    <div class="contenedor-red">
+      <dog-form/>
+
+      <div class="contenedor-cartas">
+        <dog-card/>
+        <dog-card/>
+        <dog-card/>
+        <dog-card/>
+        <dog-card/>
+        <dog-card/>
+      </div>
+    </div>
+
     <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import dogCard from './dogCard.vue'
+import dogForm from './dogForm.vue'
+import Header from "./Header";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 export default {
   name: "Red.vue",
   components: {
+    dogCard,
+    dogForm,
     Header,
     NavBar,
     Footer
@@ -23,5 +39,21 @@ export default {
 </script>
 
 <style scoped>
+
+  .contenedor-red{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenedor-cartas{
+    padding: 40px 0;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 14px;
+    grid-row-gap: 10px;
+  }
 
 </style>

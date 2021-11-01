@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form id="form-container" @submit.prevent="recomendacion(); $emit('recomendacionEvent', puntaje)">
+    <form class="form-container" @submit.prevent="recomendacion(); $emit('recomendacionEvent', puntaje)">
       <fieldset id="fieldset-container">
         <legend>INFORMACION SOBRE SU MASCOTA</legend>
 
