@@ -125,11 +125,6 @@ export default {
 </script>
 
 <style scoped>
-#form-container{
-  padding:20px;
-}
-.form-data{
-  margin:20px;
-}
+@import "../assets/css/Formulario.css";
 
 </style>
