@@ -14,5 +14,5 @@ export default {
 </script>
 
 <style scoped>
-
+@import "../assets/css/Footer.css";
 </style>
