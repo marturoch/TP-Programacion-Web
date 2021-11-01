@@ -4,7 +4,7 @@
     <NavBar></NavBar>
     <p>Mis Datos</p>
     <p>Pedidos</p>
-    <p>Mis mascotas</p>
+    <p>Mis mascotass</p>
     <p>Salir</p>
     <Footer></Footer>
   </div>
