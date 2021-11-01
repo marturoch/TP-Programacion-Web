@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="main">
     <h1>Main</h1>
   </div>
 </template>
@@ -11,5 +11,6 @@ export default {
 </script>
 
 <style scoped>
-
+@import "../assets/css/main.css";
 </style>
+
