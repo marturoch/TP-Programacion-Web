@@ -2,6 +2,7 @@
   <div>
     <Header></Header>
     <NavBar></NavBar>
+    <banners></banners>
     <Main></Main>
     <RecomendacionBoton></RecomendacionBoton>
     <Footer></Footer>
@@ -14,10 +15,12 @@ import NavBar from "@/components/NavBar";
 import Main from "@/components/Main";
 import Footer from "@/components/Footer";
 import RecomendacionBoton from "@/components/RecomendacionBoton";
+import Banners from "./banners";
 
 export default {
   name: 'Home.vue',
   components: {
+    Banners,
     Header,
     NavBar,
     Main,

@@ -1,7 +1,9 @@
 <template>
-  <div class="Recomendar">
+  <div>
+    <div class="Recomendar">
       <router-link to="/recomendacion">Quiero una recomendacion</router-link>
-      <br>
+    </div>
+    <br><br>
   </div>
 </template>
 
@@ -26,4 +28,7 @@ export default {
   display: inline-block;
   }
 
+img {
+  display: flex;
+}
 </style>
