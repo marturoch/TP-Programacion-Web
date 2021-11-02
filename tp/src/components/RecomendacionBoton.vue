@@ -1,6 +1,7 @@
 <template>
   <div class="Recomendar">
       <router-link to="/recomendacion">Quiero una recomendacion</router-link>
+      <br>
   </div>
 </template>
 
@@ -13,15 +14,16 @@ export default {
 
 <style scoped>
 .Recomendar {
-  font-size: 15px;
+  font-size: 20px;
   width: 20%;
-  background-color: #42b983;
+  background-color: #D90368;
   padding: 8px;
   border-radius: 100px;
   box-sizing: border-box;
   font-family: Helvetica;
+  text-decoration: none;
   color: white;
-  justify-content: center;
+  display: inline-block;
   }
 
 </style>

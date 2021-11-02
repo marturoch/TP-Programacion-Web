@@ -27,17 +27,17 @@ const productos = [
 ]
 const servicios = [
     {
-        name:"peluqueria",
+        name:"PELUQUERIA",
         image:"peluquera.jpg",
         description:"descripcion"
     },
     {
-        name:"paseador",
+        name:"PASEADOR",
         image:"paseador.png",
         description:"descripcion"
     },
     {
-        name:"Adiestrador",
+        name:"ADIESTRADOR",
         image:"adiestrador.jpg",
         description:"descripcion"
     }

@@ -2,7 +2,7 @@
   <div>
     <Header></Header>
     <NavBar></NavBar>
-    <h1>Planes</h1>
+    <h1>PLANES</h1>
     <div class="planes-container">
         <Plan class="plan-container" v-for="(plan, index) in planes" v-bind:key="index"
               v-bind:name="plan.name"
@@ -13,6 +13,7 @@
         </Plan>
      </div>
     <RecomendacionBoton></RecomendacionBoton>
+    <br><br>
     <Footer></Footer>
   </div>
 </template>
@@ -47,6 +48,7 @@ export default {
   display:flex;
   align-items: center;
   justify-content: space-between;
+
 }
 .plan-container{
   display:flex;

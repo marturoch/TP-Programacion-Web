@@ -2,6 +2,7 @@
   <div>
     <Header></Header>
     <NavBar></NavBar>
+    <br><br>
     <Formulario v-on:recomendacionEvent="recomendacionPlan($event)" v-if="show === false"></Formulario>
     <div class="todosPlanes">
 
@@ -12,7 +13,9 @@
 
       <div class="noSeleccionado">
         <div>
-          <h3>Seleccionar otro plan</h3>
+          <br>
+          <button>Seleccionar otro plan</button>
+          <br><br>
         </div>
         <planTemplate class="secundario" v-if="show" :data=planes[otros[0]]></planTemplate>
         <planTemplate class="secundario" v-if="show" :data=planes[otros[1]]></planTemplate>
@@ -99,5 +102,15 @@ export default {
 }
 .secundario{
   flex-basis:20%;
+}
+
+button {
+  background-color: #D90368;
+  color: white;
+  border-radius: 100px;
+  font-size: 20px;
+  border: 3px solid #D90368;
+  padding:10px;
+  cursor: pointer;
 }
 </style>

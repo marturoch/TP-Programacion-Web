@@ -1,6 +1,6 @@
 #navbar-container{
     display:flex;
-    background-color: darksalmon;
+    background-color: #820263;
     justify-content:space-around;
     padding: 15px;
     align-items: center;
@@ -10,20 +10,21 @@
 }
 .menu{
     text-decoration: none;
-    color:black;
+    color:white;
+    font-weight: bold;
 }
 .menu:hover {
-    background-color: lightsalmon;
+    background-color: #CD39A9;
     cursor: pointer;
     box-sizing: border-box;
-    padding: 4px;
     position: relative;
 }
 .login{
     text-decoration: none;
     color:white;
-    border: 3px solid white;
+    border: 3px solid #D90368;
     padding:10px;
-    background: black;
+    background: #D90368;
     border-radius: 100px;
+    font-weight: bold;
 }

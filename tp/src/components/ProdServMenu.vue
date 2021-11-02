@@ -2,6 +2,7 @@
     <div id="main">
         <h2 class="prodServ-title">{{name}}</h2>
         <img class="prodServ-img" v-bind:src="require('../assets/img/prodServ/' + image)" v-bind:alt="ProductAlt" width="200px">
+        <br>
         <p class="product-description">{{description}}</p>
     </div>
 </template>
@@ -23,7 +24,9 @@ export default {
 </script>
 
 <style scoped>
-#main{
+#main {
   margin:10px;
+  align-content: center;
+  display: inline-block;
 }
 </style>
