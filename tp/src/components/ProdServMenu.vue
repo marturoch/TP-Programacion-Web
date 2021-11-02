@@ -1,7 +1,7 @@
 <template>
     <div id="main">
         <h2 class="prodServ-title">{{name}}</h2>
-        <img class="prodServ-img" v-bind:src="require('../assets/img/prodServ/' + image)" v-bind:alt="ProductAlt" width="200px">
+        <img class="prodServ-img" v-bind:src="require('../assets/img/prodServ/' + image)" width="200px">
         <br>
         <p class="product-description">{{description}}</p>
     </div>

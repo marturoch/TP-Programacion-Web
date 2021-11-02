@@ -5,8 +5,6 @@
     padding: 14px 14px;
     text-align: left;
 }
-
-
 #header_2 {
     background-color: #F75C03;
     color: #fff;
@@ -22,12 +20,16 @@ img, p {
 
 h1 {
     font-family: Arial;
-    font-size: 50px;
+    font-size: 55px;
     color: black;
     display: inline-flex;
 }
-
 #name {
     display: inline-flex;
     position: absolute;
+}
+#subtitle{
+    display: inline-flex;
+    font-style: italic;
+    color:black;
 }

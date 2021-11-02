@@ -13,6 +13,9 @@
       <div id = "name">
         <h1>DOG CARE</h1>
       </div>
+      <div id="subtitle">
+        <h2>Seguros Para Perros</h2>
+      </div>
     </div>
   </div>
 </template>

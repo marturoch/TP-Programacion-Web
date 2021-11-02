@@ -6,20 +6,19 @@
     <Formulario v-on:recomendacionEvent="recomendacionPlan($event)" v-if="show === false"></Formulario>
     <div class="todosPlanes">
 
-      <div class="seleccionado">
-        <h2 v-if="show">Plan Recomendado</h2>
-        <planTemplate class="principal" v-if="show" :data=planes[array]></planTemplate>
+      <div class="seleccionado" v-if="show">
+        <h2>PLAN RECOMENDADO</h2>
+        <planTemplate class="principal" :data=planes[array]></planTemplate>
       </div>
 
-      <div class="noSeleccionado">
-        <div>
-          <br>
-          <button>Seleccionar otro plan</button>
-          <br><br>
-        </div>
-        <planTemplate class="secundario" v-if="show" :data=planes[otros[0]]></planTemplate>
-        <planTemplate class="secundario" v-if="show" :data=planes[otros[1]]></planTemplate>
-        <planTemplate class="secundario" v-if="show" :data=planes[otros[2]]></planTemplate>
+      <div v-if="show">
+        <button @click="otroPlan()" v-if="showButton">Seleccionar otro plan</button>
+      </div>
+
+      <div class="noSeleccionado" v-if="show">
+        <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[0]]></planTemplate>
+        <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[1]]></planTemplate>
+        <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[2]]></planTemplate>
       </div>
 
     </div>
@@ -50,7 +49,9 @@ export default {
       puntaje: 0,
       planes: planes,
       array: null,
-      otros: []
+      otros: [],
+      otrosPlanes: false,
+      showButton: true,
     }
   },
   methods: {
@@ -75,6 +76,12 @@ export default {
         this.otros = [0,1,2]
       }
     },
+    otroPlan() {
+      this.otrosPlanes = true;
+      this.showButton = false;
+
+
+    }
   }
 }
 
@@ -97,7 +104,7 @@ export default {
   align-items: baseline;
 }
 .principal{
-  font-size: 30px;
+  font-size: 25px;
   border: 4px dotted black;
 }
 .secundario{
@@ -112,5 +119,6 @@ button {
   border: 3px solid #D90368;
   padding:10px;
   cursor: pointer;
+  margin-bottom:20px;
 }
 </style>

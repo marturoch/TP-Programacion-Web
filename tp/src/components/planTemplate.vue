@@ -3,6 +3,7 @@
     <h2>{{data["name"]}}</h2>
     <h3>{{data["tipo"]}}</h3>
     <h4>{{data["item1"]}}</h4>
+    <button>SELECCIONAR ESTE PLAN</button>
   </div>
 </template>
 
@@ -16,4 +17,17 @@ export default {
 </script>
 
 <style scoped>
+.plan-container{
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+button {
+  background-color: #D90368;
+  color: white;
+  border-radius: 100px;
+  font-size: 20px;
+  border: 3px solid #D90368;
+  padding:10px;
+  cursor: pointer;
+}
 </style>

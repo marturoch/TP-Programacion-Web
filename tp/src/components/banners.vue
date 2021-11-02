@@ -1,8 +1,10 @@
 <template>
   <div>
-    <br>
-    <img src="../assets/img/banners/banner1.png">
-    <br>
+    <div class="banner">
+      <br>
+      <img src="../assets/img/banners/banner1.png">
+      <br>
+    </div>
   </div>
 </template>
 
@@ -11,7 +13,8 @@ export default {
   name: "banners"
 }
 </script>
-
 <style scoped>
-
+img{
+  width:100%;
+}
 </style>

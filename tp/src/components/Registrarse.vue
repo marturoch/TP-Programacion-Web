@@ -23,7 +23,7 @@
       </div>
 
     </form>
-    <p v-if="logearse === false">Ya tienes cuenta? Haz Log in <span @click="$emit('login', true)">aqui</span></p>
+    <p v-if="logearse === false">Ya tienes cuenta? Haz Log in<span @click="$emit('login', true)"> aqui</span></p>
     <LogIn v-if="logearse"></LogIn>
   </div>
 </template>

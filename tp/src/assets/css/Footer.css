@@ -1,6 +1,6 @@
 .footer {
     background-color: #F75C03;
-    color: #fff;
+    color: black;
     min-height: 55px;
     border-radius: 0;
     border: 0;
@@ -9,7 +9,9 @@
     text-align: center;
 
 }
-
+iframe{
+    margin-bottom: 20px;
+}
 .datos-contacto {
    margin: 4px;
 }

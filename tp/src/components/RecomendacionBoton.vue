@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="Recomendar">
-      <router-link to="/recomendacion">Quiero una recomendacion</router-link>
+      <router-link class="botonRecomendar" to="/recomendacion">QUIERO UNA RECOMENDACION</router-link>
     </div>
     <br><br>
   </div>
@@ -22,13 +22,10 @@ export default {
   padding: 8px;
   border-radius: 100px;
   box-sizing: border-box;
-  font-family: Helvetica;
-  text-decoration: none;
-  color: white;
   display: inline-block;
   }
-
-img {
-  display: flex;
+.botonRecomendar{
+  text-decoration: none;
+  color:white;
 }
 </style>
