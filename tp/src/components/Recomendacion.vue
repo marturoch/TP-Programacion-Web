@@ -3,61 +3,78 @@
     <Header></Header>
     <NavBar></NavBar>
     <Formulario v-on:recomendacionEvent="recomendacionPlan($event)" v-if="show === false"></Formulario>
-    <planFrida v-if="hasta5"></planFrida>
-    <planRocky v-if="entre6y10"></planRocky>
-    <planKira v-if="entre11y15"></planKira>
-    <planZeus v-if="mayora15"></planZeus>
+    <div class="todosPlanes">
+
+      <div class="seleccionado">
+        <h2 v-if="show">Plan Recomendado</h2>
+        <planTemplate class="principal" v-if="show" :data=planes[array]></planTemplate>
+      </div>
+
+      <div class="noSeleccionado">
+        <div>
+          <h3>Seleccionar otro plan</h3>
+        </div>
+        <planTemplate class="secundario" v-if="show" :data=planes[otros[0]]></planTemplate>
+        <planTemplate class="secundario" v-if="show" :data=planes[otros[1]]></planTemplate>
+        <planTemplate class="secundario" v-if="show" :data=planes[otros[2]]></planTemplate>
+      </div>
+
+    </div>
     <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Formulario from "./Formulario";
+import planTemplate from "./planTemplate.vue"
+import {planes} from "@/assets/js/planes";
 import Header from "./Header";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import Formulario from "./Formulario";
-import planFrida from "./planFrida"
-import planRocky from "./planRocky";
-import planKira from "./planKira";
-import planZeus from "./planZeus";
 
 export default {
   name: "Recomendacion",
   components: {
+    Formulario,
+    planTemplate,
     Header,
     NavBar,
-    Footer,
-    Formulario,
-    planFrida,
-    planKira,
-    planRocky,
-    planZeus
+    Footer
   },
   data() {
     return {
       show: false,
       puntaje: 0,
-      hasta5: false,
-      entre6y10: false,
-      entre11y15: false,
-      mayora15: false
+      planes: planes,
+      array: null,
+      otros: []
     }
   },
   methods: {
     recomendacionPlan(puntaje) {
       this.puntaje = puntaje
       this.show = true
+
       if (this.puntaje <= 5) {
-        this.hasta5 = true
-      } else if (this.puntaje > 5 && this.puntaje <= 10) {
-        this.entre6y10 = true;
-      } else if (this.puntaje > 10 && this.puntaje <= 15) {
-        this.entre11y15 = true;
-      } else {
-        this.mayora15 = true;
+        this.array = 0
+        this.otros = [1,2,3]
       }
-    }}
+      else if (this.puntaje > 5 && this.puntaje <=10){
+        this.array = 1
+        this.otros = [0,2,3]
+      }
+      else if (this.puntaje > 10 && this.puntaje <= 15){
+        this.array = 2
+        this.otros = [0,1,3]
+      }
+      else{
+        this.array = 3
+        this.otros = [0,1,2]
+      }
+    },
+  }
 }
+
 </script>
 
 <style scoped>
@@ -67,5 +84,20 @@ export default {
 .form-data{
   margin:20px;
 }
-
+.todosPlanes{
+  display:flex;
+  flex-direction:column;
+}
+.noSeleccionado{
+  display:flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.principal{
+  font-size: 30px;
+  border: 4px dotted black;
+}
+.secundario{
+  flex-basis:20%;
+}
 </style>
