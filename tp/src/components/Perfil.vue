@@ -2,9 +2,7 @@
   <div>
     <Header></Header>
     <NavBar></NavBar>
-
     <div class="hola">
-
       <div class="secciones">
         <p @click="todoFalse(); datosFunction()" :class="{seccionMarcada:datos}">Mis Datos</p>
         <p @click="todoFalse(); pedidosFunction()" :class="{seccionMarcada:pedidos}">Pedidos</p>

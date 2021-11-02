@@ -1,6 +1,6 @@
 const planes = [
     {
-        name: "Frida",
+        name: "frida",
         tipo: "Básico",
         item1: " Contratacion microseguros en el momento puntual de necesidad respondiendo a la exigencia de contar con coberturas a medida y de facil adquisición ",
         item2: "Se puede activar y desactivar en cualquier momento ",
@@ -8,7 +8,7 @@ const planes = [
         precio:""
     },
     {
-        name: "Rocky",
+        name: "rocky",
         tipo: "Estandar",
         item1: "Atencion de urgencia por accidente",
         item2: "Cobertura gastos funerarios",
@@ -16,7 +16,7 @@ const planes = [
         precio: "$1100/mes"
     },
     {
-        name: "Kira",
+        name: "kira",
         tipo: "Completo",
         item1: "Servicio de asistencia veterinaria cubierta" ,
         item2: "Servicio de paseo semanal",
@@ -24,7 +24,7 @@ const planes = [
         precio: "$1800/mes"
     },
     {
-        name: "Zeus",
+        name: "zeus",
         tipo: "Plus",
         item1:"Servicio de asistencia veterinaria las 24hs y controles mensuales a domicilio",
         item2: "Cobertura de vacunas y operaciones necesarias" ,

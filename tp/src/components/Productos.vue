@@ -3,13 +3,14 @@
     <Header></Header>
     <NavBar></NavBar>
     <h1>Productos</h1>
-    <div class="productos-container">
+    <div class="todosProductos" v-if="showall">
       <ProdServMenu v-for="(producto, index) in productos" v-bind:key="index"
                     v-bind:name="producto.name"
                     v-bind:image="producto.image"
-                    v-bind:description="producto.description">
+                    v-bind:description="producto.description"
+                    v-bind:tipo="tipo">
       </ProdServMenu>
-    </div>
+     </div>
     <Footer></Footer>
   </div>
 </template>
@@ -29,16 +30,17 @@ export default {
     ProdServMenu,
     Footer
   },
-  data(){
-    return{
-      productos: productos
+  data() {
+    return {
+      tipo: "productos",
+      productos: productos,
+      showall: true,
     }
-  }
+ }
 }
 </script>
-
 <style scoped>
-.productos-container{
+.todosProductos{
   display:flex;
   justify-content: space-evenly;
   flex-wrap: wrap;

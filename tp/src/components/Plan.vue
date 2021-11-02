@@ -5,7 +5,7 @@
     <p class="planes-item1">{{item1}}</p>
     <p class="planes-item2">{{item2}}</p>
     <p class="planes-item3">{{item3}}</p>
-    <button>SELECCIONAR PLAN</button>
+    <router-link v-bind:to="/planes/ + name + '/comprar'" >Seleccionar Este Plan</router-link>
   </div>
 </template>
 

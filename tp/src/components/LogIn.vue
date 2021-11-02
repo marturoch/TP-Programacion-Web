@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      registrarse: false,
+      registrarse: false
     }
   },
   methods:{

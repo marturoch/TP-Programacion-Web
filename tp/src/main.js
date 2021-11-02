@@ -19,8 +19,31 @@ import Perfil from "./components/Perfil";
 const routes = [
   {path: '/', name: "Home", component:Home},
   {path: '/planes', name: "Planes", component:Planes},
+  {path: '/planes/:nombre', name: "Plan", component:Planes,
+    children:[
+      {
+        path:'comprar',
+        component:Planes
+      }
+      ]
+  },
   {path: '/productos', name: "Productos", component:Productos},
+  {path: '/productos/:nombre', name: "Producto",component: Productos,
+      children:[
+      {
+        path:'detalles',
+        component:Productos
+      }
+     ]},
   {path: '/servicios', name: "Servicios", component:Servicios},
+    {path: '/servicios/:nombre', name: "Servicio", component:Servicios,
+    children:[
+    {
+        path:'detalles',
+        component:Servicios
+    }
+    ]
+},
   {path: '/red-de-mascotas', name: "Red", component:Red},
   {path: '/recomendacion', name: "Recomendacion", component:Recomendacion},
   {path: '/login', name:"Login", component:LogIn},

@@ -1,43 +1,43 @@
 const productos = [
     {
-        name:"SNACKS",
+        name:"snacks",
         image:"snack_ppal.jpeg",
         description:"descripcion"
     },
     {
-        name:"ALIMENTOS",
+        name:"alimentos",
         image:"alimento_ppal.jpeg",
         description:"descripcion"
     },
     {
-        name:"JUGUETES",
+        name:"juguetes",
         image:"juguetes_ppal.jpeg",
         description:"descripcion"
     },
     {
-        name:"PETFIND",
+        name:"petFind",
         image:"petfind.jpg",
         description:"descripcion"
     },
     {
-        name:"HIGIENE",
+        name:"higiene",
         image:"higiene_ppal.png",
         description:"descripcion"
     }
 ]
 const servicios = [
     {
-        name:"PELUQUERIA",
+        name:"peluqueria",
         image:"peluquera.jpg",
         description:"descripcion"
     },
     {
-        name:"PASEADOR",
+        name:"paseador",
         image:"paseador.png",
         description:"descripcion"
     },
     {
-        name:"ADIESTRADOR",
+        name:"adiestrador",
         image:"adiestrador.jpg",
         description:"descripcion"
     }

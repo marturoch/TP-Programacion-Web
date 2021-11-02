@@ -7,7 +7,8 @@
       <ProdServMenu v-for="(servicio, index) in servicios" v-bind:key="index"
                     v-bind:name="servicio.name"
                     v-bind:image="servicio.image"
-                    v-bind:description="servicio.description">
+                    v-bind:description="servicio.description"
+                    v-bind:tipo="tipo">
       </ProdServMenu>
     </div>
     <Footer></Footer>
@@ -31,6 +32,7 @@ export default {
   },
   data(){
     return{
+      tipo: "servicios",
       servicios: servicios
     }
   }
