@@ -2,27 +2,27 @@ const productos = [
     {
         name:"snacks",
         image:"snack_ppal.jpeg",
-        description:"descripcion snacks"
+
     },
     {
         name:"alimentos",
         image:"alimento_ppal.jpeg",
-        description:"descripcion alimentos"
+
     },
     {
         name:"juguetes",
         image:"juguetes_ppal.jpeg",
-        description:"descripcion juguetes"
+
     },
     {
         name:"petFind",
         image:"petfind.jpg",
-        description:"descripcion petFind"
+
     },
     {
         name:"higiene",
         image:"higiene_ppal.png",
-        description:"descripcion"
+
     }
 ]
 const servicios = [
@@ -49,66 +49,79 @@ const alimentos = [
         name: "ROYAL CANIN MAXI ADULT DERMACONFORT",
         image: "ROYAL-CANIN-MAXI-ADULT-DERMACONFORT.png",
         price: 5690,
+        description:"descripcion"
     },
     {
         name: "ROYAL CANIN MAXI ADULT STERILIZED",
         image: "ROYAL-CANIN-MAXI-ADULT-STERILIZED.png",
         price: 5390,
+        description:"descripcion snacks"
     },
     {
         name: "ROYAL CANIN MAXI ADULT WEIGHT CARE",
         image: "Royal-Canin-maxi-adult-weight-care.png",
         price: 5690,
+        description:"descripcion snacks"
     },
     {
         name: "ROYAL CANIN MEDIUM ADULT DERMACONFORT",
         image: "ROYAL-CANIN-MEDIUM-ADULT-DERMACONFORT.png",
         price: 5690,
+        description:"descripcion snacks"
     },
     {
         name: "ROYAL CANIN MEDIUM ADULT STERILIZED",
         image: "ROYAL-CANIN-MEDIUM-ADULT-STERILIZED.png",
         price: 5690,
+        description:"descripcion snacks"
     },
     {
         name: "ROYAL CANIN MEDIUM ADULT WEIGHT CARE",
         image: "Royal-Canin-medium-adult-weight-care.png",
         price: 5690,
+        description:"descripcion snacks"
     },
     {
         name: "PRO PLAN ACTIVE MIND RAZAS MEDIANAS Y GRANDES",
         image: "Pro-Plan-Active-Mind-Razas-Medianas-y-Grandes.png",
         price: 6790,
+        description:"descripcion snacks"
     },
     {
         name: "PRO PLAN ADULTO RAZAS GRANDES",
         image: "Pro-Plan-Adulto-Raza-Grande.png",
         price: 6190,
+        description:"descripcion snacks"
     },
     {
         name: "PRO PLAN ADULTO RAZAS MEDIANAS",
         image: "Pro-Plan-Adulto-Razas-Medianas.png",
         price: 6190,
+        description:"descripcion snacks"
     },
     {
         name: "PRO PLAN ADULTO RAZAS PEQUEÑAS",
         image: "Pro-Plan-Adulto-Razas-Pequenas.png",
         price: 3790,
+        description:"descripcion snacks"
     },
     {
         name: "PRO PLAN PUPPY SMALL BREED",
         image: "Pro-Plan-Puppy-Small-Breed.png",
         price: 4120,
+        description:"descripcion snacks"
     },
     {
         name: "PRO PLAN PUPPY LARGE BREED",
         image: "Pro-Plan-Puppy-Large-Breed-1.png",
         price: 6790,
+        description:"descripcion snacks"
     },
     {
         name: "PRO PLAN PUPPY COMPLETE",
         image: "Pro-Plan-Puppy-Medium-Breed.png",
         price: 6790,
+        description:"descripcion snacks"
     },
 ]
 
@@ -117,51 +130,61 @@ const snacks = [
         name: "DONA CHICA",
         image: "dona-chica.png" ,
         price: 110,
+        description:"descripcion snacks"
     },
     {
         name: "HUESO DE CUERO",
         image: "hueso-de-cuero.png" ,
         price: 380,
+        description:"descripcion snacks"
     },
     {
         name: "MINI ROLL (10 u)",
         image: "mini-roll.png" ,
         price: 600,
+        description:"descripcion snacks"
     },
     {
         name: "PEDIGREE RODEO SABOR CARNE",
         image: "Renders-Rodeo-CARNE.png" ,
         price: 140,
+        description:"snacks irresistible sabon carne, contiene 4 unidades-70grs"
     },
     {
         name: "PEDIGREE RODEO SABOR POLLO",
         image: "Renders-Rodeo-POLLO.png" ,
         price: 140,
+        description:"snacks irresistible sabon pollo, contiene 4 unidades-70grs"
     },
     {
         name: "BISCUITS DE POLLO (120gr)",
         image: "Biscuits-de-Pollo-x-500.png" ,
         price: 130,
+        description:"descripcion snacks"
     },
     {
         name: "CUIDADO DENTAL DIARIO DENTAL CLEAN (400gr)",
         image: "Cuidado-Dental-Diario-Dental-Clean.png" ,
         price: 640,
+        description:"descripcion snacks"
     },
     {
         name: "CUIDADO DENTAL DIARIO DENTAL MILK STICKS (400gr)",
         image: "Cuidado-Dental-Diario-Dental-Milk-Sticks.png" ,
         price: 640,
+        description:"descripcion snacks"
     },
     {
         name: "CUIDADO DENTAL DIARIO DENTAL STICKS (400gr)",
         image: "Cuidado-Dental-Diario-Dental-Sticks.png" ,
         price: 640,
+        description:"descripcion snacks"
     },
     {
         name: "SNACK SALUDABLE DE POLLO GRILLÉ (400gr)",
         image: "Snack-Saludable-de-Pollo-Grille.png" ,
         price: 800,
+        description:"descripcion snacks"
     }
 ]
 
