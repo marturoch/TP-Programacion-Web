@@ -10,7 +10,7 @@ import PlanesView from "./Views/PlanesView";
 import RedView from "./Views/RedView";
 import RecomendacionView from "./Views/RecomendacionView";
 import login from "./components/login";
-import Perfil from "./components/Perfil";
+import PerfilView from "./Views/PerfilView";
 import ProductsView from "./Views/ProductsView";
 import ServicesView from "./Views/ServicesView";
 import HomeView from "./Views/HomeView";
@@ -29,7 +29,7 @@ const routes = [
   {path: '/red-de-mascotas', name: "Red", component:RedView},
   {path: '/recomendacion', name: "Recomendacion", component:RecomendacionView},
   {path: '/login', name:"Login", component:login},
-  {path: '/perfil', name:"Perfil", component:Perfil},
+  {path: '/perfil', name:"Perfil", component:PerfilView},
   {path: '/*', component:NotFoundView}
 ]
 
