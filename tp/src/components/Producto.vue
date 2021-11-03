@@ -67,6 +67,7 @@ h1{
   align-items: center;
 }
 .fotoDescripcion{
+  margin: 0px 200px;
   display:flex;
   align-items: center;
 }

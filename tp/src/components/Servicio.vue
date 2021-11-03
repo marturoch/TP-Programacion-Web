@@ -69,6 +69,7 @@ h1{
 .fotoDescripcion{
   display:flex;
   align-items: center;
+  margin: 0px 100px;
 }
 img{
   margin-right:20px;
