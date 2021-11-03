@@ -2,7 +2,7 @@
   <div>
     <Header></Header>
     <NavBar></NavBar>
-    <h1>Productos</h1>
+    <h1>PRODUCTOS</h1>
     <div class="todosProductos" v-if="showall">
       <ProdServMenu v-for="(producto, index) in productos" v-bind:key="index"
                     v-bind:name="producto.name"
@@ -36,7 +36,7 @@ export default {
       productos: productos,
       showall: true,
     }
- }
+  }
 }
 </script>
 <style scoped>

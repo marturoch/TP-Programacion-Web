@@ -2,7 +2,7 @@
   <div>
     <Header></Header>
     <NavBar></NavBar>
-    <h1>Servicios</h1>
+    <h1>SERVICIOS</h1>
     <div class="servicios-container">
       <ProdServMenu v-for="(servicio, index) in servicios" v-bind:key="index"
                     v-bind:name="servicio.name"

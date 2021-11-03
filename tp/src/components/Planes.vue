@@ -45,10 +45,11 @@ export default {
 
 <style scoped>
 .planes-container{
-  margin-bottom: 15px;
   display:flex;
-  align-items: center;
-  justify-content: center
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom:20px;
 
 }
 .plan-container{
@@ -56,7 +57,8 @@ export default {
   flex-direction:column;
   justify-content: center;
   padding:5px;
-  width: 20%;
+  width:20%;
+  align-items: center;
 }
 </style>
 
