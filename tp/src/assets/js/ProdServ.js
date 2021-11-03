@@ -115,7 +115,7 @@ const alimentos = [
 const snacks = [
     {
         name: "DONA CHICA",
-        image: "dona_chica.png" ,
+        image: "dona-chica.png" ,
         price: 110,
     },
     {
