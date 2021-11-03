@@ -79,8 +79,6 @@ export default {
     otroPlan() {
       this.otrosPlanes = true;
       this.showButton = false;
-
-
     }
   }
 }

@@ -21,74 +21,14 @@
         <div class="form-data">
           <label>Raza: </label>
           <select v-model="raza" required>
-            <option>Affenpinscher</option>
-            <option>Afgano</option>
-            <option>Akita</option>
-            <option>American Pit Bull Terrier</option>
-            <option>American Staffordshire Terrier</option>
-            <option>Beagle</option>
-            <option>Bedlington Terrier</option>
-            <option>Berger de Picardie</option>
-            <option>Border Collie</option>
-            <option>Border Terrier</option>
-            <option>Boston Terrier</option>
-            <option>Boyero</option>>
-            <option>Braco San Germain</option>
-            <option>Braco alemán de pelo corto</option>
-            <option>Bull Terrier</option>
-            <option>Bull Terrier Miniatura</option>
-            <option>Bulldog</option>
-            <option>Bulldog Francés</option>
-            <option>Bull Mastín</option>
-            <option>Bóxer</option>
-            <option>Caniche</option>
-            <option>Chihuahua</option>
-            <option>Chow Chow</option>
-            <option>Cirneco Del Etna</option>
-            <option>Cocker</option>
-            <option>Collie</option>
-            <option>Doberman</option>
-            <option>Dogo Argentino</option>
-            <option>Dogo Mallorquín</option>
-            <option>Dogo de Burdeos</option>
-            <option>Dálmata</option>
-            <option>Epagneul breton</option>
-            <option>Eurasier</option>
-            <option>Fox Terrier</option>
-            <option>Foxhound Americano</option>
-            <option>Foxhound Inglés</option>
-            <option>Fox Terrier Toy</option>
-            <option>Galgo</option>
-            <option>Golden Retriever</option>
-            <option>Gran Danés</option>
-            <option>Grifón Belga</option>
-            <option>Hamiltonstovare</option>
-            <option>Husky Siberiano</option>
-            <option>Jack Russell Terrier</option>
-            <option>Kishu</option>
-            <option>Labrador Retriever</option>
-            <option>Laïka</option>
-            <option>Mastín</option>
-            <option>Mastín Napolitano</option>
-            <option>Malamute de Alaska</option>
-            <option>Münsterländer grande</option>
-            <option>Münsterländer pequeño</option>
-            <option>Pastor Alemán</option>
-            <option>Pastor Australiano</option>
-            <option>Pastor Belga</option>
-            <option>Pequinés</option>
-            <option>Perdiguero</option>
-            <option>Rottweiler</option>
-            <option>Sabueso</option>
-            <option>Schnauzer</option>
-            <option>Setter</option>
-            <option>Shar Pei</option>
-            <option>Staffordshire Bull Terrier</option>
-            <option>Terranova</option>
-            <option>Terrier</option>
-            <option>Yorkshire terrier</option>
-            <option>Otros</option>
-
+            <option>Raza 1</option>
+            <option>Raza 2</option>
+            <option>Raza 3</option>
+            <option>Raza 4</option>
+            <option>Raza 5</option>
+            <option>Raza 6</option>
+            <option>Raza 7</option>
+            <option>Raza 8</option>
           </select>
         </div>
 

@@ -2,22 +2,22 @@ const productos = [
     {
         name:"snacks",
         image:"snack_ppal.jpeg",
-        description:"descripcion"
+        description:"descripcion snacks"
     },
     {
         name:"alimentos",
         image:"alimento_ppal.jpeg",
-        description:"descripcion"
+        description:"descripcion alimentos"
     },
     {
         name:"juguetes",
         image:"juguetes_ppal.jpeg",
-        description:"descripcion"
+        description:"descripcion juguetes"
     },
     {
         name:"petFind",
         image:"petfind.jpg",
-        description:"descripcion"
+        description:"descripcion petFind"
     },
     {
         name:"higiene",
@@ -29,17 +29,17 @@ const servicios = [
     {
         name:"peluqueria",
         image:"peluquera.jpg",
-        description:"descripcion"
+        description:"descripcion peluqueria"
     },
     {
         name:"paseador",
         image:"paseador.png",
-        description:"descripcion"
+        description:"descripcion paseador"
     },
     {
         name:"adiestrador",
         image:"adiestrador.jpg",
-        description:"descripcion"
+        description:"descripcion adiestrador"
     }
 ]
 

@@ -1,31 +1,31 @@
 <template>
-<div>
-  <Header></Header>
-  <NavBar></NavBar>
-  {{info($route.params.nombre)}}
-  <H1>{{$route.params.nombre}}</H1>
-  <br>
-  <div class="container">
-    <div class="fotoDescripcion">
-      <img :src="image" width="300px">
-      <h3>{{description}}</h3>
+  <div>
+    <Header></Header>
+    <NavBar></NavBar>
+    {{info($route.params.nombre)}}
+    <H1>{{$route.params.nombre}}</H1>
+    <br>
+    <div class="container">
+      <div class="fotoDescripcion">
+        <img :src="image" width="300px">
+        <h3>{{description}}</h3>
+      </div>
+      <div>
+        <p class="botonVolver" @click="irAServicios">VOLVER A TODOS LOS SERVICIOS</p>
+      </div>
     </div>
-    <div>
-      <p class="botonVolver" @click="irAProductos">VOLVER A TODOS LOS PRODUCTOS</p>
-    </div>
+    <Footer></Footer>
   </div>
-  <Footer></Footer>
-</div>
 </template>
 
 <script>
 import Header from "./Header";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import {productos} from "@/assets/js/ProdServ";
+import {servicios} from "@/assets/js/ProdServ";
 
 export default {
-  name: "Producto",
+  name: "Servicio",
   components: {
     Header,
     NavBar,
@@ -33,7 +33,7 @@ export default {
   },
   data() {
     return {
-      productos: productos,
+      productos: servicios,
       name: "",
       description: "",
       image:""
@@ -49,10 +49,10 @@ export default {
         }
       }
     },
-    irAProductos(){
+    irAServicios(){
       this.$router.go(-1)
+    }
   }
-}
 }
 </script>
 

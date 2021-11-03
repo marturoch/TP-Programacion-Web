@@ -30,4 +30,7 @@ button {
   padding:10px;
   cursor: pointer;
 }
+h2{
+  text-transform: uppercase;
+}
 </style>
