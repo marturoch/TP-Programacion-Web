@@ -4,6 +4,7 @@
     <NavBar></NavBar>
     <br><br>
     <Formulario v-on:recomendacionEvent="recomendacionPlan($event)" v-if="show === false"></Formulario>
+
     <div class="todosPlanes">
 
       <div class="seleccionado" v-if="show">
@@ -21,9 +22,8 @@
         <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[2]]></planTemplate>
       </div>
 
-      <p class="botonVolver" v-if="show" @click="volverAFormulario()">VOLVER A FORMULARIO</p>
-
     </div>
+    <p class="botonVolver" v-if="show" @click="volverAFormulario()">VOLVER A FORMULARIO</p>
     <Footer></Footer>
   </div>
 </template>

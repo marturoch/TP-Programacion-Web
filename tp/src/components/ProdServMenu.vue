@@ -45,5 +45,6 @@ h2{
 }
 .producto:hover{
   opacity: 80%;
+  cursor:pointer;
 }
 </style>
