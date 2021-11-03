@@ -55,7 +55,7 @@ const alimentos = [
         name: "ROYAL CANIN MAXI ADULT STERILIZED",
         image: "ROYAL-CANIN-MAXI-ADULT-STERILIZED.png",
         price: 5390,
-        description:"descripcion snacks"
+        description:"Mantenimiento del peso idel. Para perros adultos castrados de talla grande  -75kg"
     },
     {
         name: "ROYAL CANIN MAXI ADULT WEIGHT CARE",
