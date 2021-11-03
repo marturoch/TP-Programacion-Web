@@ -21,6 +21,8 @@
         <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[2]]></planTemplate>
       </div>
 
+      <p class="botonVolver" v-if="show" @click="volverAFormulario()">VOLVER A FORMULARIO</p>
+
     </div>
     <Footer></Footer>
   </div>
@@ -79,6 +81,9 @@ export default {
     otroPlan() {
       this.otrosPlanes = true;
       this.showButton = false;
+    },
+    volverAFormulario(){
+      this.show = false;
     }
   }
 }
