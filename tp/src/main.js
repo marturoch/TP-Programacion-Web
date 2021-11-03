@@ -9,7 +9,6 @@ import App from './App.vue'
 import PlanesView from "./Views/PlanesView";
 import RedView from "./Views/RedView";
 import RecomendacionView from "./Views/RecomendacionView";
-import login from "./components/login";
 import PerfilView from "./Views/PerfilView";
 import ProductsView from "./Views/ProductsView";
 import ServicesView from "./Views/ServicesView";
@@ -17,6 +16,7 @@ import HomeView from "./Views/HomeView";
 import Producto from "./components/Producto";
 import Servicio from "./components/Servicio";
 import NotFoundView from "./Views/NotFoundView";
+import login from "./components/login";
 
 const routes = [
   {path: '/', name: "Home", component:HomeView},
