@@ -6,31 +6,31 @@ Vue.use(VueRouter)
 
 //Components
 import App from './App.vue'
-import Home from "@/components/Home";
-import NotFound from "@/components/NotFound";
-import Planes from "./components/Planes";
-import Productos from "./components/Productos";
-import Servicios from "./components/Servicios";
-import Red from "./components/Red";
-import Recomendacion from "./components/Recomendacion";
-import LogIn from "./components/LogIn";
+import PlanesView from "./Views/PlanesView";
+import RedView from "./Views/RedView";
+import RecomendacionView from "./Views/RecomendacionView";
+import login from "./components/login";
 import Perfil from "./components/Perfil";
+import ProductsView from "./Views/ProductsView";
+import ServicesView from "./Views/ServicesView";
+import HomeView from "./Views/HomeView";
 import Producto from "./components/Producto";
 import Servicio from "./components/Servicio";
+import NotFoundView from "./Views/NotFoundView";
 
 const routes = [
-  {path: '/', name: "Home", component:Home},
-  {path: '/planes', name: "Planes", component:Planes},
-  {path: '/planes/:nombre', name: "Plan", component:Planes},
-  {path: '/productos', name: "Productos", component:Productos},
+  {path: '/', name: "Home", component:HomeView},
+  {path: '/productos', name: "Productos", component:ProductsView},
   {path: '/productos/:nombre', name: "Producto",component: Producto},
-  {path: '/servicios', name: "Servicios", component:Servicios},
+  {path: '/planes', name: "Planes", component:PlanesView},
+  {path: '/planes/:nombre', name: "Plan", component:PlanesView},
+  {path: '/servicios', name: "Servicios", component:ServicesView},
   {path: '/servicios/:nombre', name: "Servicio", component:Servicio},
-  {path: '/red-de-mascotas', name: "Red", component:Red},
-  {path: '/recomendacion', name: "Recomendacion", component:Recomendacion},
-  {path: '/login', name:"Login", component:LogIn},
+  {path: '/red-de-mascotas', name: "Red", component:RedView},
+  {path: '/recomendacion', name: "Recomendacion", component:RecomendacionView},
+  {path: '/login', name:"Login", component:login},
   {path: '/perfil', name:"Perfil", component:Perfil},
-  {path: '/*', component:NotFound}
+  {path: '/*', component:NotFoundView}
 ]
 
 const router = new VueRouter({

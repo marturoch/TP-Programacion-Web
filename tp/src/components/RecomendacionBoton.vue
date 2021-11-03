@@ -15,17 +15,14 @@ export default {
 </script>
 
 <style scoped>
-.Recomendar {
-  font-size: 20px;
+.botonRecomendar {
+  font-size: 15px;
   width: 20%;
+  display:inline-block;
   background-color: #D90368;
-  padding: 8px;
   border-radius: 100px;
-  box-sizing: border-box;
-  display: inline-block;
-  }
-.botonRecomendar{
   text-decoration: none;
   color:white;
+  padding:10px;
 }
 </style>

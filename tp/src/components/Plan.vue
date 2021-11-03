@@ -1,11 +1,13 @@
 <template>
     <div class="planes">
-      <h2 class="planes-title">{{name}}</h2>
-      <p class="planes-info">{{tipo}}</p>
-      <p class="planes-info">{{item1}}</p>
-      <p class="planes-info">{{item2}}</p>
-      <p class="planes-info">{{item3}}</p>
-    <router-link class="seleccionar" v-bind:to="/planes/ + name + '/comprar'" >SELECCIONAR ESTE PLAN</router-link>
+      <div>
+        <h2 class="planes-title">{{name}}</h2>
+        <p class="planes-info">{{tipo}}</p>
+        <p class="planes-info">{{item1}}</p>
+        <p class="planes-info">{{item2}}</p>
+        <p class="planes-info">{{item3}}</p>
+      </div>
+      <router-link class="seleccionar" v-bind:to="/planes/ + name" >SELECCIONAR ESTE PLAN</router-link>
     </div>
 </template>
 

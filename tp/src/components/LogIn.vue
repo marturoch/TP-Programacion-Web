@@ -1,22 +1,22 @@
 <template>
-<div>
-  <Header></Header>
-  <NavBar></NavBar>
-  <form class="form-container" v-if="registrarse === false">
-    <div class="form-data">
-      <label>MAIL: </label><input type="email" required>
-    </div>
-    <div class="form-data">
-      <label>CONTRASEÑA: </label><input type="password" required>
-    </div>
-    <div class="form-data">
-      <input type="submit" value="login">
-    </div>
-  </form>
-  <p v-if="registrarse === false">No tienes cuenta? Registrate<span @click="registro()" > aqui</span></p>
-  <Registrarse v-if="registrarse" v-on:login="logeo()"></Registrarse>
-  <Footer></Footer>
-</div>
+  <div>
+    <Header></Header>
+    <NavBar></NavBar>
+    <form class="form-container" v-if="registrarse === false">
+      <div class="form-data">
+        <label>MAIL: </label><input type="email" required>
+      </div>
+      <div class="form-data">
+        <label>CONTRASEÑA: </label><input type="password" required>
+      </div>
+      <div class="form-data">
+        <input type="submit" value="login">
+      </div>
+    </form>
+    <p v-if="registrarse === false">No tienes cuenta? Registrate<span @click="registro()" > aqui</span></p>
+    <Registrarse v-if="registrarse" v-on:login="logeo()"></Registrarse>
+    <Footer></Footer>
+  </div>
 </template>
 
 <script>
@@ -26,7 +26,7 @@ import Footer from "./Footer";
 import Registrarse from "./Registrarse";
 
 export default {
-  name: "LogIn",
+  name: "login",
   components:{
     Header,
     NavBar,

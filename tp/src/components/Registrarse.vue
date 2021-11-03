@@ -24,17 +24,17 @@
 
     </form>
     <p v-if="logearse === false">Ya tienes cuenta? Haz Log in<span @click="$emit('login', true)"> aqui</span></p>
-    <LogIn v-if="logearse"></LogIn>
+    <login v-if="logearse"></login>
   </div>
 </template>
 
 <script>
-import LogIn from "./LogIn";
+import login from "./login";
 
 export default {
   name: "Registrarse",
   components:{
-    LogIn
+    login
   },
   data() {
     return {

@@ -27,15 +27,15 @@
 </template>
 
 <script>
-import Formulario from "./Formulario";
-import planTemplate from "./planTemplate.vue"
-import {planes} from "@/assets/js/planes";
-import Header from "./Header";
-import NavBar from "./NavBar";
-import Footer from "./Footer";
+import Formulario from "../components/Formulario";
+import planTemplate from "../components/planTemplate.vue"
+import {planes} from "../assets/js/planes";
+import Header from "../components/Header";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 export default {
-  name: "Recomendacion",
+  name: "RecomendacionView",
   components: {
     Formulario,
     planTemplate,
