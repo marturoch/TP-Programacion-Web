@@ -148,19 +148,19 @@ const snacks = [
         name: "PEDIGREE RODEO SABOR CARNE",
         image: "Renders-Rodeo-CARNE.png" ,
         price: 140,
-        description:"snacks irresistible sabon carne, contiene 4 unidades-70grs"
+        description:"snacks irresistible sabon carne, contiene 4 unidades - 70gr"
     },
     {
         name: "PEDIGREE RODEO SABOR POLLO",
         image: "Renders-Rodeo-POLLO.png" ,
         price: 140,
-        description:"snacks irresistible sabon pollo, contiene 4 unidades-70grs"
+        description:"snacks irresistible sabon pollo, contiene 4 unidades - 70gr"
     },
     {
         name: "BISCUITS DE POLLO",
         image: "Biscuits-de-Pollo-x-500.png" ,
         price: 130,
-        description:"Biscuits sabor pollo horneadas - 120g"
+        description:"Biscuits sabor pollo horneadas - 120gr"
     },
     {
         name: "CUIDADO DENTAL DIARIO DENTAL CLEAN (400gr)",
@@ -169,22 +169,22 @@ const snacks = [
         description:"descripcion snacks"
     },
     {
-        name: "CUIDADO DENTAL DIARIO DENTAL MILK STICKS (400gr)",
+        name: "CUIDADO DENTAL DIARIO DENTAL MILK STICKS ",
         image: "Cuidado-Dental-Diario-Dental-Milk-Sticks.png" ,
         price: 640,
-        description:"descripcion snacks"
+        description:"Ayuda a combatir el sarro, fortalece la denticion, textura porosa que limpia profundamente los dientes, libre de subproductos - 400gr"
     },
     {
-        name: "CUIDADO DENTAL DIARIO DENTAL STICKS (400gr)",
+        name: "CUIDADO DENTAL DIARIO DENTAL STICKS ",
         image: "Cuidado-Dental-Diario-Dental-Sticks.png" ,
         price: 640,
-        description:"descripcion snacks"
+        description:"Ayuda a combatir el sarro, fortalece dientes y huesos, aporta extra calcio, libre de subproductos - 400gr"
     },
     {
-        name: "SNACK SALUDABLE DE POLLO GRILLÉ (400gr)",
+        name: "SNACK SALUDABLE DE POLLO GRILLÉ ",
         image: "Snack-Saludable-de-Pollo-Grille.png" ,
         price: 800,
-        description:"descripcion snacks"
+        description:"Ingredientes aptos para el consumo humano, libre de soja, libre de subproductos -400gr"
     }
 ]
 
