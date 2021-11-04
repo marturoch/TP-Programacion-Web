@@ -11,7 +11,7 @@
         <h3>{{description}}</h3>
       </div>
       <div>
-        <p class="botonVolver" @click="irAServicios">VOLVER A TODOS LOS SERVICIOS</p>
+        <p class="botonVolver" @click="irAServicios">VOLVER A SERVICIOS</p>
       </div>
     </div>
     <Footer></Footer>
@@ -34,7 +34,6 @@ export default {
   data() {
     return {
       productos: servicios,
-      name: "",
       description: "",
       image:""
     }
@@ -43,7 +42,6 @@ export default {
     info(productoSeleccionado){
       for (let producto of this.productos){
         if(producto.name == productoSeleccionado){
-          this.name = producto.name
           this.description = producto.description
           this.image = require('../assets/img/prodServ/' + producto.image)
         }
@@ -79,12 +77,16 @@ h2{
 }
 .botonVolver{
   cursor:pointer;
-  border-radius:40px;
-  background-color: #af9c9f;
+  border-radius:50%;
+  width:90px;
+  height:90px;
+  background-color: #820263;
   color:white;
-  padding:20px;
+  padding:12px;
   margin-top:40px;
   font-size:12px;
-
+}
+p{
+  align-items: center;
 }
 </style>

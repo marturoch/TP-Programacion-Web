@@ -8,7 +8,7 @@
         <p class="planes-info">{{item2}}</p>
         <p class="planes-info">{{item3}}</p>
       </div>
-      <router-link class="seleccionar" v-bind:to="/planes/ + name" >SELECCIONAR </router-link>
+      <p class="seleccionar">SELECCIONAR </p>
     </div>
 </template>
 

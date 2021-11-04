@@ -18,24 +18,6 @@
         </div>
         <RecomendacionBoton></RecomendacionBoton>
         <br><br>
-    <!--    <div class="todosPlanes">
-
-          <div class="seleccionado" v-if="show">
-            <h2>PLAN RECOMENDADO</h2>
-            <planTemplate class="principal" :data=planes[array]></planTemplate>
-          </div>
-
-          <div v-if="show">
-            <button @click="otroPlan()" v-if="showButton">Seleccionar otro plan</button>
-          </div>
-
-          <div class="noSeleccionado" v-if="show">
-            <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[0]]></planTemplate>
-            <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[1]]></planTemplate>
-            <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[2]]></planTemplate>
-          </div>
-
-        </div>-->
       <p class="botonVolver" v-if="show" @click="volverAFormulario()">VOLVER A FORMULARIO</p>
     </div>
     <Footer></Footer>
@@ -44,7 +26,6 @@
 
 <script>
 import Formulario from "../components/Formulario";
-//import planTemplate from "../components/planTemplate.vue"
 import {planes} from "../assets/js/planes";
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
@@ -55,7 +36,6 @@ export default {
   name: "RecomendacionView",
   components: {
     Formulario,
-    //planTemplate,
     Plan,
     Header,
     NavBar,

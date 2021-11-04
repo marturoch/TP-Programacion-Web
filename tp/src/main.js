@@ -17,19 +17,20 @@ import Producto from "./components/Producto";
 import Servicio from "./components/Servicio";
 import NotFoundView from "./Views/NotFoundView";
 import login from "./components/login";
+import Carrito from "./components/Carrito";
 
 const routes = [
   {path: '/', name: "Home", component:HomeView},
   {path: '/productos', name: "Productos", component:ProductsView},
   {path: '/productos/:nombre', name: "Producto",component: Producto},
   {path: '/planes', name: "Planes", component:PlanesView},
-  {path: '/planes/:nombre', name: "Plan", component:PlanesView},
   {path: '/servicios', name: "Servicios", component:ServicesView},
   {path: '/servicios/:nombre', name: "Servicio", component:Servicio},
   {path: '/red-de-mascotas', name: "Red", component:RedView},
   {path: '/recomendacion', name: "Recomendacion", component:RecomendacionView},
   {path: '/login', name:"Login", component:login},
   {path: '/perfil', name:"Perfil", component:PerfilView},
+  {path: '/carrito', name:"Carrito", component:Carrito},
   {path: '/*', component:NotFoundView}
 ]
 
