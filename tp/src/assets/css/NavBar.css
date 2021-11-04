@@ -2,7 +2,6 @@
     display:flex;
     background-color: #820263;
     justify-content:space-around;
-    padding: 15px;
     align-items: center;
     color: black;
     width: auto;
@@ -13,30 +12,16 @@
     text-decoration: none;
     color:white;
     font-weight: bold;
+    height: auto;
+    width: auto;
+    padding: 15px;
+    margin: 15px
 }
 .menu:hover {
     background-color: #CD39A9;
     cursor: pointer;
     padding:12px;
-    border-radius:20px;
+    border-radius:30px;
     box-sizing: border-box;
     position: relative;
-}
-.login{
-    text-decoration: none;
-    color:white;
-    border: 3px solid #D90368;
-    padding:10px;
-    background: #D90368;
-    border-radius: 100px;
-    font-weight: bold;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-}
-.cuentaYcarrito{
-    border:3px solid #F75C03;
-    border-radius:30px;
-    display:flex;
-    padding:8px;
 }

@@ -3,15 +3,15 @@
     <form class="form-container" v-if="logearse === false">
 
       <div class="form-data">
-        <label>NOMBRE: </label><input type="text" required>
+        <label>NOMBRE: </label><input type="text" required v-model="nombre">
       </div>
 
       <div class="form-data">
-        <label>APELLIDO: </label><input type="text" required>
+        <label>APELLIDO: </label><input type="text" required v-model="apellido">
       </div>
 
       <div class="form-data">
-        <label>MAIL: </label><input type="email" required>
+        <label>MAIL: </label><input type="email" required v-model="mail">
       </div>
 
       <div class="form-data">
@@ -39,8 +39,11 @@ export default {
   data() {
     return {
       logearse: false,
+      nombre: "",
+      apellido:"",
+      email: "",
     }
-  }
+}
 }
 </script>
 

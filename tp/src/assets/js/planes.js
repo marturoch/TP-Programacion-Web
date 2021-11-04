@@ -4,8 +4,8 @@ const planes = [
         tipo: "Básico",
         item1: " Contratacion microseguros en el momento puntual de necesidad respondiendo a la exigencia de contar con coberturas a medida y de facil adquisición ",
         item2: "Se puede activar y desactivar en cualquier momento ",
-        item3:"",
-        precio:""
+        item3:"agregar algo",
+        precio:"$900/mes"
     },
     {
         name: "rocky",
@@ -20,7 +20,7 @@ const planes = [
         tipo: "Completo",
         item1: "Servicio de asistencia veterinaria cubierta" ,
         item2: "Servicio de paseo semanal",
-        item3: "",
+        item3: "agregar algo",
         precio: "$1800/mes"
     },
     {

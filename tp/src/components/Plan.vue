@@ -1,12 +1,16 @@
 <template>
     <div class="planes">
-      <div>
-
+      <div class ="info">
         <h2 class="planes-title">·· {{name}} ··</h2>
-        <h4 class="planes-info">  <strong>{{tipo}}</strong></h4>
-        <p class="planes-info">{{item1}}</p>
-        <p class="planes-info">{{item2}}</p>
-        <p class="planes-info">{{item3}}</p>
+        <h4 class="planes-tipo">
+          <strong>{{tipo}}</strong>
+        </h4>
+        <p class="planes-precio">{{precio}}</p>
+        <div class="planes-info">
+          <p>● {{item1}}</p>
+          <p>● {{item2}}</p>
+          <p>● {{item3}}</p>
+        </div>
       </div>
       <p class="seleccionar">SELECCIONAR </p>
     </div>
@@ -20,7 +24,8 @@ export default {
     "tipo",
     "item1",
     "item2",
-    "item3"
+    "item3",
+    "precio",
   ],
 }
 </script>
@@ -48,6 +53,11 @@ button {
   background-color: #820263;
   border-radius: 20px;
   padding:10px;
+  cursor: pointer
+}
+
+.seleccionar:hover {
+  opacity: 65%
 }
 h4{
   font-size: 20px;
@@ -58,4 +68,27 @@ h4{
   background-color: #D6FDD6;
 }
 
+.planes-info {
+  color: black;
+  text-align: left;
+  font-weight: bold;
+
+}
+
+.planes-precio {
+  color: black;
+}
+
+.planes-tipo {
+  color: black;
+}
+
+.info {
+  margin-left: 10px;
+}
+
+.planes:hover {
+  border-color: #D90368;
+  border-width: 5px;
+}
 </style>

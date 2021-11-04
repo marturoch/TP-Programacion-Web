@@ -78,6 +78,7 @@ h2{
 .botonVolver{
   cursor:pointer;
   border-radius:50%;
+  text-align: center;
   width:90px;
   height:90px;
   background-color: #820263;
@@ -85,6 +86,9 @@ h2{
   padding:12px;
   margin-top:40px;
   font-size:12px;
+}
+.botonVolver:hover {
+  opacity: 60%;
 }
 p{
   align-items: center;

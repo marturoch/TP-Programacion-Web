@@ -35,6 +35,7 @@ export default {
 }
 h2{
   text-transform: uppercase;
+
 }
 .producto{
   padding:10px;
@@ -44,7 +45,9 @@ h2{
   background-color: white;
 }
 .producto:hover{
-  opacity: 80%;
+  opacity: 85%;
+  border-color: #D90368;
+  border-width: 5px;
   cursor:pointer;
 }
 </style>
