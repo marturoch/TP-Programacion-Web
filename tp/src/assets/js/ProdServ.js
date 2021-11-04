@@ -121,7 +121,7 @@ const alimentos = [
         name: "PRO PLAN PUPPY COMPLETE",
         image: "Pro-Plan-Puppy-Medium-Breed.png",
         price: 6790,
-        description:" -15kg"
+        description:" Alimento balanceado super premium para perros de razas medianas hasta los 15 meses de edad-15kg"
     },
 ]
 
@@ -157,10 +157,10 @@ const snacks = [
         description:"snacks irresistible sabon pollo, contiene 4 unidades-70grs"
     },
     {
-        name: "BISCUITS DE POLLO (120gr)",
+        name: "BISCUITS DE POLLO",
         image: "Biscuits-de-Pollo-x-500.png" ,
         price: 130,
-        description:"descripcion snacks"
+        description:"Biscuits sabor pollo horneadas - 120g"
     },
     {
         name: "CUIDADO DENTAL DIARIO DENTAL CLEAN (400gr)",
