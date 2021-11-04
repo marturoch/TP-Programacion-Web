@@ -49,79 +49,79 @@ const alimentos = [
         name: "ROYAL CANIN MAXI ADULT DERMACONFORT",
         image: "ROYAL-CANIN-MAXI-ADULT-DERMACONFORT.png",
         price: 5690,
-        description:"Alimento completo para perros, adultos y maduros de razas grandes (de 26 a 44 kg) - A partir de los 15 meses de edad - Perros propensos a la irritación cutánea y a los picores- 10kg"
+        description: "Alimento completo para perros, adultos y maduros de razas grandes (de 26 a 44 kg) - A partir de los 15 meses de edad - Perros propensos a la irritación cutánea y a los picores- 10kg"
     },
     {
         name: "ROYAL CANIN MAXI ADULT STERILIZED",
         image: "ROYAL-CANIN-MAXI-ADULT-STERILIZED.png",
         price: 5390,
-        description:"Mantenimiento del peso ideal. Para perros adultos castrados de talla grande  -7,5kg"
+        description: "Mantenimiento del peso ideal. Para perros adultos castrados de talla grande  -7,5kg"
     },
     {
         name: "ROYAL CANIN MAXI ADULT WEIGHT CARE",
         image: "Royal-Canin-maxi-adult-weight-care.png",
         price: 5690,
-        description:"Ayuda a limitar la ganancia de peso -10kg"
+        description: "Ayuda a limitar la ganancia de peso -10kg"
     },
     {
         name: "ROYAL CANIN MEDIUM ADULT DERMACONFORT",
         image: "ROYAL-CANIN-MEDIUM-ADULT-DERMACONFORT.png",
         price: 5690,
-        description:"descripcion snacks"
+        description: "Alimento para perros adultos y maduros de talla mediana (de 11 a 25 kg) propensos a la irritación cutánea y al prurito. A partir de los 12 meses de edad - 10kg"
     },
     {
         name: "ROYAL CANIN MEDIUM ADULT STERILIZED",
         image: "ROYAL-CANIN-MEDIUM-ADULT-STERILIZED.png",
         price: 5690,
-        description:"Alimento completo para perros adultos y maduros de razas medianas (de 11 a 25 kg) - A partir de los 12 meses de edad - Perros propensos a la irritación cutánea y al picor -10kg"
+        description: "Alimento completo para perros adultos y maduros de razas medianas (de 11 a 25 kg) - A partir de los 12 meses de edad - Perros propensos a la irritación cutánea y al picor - 10kg"
     },
     {
         name: "ROYAL CANIN MEDIUM ADULT WEIGHT CARE",
         image: "Royal-Canin-medium-adult-weight-care.png",
         price: 5690,
-        description:"El sobrepeso puede estar asociado a complicaciones en la salud. Si tu perro tiene tendencia a aumentar de peso, podés ayudarlo a mantenerse en forma y bien alimentado. Alimento para perros adultos y maduros de talla mediana (de 11 a 25 kg). A partir de los 12 meses de edad. Recomendado para perros con tendencia al sobrepeso - 10kg"
+        description: "El sobrepeso puede estar asociado a complicaciones en la salud. Si tu perro tiene tendencia a aumentar de peso, podés ayudarlo a mantenerse en forma y bien alimentado. Alimento para perros adultos y maduros de talla mediana (de 11 a 25 kg). A partir de los 12 meses de edad. Recomendado para perros con tendencia al sobrepeso - 10kg"
     },
     {
         name: "PRO PLAN ACTIVE MIND RAZAS MEDIANAS Y GRANDES",
         image: "Pro-Plan-Active-Mind-Razas-Medianas-y-Grandes.png",
         price: 6790,
-        description:"descripcion snacks"
+        description: "Provee nutrición de avanzada para proteger a los perros mayores de 7 años, manteniéndolos sanos y activos - 13kg"
     },
     {
         name: "PRO PLAN ADULTO RAZAS GRANDES",
         image: "Pro-Plan-Adulto-Raza-Grande.png",
         price: 6190,
-        description:"descripcion snacks"
+        description: "Provee nutrición de avanzada que ayuda a los perros de razas grandes a mantenerse fuertes y llenos de vitalidad - 15kg"
     },
     {
         name: "PRO PLAN ADULTO RAZAS MEDIANAS",
         image: "Pro-Plan-Adulto-Razas-Medianas.png",
         price: 6190,
-        description:"descripcion snacks"
+        description: "Provee nutrición de avanzada que ayuda a los perros de razas medianas a mantenerse fuertes y llenos de vitalidad - 15kg"
     },
     {
         name: "PRO PLAN ADULTO RAZAS PEQUEÑAS",
         image: "Pro-Plan-Adulto-Razas-Pequenas.png",
         price: 3790,
-        description:"descripcion snacks"
+        description: "Provee nutrición de avanzada que ayuda a los perros de razas pequeñas a mantenerse fuertes y llenos de vitalidad - 15kg"
     },
     {
         name: "PRO PLAN PUPPY SMALL BREED",
         image: "Pro-Plan-Puppy-Small-Breed.png",
         price: 4120,
-        description:"descripcion snacks"
+        description: "Reforzar los sistemas naturales de proteccíon de tu cachorro y  satisfacer las necesidades metabólicas especificas basadas en el tamaño de su raza - 7,5kg "
     },
     {
         name: "PRO PLAN PUPPY LARGE BREED",
         image: "Pro-Plan-Puppy-Large-Breed-1.png",
         price: 6790,
-        description:"descripcion snacks"
+        description:""
     },
     {
         name: "PRO PLAN PUPPY COMPLETE",
         image: "Pro-Plan-Puppy-Medium-Breed.png",
         price: 6790,
-        description:"descripcion snacks"
+        description:" -15kg"
     },
 ]
 
