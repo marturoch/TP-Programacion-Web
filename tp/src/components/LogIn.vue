@@ -13,7 +13,7 @@
         <input type="submit" value="login">
       </div>
     </form>
-    <p v-if="registrarse === false">No tienes cuenta? Registrate<span @click="registro()" > aqui</span></p>
+    <p v-if="registrarse === false">No tienes cuenta? Registrate<span @click="registro()"> aqui</span></p>
     <Registrarse v-if="registrarse" v-on:login="logeo()"></Registrarse>
     <Footer></Footer>
   </div>

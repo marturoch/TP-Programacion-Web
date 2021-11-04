@@ -5,42 +5,58 @@
     <br><br>
     <Formulario v-on:recomendacionEvent="recomendacionPlan($event)" v-if="show === false"></Formulario>
 
-    <div class="todosPlanes">
+    <div v-if="show">
+        <h1>PLANES</h1>
+        <div class="planes-container">
+          <Plan class="plan-container" v-for="(plan, index) in planes" v-bind:key="index" :class="{ active: index === isActive }"
+                v-bind:name="plan.name"
+                v-bind:tipo="plan.tipo"
+                v-bind:item1="plan.item1"
+                v-bind:item2="plan.item2"
+                v-bind:item3="plan.item3">
+          </Plan>
+        </div>
+        <RecomendacionBoton></RecomendacionBoton>
+        <br><br>
+    <!--    <div class="todosPlanes">
 
-      <div class="seleccionado" v-if="show">
-        <h2>PLAN RECOMENDADO</h2>
-        <planTemplate class="principal" :data=planes[array]></planTemplate>
-      </div>
+          <div class="seleccionado" v-if="show">
+            <h2>PLAN RECOMENDADO</h2>
+            <planTemplate class="principal" :data=planes[array]></planTemplate>
+          </div>
 
-      <div v-if="show">
-        <button @click="otroPlan()" v-if="showButton">Seleccionar otro plan</button>
-      </div>
+          <div v-if="show">
+            <button @click="otroPlan()" v-if="showButton">Seleccionar otro plan</button>
+          </div>
 
-      <div class="noSeleccionado" v-if="show">
-        <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[0]]></planTemplate>
-        <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[1]]></planTemplate>
-        <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[2]]></planTemplate>
-      </div>
+          <div class="noSeleccionado" v-if="show">
+            <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[0]]></planTemplate>
+            <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[1]]></planTemplate>
+            <planTemplate class="secundario" v-if="otrosPlanes" :data=planes[otros[2]]></planTemplate>
+          </div>
 
+        </div>-->
+      <p class="botonVolver" v-if="show" @click="volverAFormulario()">VOLVER A FORMULARIO</p>
     </div>
-    <p class="botonVolver" v-if="show" @click="volverAFormulario()">VOLVER A FORMULARIO</p>
     <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Formulario from "../components/Formulario";
-import planTemplate from "../components/planTemplate.vue"
+//import planTemplate from "../components/planTemplate.vue"
 import {planes} from "../assets/js/planes";
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Plan from "../components/Plan";
 
 export default {
   name: "RecomendacionView",
   components: {
     Formulario,
-    planTemplate,
+    //planTemplate,
+    Plan,
     Header,
     NavBar,
     Footer
@@ -50,10 +66,8 @@ export default {
       show: false,
       puntaje: 0,
       planes: planes,
-      array: null,
-      otros: [],
-      otrosPlanes: false,
       showButton: true,
+      isActive: null
     }
   },
   methods: {
@@ -62,25 +76,17 @@ export default {
       this.show = true
 
       if (this.puntaje <= 5) {
-        this.array = 0
-        this.otros = [1,2,3]
+        this.isActive = 0
       }
       else if (this.puntaje > 5 && this.puntaje <=10){
-        this.array = 1
-        this.otros = [0,2,3]
+        this.isActive = 1
       }
       else if (this.puntaje > 10 && this.puntaje <= 15){
-        this.array = 2
-        this.otros = [0,1,3]
+        this.isActive = 2
       }
       else{
-        this.array = 3
-        this.otros = [0,1,2]
+        this.isActive = 3
       }
-    },
-    otroPlan() {
-      this.otrosPlanes = true;
-      this.showButton = false;
     },
     volverAFormulario(){
       this.show = false;
@@ -90,38 +96,27 @@ export default {
 
 </script>
 
-<style scoped>
-#form-container{
-  padding:20px;
-}
-.form-data{
-  margin:20px;
-}
-.todosPlanes{
-  display:flex;
-  flex-direction:column;
-}
-.noSeleccionado{
-  display:flex;
-  justify-content: center;
-  align-items: baseline;
-}
-.principal{
-  font-size: 25px;
-  border: 4px dotted black;
-}
-.secundario{
-  flex-basis:20%;
-}
+    <style scoped>
 
-button {
-  background-color: #D90368;
-  color: white;
-  border-radius: 100px;
-  font-size: 20px;
-  border: 3px solid #D90368;
-  padding:10px;
-  cursor: pointer;
-  margin-bottom:20px;
-}
-</style>
+      .active{
+        background-color: rgba(217, 3, 104, 0.2);
+      }
+
+      .planes-container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-bottom:50px;
+      }
+      .plan-container{
+        display:flex;
+        border:2px solid black;
+        flex-direction:column;
+        justify-content: space-between;
+        padding:0px 5px 20px 5px;
+        align-items: center;
+        width:22%;
+        height:550px;
+      }
+    </style>
