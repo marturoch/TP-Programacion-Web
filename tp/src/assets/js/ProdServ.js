@@ -49,19 +49,19 @@ const alimentos = [
         name: "ROYAL CANIN MAXI ADULT DERMACONFORT",
         image: "ROYAL-CANIN-MAXI-ADULT-DERMACONFORT.png",
         price: 5690,
-        description:"descripcion"
+        description:"Alimento completo para perros, adultos y maduros de razas grandes (de 26 a 44 kg) - A partir de los 15 meses de edad - Perros propensos a la irritación cutánea y a los picores- 10kg"
     },
     {
         name: "ROYAL CANIN MAXI ADULT STERILIZED",
         image: "ROYAL-CANIN-MAXI-ADULT-STERILIZED.png",
         price: 5390,
-        description:"Mantenimiento del peso idel. Para perros adultos castrados de talla grande  -75kg"
+        description:"Mantenimiento del peso ideal. Para perros adultos castrados de talla grande  -7,5kg"
     },
     {
         name: "ROYAL CANIN MAXI ADULT WEIGHT CARE",
         image: "Royal-Canin-maxi-adult-weight-care.png",
         price: 5690,
-        description:"descripcion snacks"
+        description:"Ayuda a limitar la ganancia de peso -10kg"
     },
     {
         name: "ROYAL CANIN MEDIUM ADULT DERMACONFORT",
@@ -73,13 +73,13 @@ const alimentos = [
         name: "ROYAL CANIN MEDIUM ADULT STERILIZED",
         image: "ROYAL-CANIN-MEDIUM-ADULT-STERILIZED.png",
         price: 5690,
-        description:"descripcion snacks"
+        description:"Alimento completo para perros adultos y maduros de razas medianas (de 11 a 25 kg) - A partir de los 12 meses de edad - Perros propensos a la irritación cutánea y al picor -10kg"
     },
     {
         name: "ROYAL CANIN MEDIUM ADULT WEIGHT CARE",
         image: "Royal-Canin-medium-adult-weight-care.png",
         price: 5690,
-        description:"descripcion snacks"
+        description:"El sobrepeso puede estar asociado a complicaciones en la salud. Si tu perro tiene tendencia a aumentar de peso, podés ayudarlo a mantenerse en forma y bien alimentado. Alimento para perros adultos y maduros de talla mediana (de 11 a 25 kg). A partir de los 12 meses de edad. Recomendado para perros con tendencia al sobrepeso - 10kg"
     },
     {
         name: "PRO PLAN ACTIVE MIND RAZAS MEDIANAS Y GRANDES",
