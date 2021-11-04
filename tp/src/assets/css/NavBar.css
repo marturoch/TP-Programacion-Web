@@ -30,4 +30,13 @@
     background: #D90368;
     border-radius: 100px;
     font-weight: bold;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.cuentaYcarrito{
+    border:3px solid #F75C03;
+    border-radius:30px;
+    display:flex;
+    padding:8px;
 }
