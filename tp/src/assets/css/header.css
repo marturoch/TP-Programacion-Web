@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 #header_1 {
     background-color: black;
     color: white;
     font-size: 12px;
     padding: 14px 14px;
     text-align: left;
+
+
 }
 #header_2 {
     background-color: #F75C03;
@@ -12,6 +16,7 @@
     position: relative;
     text-align: left;
     position: relative;
+
 }
 
 img, p {
@@ -19,7 +24,6 @@ img, p {
 }
 
 h1 {
-    font-family: Arial;
     font-size: 55px;
     color: black;
     display: inline-flex;
@@ -27,6 +31,7 @@ h1 {
 #name {
     display: inline-flex;
     position: absolute;
+    font-family: 'Rock Salt', cursive;
 }
 #subtitle{
     display: inline-flex;

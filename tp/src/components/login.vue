@@ -42,6 +42,7 @@ export default {
     registro(){
       this.registrarse = true;
       console.log(this.registrarse)
+
     },
     logeo(){
       this.registrarse = false;

@@ -11,7 +11,7 @@
         <img src="../assets/img/logo.png" alt="logo" width="200px">
       </router-link>
       <div id = "name">
-        <h1>DOG CARE</h1>
+        <h1 >DOG CARE ·</h1>
       </div>
       <div id="subtitle">
         <h2>Seguros Para Perros</h2>
