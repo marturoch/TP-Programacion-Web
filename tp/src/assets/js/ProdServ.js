@@ -137,7 +137,7 @@ const snacks = [
         name: "HUESO DE CUERO",
         image: "hueso-de-cuero.png" ,
         price: "$380",
-        description:"descripcion snacks"
+        description: "Para la higiene dental, sin productos químicos ni conservantes artificiales. Los huesos de carne de vacuno no son sólo una buena solución contra el aburrimiento. Con este hueso se fomenta el cuidado natural de los dientes y se fortalece la musculatura maxilar. Y además de fomentar el movimiento natural de masticar, su perro refrescará su aliento mediante el mascar intensivo y prolongado."
     },
     {
         name: "MINI ROLL (10 u)",
@@ -207,6 +207,7 @@ const juguetes = [
         name: "Juguetes KONG Cachorros/Puppy",
         image: "kong-cachorrospuppy.png" ,
         price: "$680"
+        description: "El juguete para perros Puppy KONG está adaptado para los dientes de leche de un cachorro que está creciendo; su exclusiva fórmula de caucho completamente natural es la más suave de la línea de juguetes de caucho KONG."
     },
     {
         name: "Pelota KONG Ball",
@@ -217,11 +218,13 @@ const juguetes = [
         name: "Hueso KONG Puppy/Cachorro",
         image: "kong-puppycachorro.png" ,
         price: "$790"
+        description: "El KONG Puppy Goodie Bone™ es ideal para aquellos cachorros que están aprendiendo a masticar. Fabricado con el exclusivo caucho para cachorros KONG Classic, este hueso satisface la necesidad instintiva de masticar y, a la vez, calma el dolor en dientes y encías."
     },
     {
         name: "Ice - Aro Congelado",
         image: "ice-aro-congelado.png" ,
         price: "$1420"
+        description: "El Hueso Congelado de la Línea ICE está fabricado con goma TPR no tóxica.Es un juguete resistente, seguro y extremadamente duradero.Diseñado para que su mascota mastique, juegue y se refresque a pura diversión.Ideal para cachorros de dentición.Requiere 3 horas de freezer.
     },
     {
         name: "Soga 5 Nudos",
