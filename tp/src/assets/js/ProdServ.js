@@ -201,6 +201,7 @@ const juguetes = [
         name: "Juguete KONG Extreme",
         image: "kong-extreme.png" ,
         price: "$680"
+        description: "El juguete para perros KONG Extreme es un ejemplo del caucho más resistente de KONG. El KONG Extreme está diseñado para los masticadores más tenaces, aporta beneficios y ayuda a satisfacer las necesidades instintivas de los perros."
     },
     {
         name: "Juguetes KONG Cachorros/Puppy",
