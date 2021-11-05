@@ -131,7 +131,7 @@ const snacks = [
         name: "DONA CHICA",
         image: "dona-chica.png" ,
         price: "$110",
-        description:"descripcion snacks"
+        description: "Comestibles de cuero ideal para la limpieza dental y estomacal. Presentación chico."
     },
     {
         name: "HUESO DE CUERO",
@@ -193,47 +193,40 @@ const juguetes = [
     {
         name: "juguete para perros KONG Classic",
         image: "kong-classic.png" ,
-        price: "$680",
+        price: "$680"
         description: "Es para morder, para aventar, rebotar, jugar, entretener a tu perro y mantenerlo ocupado."
 
     },
     {
         name: "Juguete KONG Extreme",
         image: "kong-extreme.png" ,
-        price: "$680",
+        price: "$680"
         description: "El juguete para perros KONG Extreme es un ejemplo del caucho más resistente de KONG. El KONG Extreme está diseñado para los masticadores más tenaces, aporta beneficios y ayuda a satisfacer las necesidades instintivas de los perros."
     },
     {
         name: "Juguetes KONG Cachorros/Puppy",
         image: "kong-cachorrospuppy.png" ,
-        price: "$680",
-        description:"El juguete para perros Puppy KONG está adaptado para los dientes de leche de un cachorro que está creciendo; su exclusiva fórmula de caucho completamente natural es la más suave de la línea de juguetes de caucho KONG."
+        price: "$680"
     },
     {
         name: "Pelota KONG Ball",
         image: "kong-ball.png" ,
-        price: "$560",
-        description:"¡La KONG Ball es la mejor aliada para el juego de buscar y recoger! El caucho KONG Classic es resistente, natural y flexible, lo que fomenta un juego saludable e interactivo y ofrece un gran rebote a la hora de jugar a buscar y recoger.""
+        price: "$560"
     },
     {
         name: "Hueso KONG Puppy/Cachorro",
         image: "kong-puppycachorro.png" ,
-        price: "$790",
-        description:"El KONG Puppy Goodie Bone es ideal para aquellos cachorros que están aprendiendo a masticar. Fabricado con el exclusivo caucho para cachorros KONG Classic, este hueso satisface la necesidad instintiva de masticar y, a la vez, calma el dolor en dientes y encías."
-
+        price: "$790"
     },
     {
         name: "Ice - Aro Congelado",
         image: "ice-aro-congelado.png" ,
-        price: "$1420",
-        description:"El Hueso Congelado de la Línea ICE está fabricado con goma TPR no tóxica.Es un juguete resistente, seguro y extremadamente duradero. Diseñado para que su mascota mastique, juegue y se refresque a pura diversión,ideal para cachorros de dentición.Requiere 3 horas de freezer."
-
+        price: "$1420"
     },
     {
         name: "Soga 5 Nudos",
         image: "soga-nudos.png" ,
-        price: "$1580",
-        description:"Colorido hueso realizado con soga de algodón con 5 nudos. Largo 50 cms."
+        price: "$1580"
     },
 ]
 
@@ -241,51 +234,51 @@ const higiene = [
     {
         name: "SHAMPOO A BASE DE ALOE & AVENA",
         image: "Shampoo-a-base-de-Aloe-Avena.png",
-        price: "$340",
+        price: "$340"
         description: "Para mascotas ha sido formulado para proveer un rápido y prolongado alivio del prurito - 200gr"
     },
     {
         name: "SHAMPOO A BASE DE PEROXIDO DE BENZOLIO",
         image: "Shampoo-a-base-de-Peroxido-de-Benzolio.png",
-        price: "$390",
+        price: "$390"
         description: "Se utiliza en Piodermias, Procesos seborreicos oleosos, Foliculitis, Impétigo, Acné felino-200gr
 
     },
     {
         name: "SHAMPOO ANTISEBORREICO",
         image: "Shampoo-Antiseborreico.png",
-        price: "$340",
+        price: "$340"
         description: "Shampoo potenciado antiseborreico de higiene general, antiséptico, astringente, antienzimático y queratolitico. Sirve para tratamientos contra la microbicida, fungicida y sarna."
 
     },
     {
         name: "SHAMPOO ANTISEPTICO PH CONTROLADO PARA CACHORROS",
         image: "Shampoo-Antiseptico-ph-Controlado-para-Cachorros.png",
-        price: "$260",
+        price: "$260"
         description: "El shampoo para cachorros sirve para la higiene en general de cachorros y animales de piel delicada, dermatitis seca descamativa. Antiséptico y desodorizante. Usado en caninos y felinos, especialmente indicado para expositores."
     },
     {
         name: "SHAMPOO CON ALGAS VITALIZADOR ABRILLANTADOR",
         image: "Shampoo-con-Algas.png",
-        price: "$330",
+        price: "$330"
         description: " Shampoo de higiene diaria da brillo y salud al pelaje de tus mascotas, tiene un efecto refrescante y suavizado del pelaje. Proporciona hidratación gracias a sus ingredientes de algas – aloe – avena – menta. Además lo mantiene protegido de pulgas y garrapatas.-250ml"
     },
     {
         name: "SHAMPOO AQUA ECTO GARRAPATICIDA",
         image: "Shampoo-con-Ectol-Garrapaticida.png",
-        price: "$330",
+        price: "$330"
         description: "es humectante, y se usa para cachorros (caninos y felinos) mayores de 30 días y adultos cuya dermatitis alérgica por pulgas puedan conducir a dermatosis descamativas - 250ml"
     },
     {
         name: "SHAMPOO DOUBLE CON ENJUAGUE 2 EN 1",
         image: "Shampoo-con-Enjuague-2-en-1.png",
-        price: "$340",
+        price: "$340"
         description: "Baños higienicos periodicos. control de garrapatas, pulgas y piojos.en caninos mayores de 4 meses de edad.No usar en cachorros de menos de 4 meses ni en gatos. Repetir el baño cada 7 dias. tres cucharadas soperas son suficientes para realizar el baño de un canino mediano con pelo de mediana longitud.-250ml"
     },
     {
         name: "SHAMPOO CON GLICERINA",
         image: "Shampoo-con-Glicerina.png",
-        price: "$260",
+        price: "$260"
         description: "Esencial para lograr una revitalización del manto pilífero.Vitalizador y abrillantador. Caninos y felinos. Dejar actuar 5 minutos. Ph controlado ideal para todo tipo de pieles.Uso como prelavado para posterior uso de shampoo de belleza, tonalizador o tratamiento - 250ml"
     }]
 
