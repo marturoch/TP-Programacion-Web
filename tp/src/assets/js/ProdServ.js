@@ -232,41 +232,51 @@ const higiene = [
         name: "SHAMPOO A BASE DE ALOE & AVENA",
         image: "Shampoo-a-base-de-Aloe-Avena.png",
         price: "$340"
+        description: "Para mascotas ha sido formulado para proveer un rápido y prolongado alivio del prurito - 200gr"
     },
     {
         name: "SHAMPOO A BASE DE PEROXIDO DE BENZOLIO",
         image: "Shampoo-a-base-de-Peroxido-de-Benzolio.png",
         price: "$390"
+        description: "Se utiliza en Piodermias, Procesos seborreicos oleosos, Foliculitis, Impétigo, Acné felino-200gr
+
     },
     {
         name: "SHAMPOO ANTISEBORREICO",
         image: "Shampoo-Antiseborreico.png",
         price: "$340"
+        description: "Shampoo potenciado antiseborreico de higiene general, antiséptico, astringente, antienzimático y queratolitico. Sirve para tratamientos contra la microbicida, fungicida y sarna."
+
     },
     {
         name: "SHAMPOO ANTISEPTICO PH CONTROLADO PARA CACHORROS",
         image: "Shampoo-Antiseptico-ph-Controlado-para-Cachorros.png",
         price: "$260"
+        description: "El shampoo para cachorros sirve para la higiene en general de cachorros y animales de piel delicada, dermatitis seca descamativa. Antiséptico y desodorizante. Usado en caninos y felinos, especialmente indicado para expositores."
     },
     {
         name: "SHAMPOO CON ALGAS VITALIZADOR ABRILLANTADOR",
         image: "Shampoo-con-Algas.png",
         price: "$330"
+        description: " Shampoo de higiene diaria da brillo y salud al pelaje de tus mascotas, tiene un efecto refrescante y suavizado del pelaje. Proporciona hidratación gracias a sus ingredientes de algas – aloe – avena – menta. Además lo mantiene protegido de pulgas y garrapatas.-250ml"
     },
     {
         name: "SHAMPOO AQUA ECTO GARRAPATICIDA",
         image: "Shampoo-con-Ectol-Garrapaticida.png",
         price: "$330"
+        description: "es humectante, y se usa para cachorros (caninos y felinos) mayores de 30 días y adultos cuya dermatitis alérgica por pulgas puedan conducir a dermatosis descamativas - 250ml"
     },
     {
         name: "SHAMPOO DOUBLE CON ENJUAGUE 2 EN 1",
         image: "Shampoo-con-Enjuague-2-en-1.png",
         price: "$340"
+        description: "Baños higienicos periodicos. control de garrapatas, pulgas y piojos.en caninos mayores de 4 meses de edad.No usar en cachorros de menos de 4 meses ni en gatos. Repetir el baño cada 7 dias. tres cucharadas soperas son suficientes para realizar el baño de un canino mediano con pelo de mediana longitud.-250ml"
     },
     {
         name: "SHAMPOO CON GLICERINA",
         image: "Shampoo-con-Glicerina.png",
         price: "$260"
+        description: "Esencial para lograr una revitalización del manto pilífero.Vitalizador y abrillantador. Caninos y felinos. Dejar actuar 5 minutos. Ph controlado ideal para todo tipo de pieles.Uso como prelavado para posterior uso de shampoo de belleza, tonalizador o tratamiento - 250ml"
     }]
 
 export{
