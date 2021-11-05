@@ -17,8 +17,7 @@ const productos = [
     {
         name:"petFind",
         image:"petfind.jpg",
-        description:"Descripcion petFind"
-
+        description:"Localizador bajo el formato de “medallita” con nombre y teléfono. Mediante señales de bluetooth se podrá conectar el “AirTag”  a dispositivos cercanos que tengan descargada nuestra app y poder visualizar desde un mapa la ubicación en tiempo real"
     },
     {
         name:"higiene",
@@ -143,7 +142,10 @@ const snacks = [
         name: "MINI ROLL (10 u)",
         image: "mini-roll.png" ,
         price: "$600",
-        description:"descripcion snacks"
+        description:"Previenen problemas dentales, ya que las diferentes formas y tamaños de los huesos masticables ayudan a reducir la acumulación de sarro en los perros, ya que ayudan a eliminar la placa bacteriana.\n" +
+            "\n" +
+            "Alivian el estrés y la frustración, Ayudan a saciar el instinto innato de los perros de morder y masticar, siendo una excelente herramienta para ellos con la que aliviar su estrés.\n" +
+            "\n"
     },
     {
         name: "PEDIGREE RODEO SABOR CARNE",
@@ -164,10 +166,10 @@ const snacks = [
         description:"Biscuits sabor pollo horneadas - 120gr"
     },
     {
-        name: "CUIDADO DENTAL DIARIO DENTAL CLEAN (400gr)",
+        name: "CUIDADO DENTAL DIARIO DENTAL CLEAN",
         image: "Cuidado-Dental-Diario-Dental-Clean.png" ,
         price: "$640",
-        description:"descripcion snacks"
+        description:"La higiene dental ayuda a prevenir enfermedades y mejora el aliento de tu mascota. Como sabemos lo tedioso que es realizar cotidianamente la limpieza dental de tu perro, desarrollamos Mon Ami Dental, una solución para este problema. El uso diario y continuado de Mon Ami Dental ayudará a que tu mascota mantenga su salud bucal de manera práctica, fácil y segura.- 400gr"
     },
     {
         name: "CUIDADO DENTAL DIARIO DENTAL MILK STICKS ",
@@ -206,30 +208,38 @@ const juguetes = [
     {
         name: "Juguetes KONG Cachorros/Puppy",
         image: "kong-cachorrospuppy.png" ,
-        price: "$680"
+        price: "$680",
         description: "El juguete para perros Puppy KONG está adaptado para los dientes de leche de un cachorro que está creciendo; su exclusiva fórmula de caucho completamente natural es la más suave de la línea de juguetes de caucho KONG."
     },
     {
         name: "Pelota KONG Ball",
         image: "kong-ball.png" ,
-        price: "$560"
+        price: "$560",
+        description: "La KONG Ball es la pelota más duradera y que mejor rebota del mercado.\n" +
+            "\n" +
+            "El juguete perfecto para los perros a los que les gusta buscar, recoger y masticar.\n" +
+            "\n" +
+            "- Hecho de nuestra goma duradera KONG Classic\n" +
+            "\n" +
+            "- Perfecto para juegos de buscar y recoger o para sesiones de masticación"
     },
     {
         name: "Hueso KONG Puppy/Cachorro",
         image: "kong-puppycachorro.png" ,
-        price: "$790"
+        price: "$790",
         description: "El KONG Puppy Goodie Bone™ es ideal para aquellos cachorros que están aprendiendo a masticar. Fabricado con el exclusivo caucho para cachorros KONG Classic, este hueso satisface la necesidad instintiva de masticar y, a la vez, calma el dolor en dientes y encías."
     },
     {
         name: "Ice - Aro Congelado",
         image: "ice-aro-congelado.png" ,
-        price: "$1420"
-        description: "El Hueso Congelado de la Línea ICE está fabricado con goma TPR no tóxica.Es un juguete resistente, seguro y extremadamente duradero.Diseñado para que su mascota mastique, juegue y se refresque a pura diversión.Ideal para cachorros de dentición.Requiere 3 horas de freezer.
+        price: "$1420",
+        description: "El Hueso Congelado de la Línea ICE está fabricado con goma TPR no tóxica.Es un juguete resistente, seguro y extremadamente duradero.Diseñado para que su mascota mastique, juegue y se refresque a pura diversión.Ideal para cachorros de dentición.Requiere 3 horas de freezer."
     },
     {
         name: "Soga 5 Nudos",
         image: "soga-nudos.png" ,
-        price: "$1580"
+        price: "$1580",
+        description:"La línea de sogas FUN se diseñó para que tu Pichicho libere su stress mientras juegan en el clásico “tira y afloje."
     },
 ]
 
