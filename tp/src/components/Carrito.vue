@@ -8,7 +8,7 @@
         <div id="carrito">
           <form>
             <table>
-              <thead>
+              <thead class="encabezado">
                 <tr>
                   <th class = "eliminar"></th>
                   <th class="imagen"></th>
@@ -35,6 +35,55 @@
       <div>
         <h2>Total del carrito</h2>
       </div>
+      <div class="informacion_cliente">
+        <br>
+        <h3>Detalles del cliente </h3>
+        <form action="">
+          <div id="nom_y_ap">
+            <div>
+              <label for="nombre">NOMBRE *</label><br>
+              <input type="name" name="" id="nombre" autocomplete>
+            </div>
+            <div>
+              <label for="apellido">APELLIDO *</label><br>
+              <input type="family-name" name="" id="apellido" autocomplete>
+            </div>
+          </div>
+
+          <div id="direc">
+            <label for="direc">DIRECCIÓN</label><br>
+            <input autocomplete type="street-address" name="" id="direc" placeholder="Nombre y Número de la Calle">
+          </div>
+
+          <div id="localidad">
+            <label for="localidad">LOCALIDAD/CIUDAD *</label><br>
+            <input autocomplete type="text" name="" id="localidad">
+          </div>
+
+          <div id="codigo_postal">
+            <label for="cp">CÓDIGO POSTAL</label><br>
+            <input autocomplete type="postal-code" name="" id="cp">
+          </div>
+
+          <div id="telefono">
+            <label for="tel">TELÉFONO</label><br>
+            <input autocomplete type="tel" name="" id="tel">
+          </div>
+
+          <div id="email">
+            <label for="email">DIRECCIÓN DE CORREO ELECTRÓNICO</label><br>
+            <input autocomplete type="email" name="" id="email">
+          </div>
+          <br><br><br>
+          <div id="nota">
+            <label for="nota">NOTAS DEL PEDIDO (OPCIONAL)</label><br>
+            <br>
+            <textarea name = "comentarios" rows = "10" cols = "50"></textarea>
+            <br><br>
+          </div>
+
+        </form>
+      </div>
     </div>
     <Footer></Footer>
   </div>
@@ -57,24 +106,6 @@ export default {
 
 <style scoped>
 
-#carrito {
-  color: black;
-  align-items: center;
-}
-table {
-  background-color: white;
-  text-align: center;
-  align-items: center;
-  width: 1200px;
-  border: #D90368;
-}
-
-.carrito-container {
-  display: inline-block;
-  border-width: 10px;
-  border-color: black;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: black
-}
+@import "../assets/css/carrito.css"
 
 </style>
