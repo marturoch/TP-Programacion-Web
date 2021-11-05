@@ -116,7 +116,7 @@ const alimentos = [
         name: "PRO PLAN PUPPY LARGE BREED",
         image: "Pro-Plan-Puppy-Large-Breed-1.png",
         price: "$6790",
-        description:"descripcion alimento"
+        description: "Reforzar los sistemas naturales de proteccíon de tu perro y  satisfacer las necesidades metabólicas especificas basadas en el tamaño de su raza - 7,5kg"
     },
     {
         name: "PRO PLAN PUPPY COMPLETE",
@@ -185,7 +185,7 @@ const snacks = [
         name: "SNACK SALUDABLE DE POLLO GRILLÉ ",
         image: "Snack-Saludable-de-Pollo-Grille.png" ,
         price: "$800",
-        description:"Ingredientes aptos para el consumo humano, libre de soja, libre de subproductos -400gr"
+        description: "Ingredientes aptos para el consumo humano, libre de soja, libre de subproductos -400gr"
     }
 ]
 
@@ -194,6 +194,8 @@ const juguetes = [
         name: "juguete para perros KONG Classic",
         image: "kong-classic.png" ,
         price: "$680"
+        description: "Es para morder, para aventar, rebotar, jugar, entretener a tu perro y mantenerlo ocupado."
+
     },
     {
         name: "Juguete KONG Extreme",
