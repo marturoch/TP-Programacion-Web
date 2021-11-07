@@ -224,7 +224,7 @@ const juguetes = [
         name: "Ice - Aro Congelado",
         image: "ice-aro-congelado.png" ,
         price: "$1420" ,
-        description: "El Hueso Congelado de la Línea ICE está fabricado con goma TPR no tóxica.Es un juguete resistente, seguro y extremadamente duradero.Diseñado para que su mascota mastique, juegue y se refresque a pura diversión.Ideal para cachorros de dentición.Requiere 3 horas de freezer.
+        description: "El Hueso Congelado de la Línea ICE está fabricado con goma TPR no tóxica.Es un juguete resistente, seguro y extremadamente duradero.Diseñado para que su mascota mastique, juegue y se refresque a pura diversión.Ideal para cachorros de dentición.Requiere 3 horas de freezer."
     },
     {
         name: "Soga 5 Nudos",
