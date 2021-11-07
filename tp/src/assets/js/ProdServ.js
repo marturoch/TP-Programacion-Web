@@ -206,7 +206,7 @@ const juguetes = [
     {
         name: "Juguetes KONG Cachorros/Puppy",
         image: "kong-cachorrospuppy.png" ,
-        price: "$680"
+        price: "$680",
         description: "El juguete para perros Puppy KONG está adaptado para los dientes de leche de un cachorro que está creciendo; su exclusiva fórmula de caucho completamente natural es la más suave de la línea de juguetes de caucho KONG."
     },
     {
@@ -217,13 +217,13 @@ const juguetes = [
     {
         name: "Hueso KONG Puppy/Cachorro",
         image: "kong-puppycachorro.png" ,
-        price: "$790"
+        price: "$790" ,
         description: "El KONG Puppy Goodie Bone™ es ideal para aquellos cachorros que están aprendiendo a masticar. Fabricado con el exclusivo caucho para cachorros KONG Classic, este hueso satisface la necesidad instintiva de masticar y, a la vez, calma el dolor en dientes y encías."
     },
     {
         name: "Ice - Aro Congelado",
         image: "ice-aro-congelado.png" ,
-        price: "$1420"
+        price: "$1420" ,
         description: "El Hueso Congelado de la Línea ICE está fabricado con goma TPR no tóxica.Es un juguete resistente, seguro y extremadamente duradero.Diseñado para que su mascota mastique, juegue y se refresque a pura diversión.Ideal para cachorros de dentición.Requiere 3 horas de freezer.
     },
     {
