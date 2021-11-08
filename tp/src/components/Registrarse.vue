@@ -17,13 +17,12 @@
       <div class="form-data">
         <label>CONTRASEÑA: </label><input type="password" required>
       </div>
-
-      <div class="form-data">
-        <input type="submit" value="REGISTRARSE">
+      <div>
+        <input type="button" value="REGISTRARSE" class="registro">
       </div>
 
     </form>
-    <p v-if="logearse === false">Ya tienes cuenta? Haz Log in<span @click="$emit('login', true)"> aqui</span></p>
+    <p v-if="logearse === false">Ya tienes cuenta? Inicia sesión 👉<span @click="$emit('login', true)">AQUI👈</span></p>
     <login v-if="logearse"></login>
   </div>
 </template>

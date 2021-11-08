@@ -12,7 +12,48 @@
     margin:20px;
 }
 
+label, input {
+    flex-direction:column;
+    margin: 10px;
+    padding: 10px;
+}
 
+input {
+    box-sizing: border-box;
+    width: 300px;
+    line-height: 2px;
+    background-color: rgba(0,0,0,.07)
+}
+
+.form-container {
+
+    margin: auto;
+    width: 50%;
+    background-color: rgba(0,0,0,.04);
+}
+
+.form-data{
+    margin:20px;
+
+}
+
+.registro {
+    text-decoration: none;
+    color:white;
+    background-color: #820263;
+    border-radius: 20px;
+    padding:10px;
+    cursor: pointer;
+    height: 50px;
+    width: 140px
+}
+.registro:hover {
+    cursor: pointer;
+}
+
+span:hover {
+    cursor:pointer
+}
 
 
 
