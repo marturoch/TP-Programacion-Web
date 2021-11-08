@@ -4,13 +4,13 @@
     <NavBar></NavBar>
     <form class="form-container" v-if="registrarse === false">
       <div class="form-data">
-        <label>MAIL: </label><input type="email" required>
+        <label>MAIL <span class="required-field">*</span></label><input type="email" required>
       </div>
       <div class="form-data">
-        <label>CONTRASEÑA: </label><input type="password" required>
+        <label>CONTRASEÑA <span class="required-field">*</span></label><input type="password" required>
       </div>
       <div>
-        <input type="button" value="Login" class="registro">
+        <input type="submit" value="Login" class="registro">
       </div>
     </form>
     <p v-if="registrarse === false">No tienes cuenta? Registrate 👉<span @click="registro()">AQUI👈</span></p>

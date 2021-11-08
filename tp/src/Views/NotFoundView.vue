@@ -1,12 +1,19 @@
 <template>
   <div>
-    <h1>Not found :(</h1>
+    <Header></Header>
+    <div>
+      <h2>Not found :(</h2>
+    </div>
   </div>
 </template>
 
 <script>
+import Header from "../components/Header"
 export default {
-  name: "NotFoundView"
+  name: "NotFoundView",
+  components: {
+    Header
+  }
 }
 </script>
 

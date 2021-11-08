@@ -7,9 +7,11 @@
       <Plan class="plan-container" v-for="(plan, index) in planes" v-bind:key="index"
             v-bind:name="plan.name"
             v-bind:tipo="plan.tipo"
+            v-bind:precio="plan.precio"
             v-bind:item1="plan.item1"
             v-bind:item2="plan.item2"
-            v-bind:item3="plan.item3">
+            v-bind:item3="plan.item3"
+            v-on:agregar="AgregarAlCarrito($event)">
       </Plan>
     </div>
     <RecomendacionBoton></RecomendacionBoton>
@@ -38,6 +40,11 @@ export default {
   data(){
     return {
       planes: planes
+    }
+  },
+  methods: {
+    AgregarAlCarrito(item) {
+      this.$emit("PushItem", item)
     }
   }
 }

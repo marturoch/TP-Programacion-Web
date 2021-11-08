@@ -1,5 +1,5 @@
 <template>
-    <div class="planes">
+    <div class="planes" >
       <div class ="info">
         <h2 class="planes-title">·· {{name}} ··</h2>
         <h4 class="planes-tipo">
@@ -12,7 +12,7 @@
           <p>● {{item3}}</p>
         </div>
       </div>
-      <p class="seleccionar">SELECCIONAR </p>
+      <p class="seleccionar" v-on:click="agregar(name, price)">SELECCIONAR </p>
     </div>
 </template>
 
@@ -27,6 +27,11 @@ export default {
     "item3",
     "precio",
   ],
+  methods: {
+    agregar(name,precio) {
+      this.$emit("agregar", {name: name, price: precio})
+    }
+  }
 }
 </script>
 

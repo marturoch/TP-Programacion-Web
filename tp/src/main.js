@@ -18,6 +18,8 @@ import Servicio from "./components/Servicio";
 import NotFoundView from "./Views/NotFoundView";
 import login from "./components/login";
 import Carrito from "./components/Carrito";
+import Registrarse from "./components/Registrarse";
+import RegistroExitoso from "./components/RegistroExitoso";
 
 const routes = [
   {path: '/', name: "Home", component:HomeView},
@@ -31,6 +33,8 @@ const routes = [
   {path: '/login', name:"Login", component:login},
   {path: '/perfil', name:"Perfil", component:PerfilView},
   {path: '/carrito', name:"Carrito", component:Carrito},
+  {path: '/registrarse', name:"Registro", component:Registrarse},
+  {path: '/registrarse/exitoso', name:"RutaRegistroExitoso", component:RegistroExitoso},
   {path: '/*', component:NotFoundView}
 ]
 
