@@ -4,6 +4,11 @@
       <div class ="enviogratis">
         <p>ENVIO SIN CARGO EN COMPRAS SUPERIORES A $6.000</p>
       </div>
+      <div>
+        <form>
+          <input type="search">
+        </form>
+      </div>
 
       <div class="cuentaYcarrito">
         <router-link v-if="logged === false" class="login" to="/login">INGRESAR/REGISTRARSE</router-link>
