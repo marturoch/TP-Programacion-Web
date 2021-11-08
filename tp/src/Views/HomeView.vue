@@ -4,6 +4,7 @@
     <NavBar></NavBar>
     <banners></banners>
     <Main></Main>
+    <minicarrito></minicarrito>
     <RecomendacionBoton></RecomendacionBoton>
     <Footer></Footer>
   </div>
@@ -16,10 +17,12 @@ import Main from "../components/Main";
 import Footer from "../components/Footer";
 import RecomendacionBoton from "../components/RecomendacionBoton";
 import banners from "../components/banners";
+import Minicarrito from "../components/minicarrito";
 
 export default {
   name: 'HomeView.vue',
   components: {
+    Minicarrito,
     banners,
     Header,
     NavBar,

@@ -11,7 +11,7 @@
             v-bind:item1="plan.item1"
             v-bind:item2="plan.item2"
             v-bind:item3="plan.item3"
-            v-on:addItem="($event)">
+            v-on:addItem="addItemToCart($event)">
       </Plan>
     </div>
     <RecomendacionBoton></RecomendacionBoton>
@@ -21,15 +21,15 @@
 </template>
 
 <script>
-import Header from "../components/Header";
-import NavBar from "../components/NavBar";
-import Plan from "../components/Plan";
+import Header from "./Header";
+import NavBar from "./NavBar";
+import Plan from "./Plan";
 import {planes} from "../assets/js/planes";
-import RecomendacionBoton from "../components/RecomendacionBoton";
-import Footer from "../components/Footer";
+import RecomendacionBoton from "./RecomendacionBoton";
+import Footer from "./Footer";
 
 export default {
-  name: "PlanesView",
+  name: "PedidoPlanes",
   components: {
     RecomendacionBoton,
     Plan,
@@ -40,6 +40,11 @@ export default {
   data(){
     return {
       planes: planes
+    }
+  },
+  methods: {
+    addItemToCart (item) {
+      this.$emit("pushItem", item)
     }
   }
 }
@@ -67,6 +72,3 @@ export default {
 }
 
 </style>
-
-
-

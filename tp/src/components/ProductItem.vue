@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="producto">
-      <h4>{{nombre}}</h4>
-      <p>{{descripcion}}</p>
-      <img class="Menu-img" v-bind:src="require('../assets/img/prodServ/' + categoria + '/' + imagen)" width="100px">
-      <p id="precio">{{precio}}</p>
-      <p class="agregar">AGREGAR </p>
-    </div>
+      <div class="producto">
+        <h4>{{nombre}}</h4>
+        <p>{{descripcion}}</p>
+        <img class="Menu-img" v-bind:src="require('../assets/img/prodServ/' + categoria + '/' + imagen)" width="100px">
+       <p id="precio">${{precio}}</p>
+       <p class="agregar" v-on:click="addItem(name, price)">AGREGAR</p>
+      </div>
   </div>
 </template>
 
@@ -19,8 +19,14 @@ export default {
       "imagen",
       "precio",
       "descripcion"
-  ]
+  ],
+  methods: {
+    addItem(name,price) {
+      this.$emit("addItem", {name: name, price: price})
+    },
+  }
 }
+
 </script>
 
 <style scoped>

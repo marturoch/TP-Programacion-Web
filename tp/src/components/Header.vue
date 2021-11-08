@@ -8,6 +8,7 @@
         <router-link v-if="logged === false" class="login" to="/login">INGRESAR/REGISTRARSE</router-link>
         <router-link v-if="logged" class="miCuenta" to="/perfil">Mi Cuenta</router-link>
         <router-link v-if="logged===false" class="carrito" to="/carrito">CARRITO</router-link>
+        <router-link v-if="logged===false" class="carrito" to="/minicarrito">MINICARRITO</router-link>
       </div>
     </div>
     <div id="header_2">

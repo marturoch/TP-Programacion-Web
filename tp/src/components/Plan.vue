@@ -5,14 +5,14 @@
         <h4 class="planes-tipo">
           <strong>{{tipo}}</strong>
         </h4>
-        <p class="planes-precio">{{precio}}</p>
+        <p class="planes-precio">${{precio}}/mes</p>
         <div class="planes-info">
           <p>● {{item1}}</p>
           <p>● {{item2}}</p>
           <p>● {{item3}}</p>
         </div>
       </div>
-      <p class="seleccionar" v-on:click="agregar(name, price)">SELECCIONAR </p>
+      <p class="seleccionar" v-on:click="addItem(name, price)">SELECCIONAR </p>
     </div>
 </template>
 
@@ -28,8 +28,8 @@ export default {
     "precio",
   ],
   methods: {
-    agregar(name,precio) {
-      this.$emit("agregar", {name: name, price: precio})
+    addItem(name,price) {
+      this.$emit("addItem", {name: name, price: price})
     }
   }
 }

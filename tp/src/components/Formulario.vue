@@ -9,7 +9,8 @@
         </div>
 
         <div class="form-data">
-          <label>Fecha Nacimiento: </label><input type="date" v-model="date" required><br>
+          <label>Fecha Nacimiento: </label><input type="date" v-model="date" required>
+          <br>
         </div>
 
         <div class="form-data">

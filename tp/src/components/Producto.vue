@@ -2,6 +2,7 @@
 <div>
   <Header></Header>
   <NavBar></NavBar>
+  <minicarrito></minicarrito>
   {{info($route.params.nombre)}}
   <H1>{{$route.params.nombre}}</H1>
   <br>
@@ -17,8 +18,8 @@
                      v-bind:nombre="snack.name"
                      v-bind:imagen="snack.image"
                      v-bind:precio="snack.price"
-                     v-bind:descripcion="snack.description"
-                     v-bind:categoria="'snacks'">
+                     v-bind:categoria="'snacks'"
+                     v-on:addItem="addItemToCart($event)">
        </ProductItem>
      </div>
 
@@ -27,8 +28,8 @@
               v-bind:nombre="alimento.name"
               v-bind:imagen="alimento.image"
               v-bind:precio="alimento.price"
-              v-bind:descripcion="alimento.description"
-              v-bind:categoria="'alimentos'">
+              v-bind:categoria="'alimentos'"
+              v-on:addItem="addItemToCart($event)">
         </ProductItem>
       </div>
 
@@ -37,8 +38,8 @@
               v-bind:nombre="juguete.name"
               v-bind:imagen="juguete.image"
               v-bind:precio="juguete.price"
-              v-bind:descripcion="juguete.description"
-              v-bind:categoria="'juguetes'">
+              v-bind:categoria="'juguetes'"
+              v-on:addItem="addItemToCart($event)">
         </ProductItem>
       </div>
 
@@ -47,8 +48,8 @@
               v-bind:nombre="higiene.name"
               v-bind:imagen="higiene.image"
               v-bind:precio="higiene.price"
-              v-bind:descripcion="higiene.description"
-              v-bind:categoria="'higiene'">
+              v-bind:categoria="'higiene'"
+              v-on:addItem="addItemToCart($event)">
         </ProductItem>
       </div>
 
@@ -73,10 +74,12 @@ import {snacks} from "../assets/js/ProdServ";
 import {alimentos} from "../assets/js/ProdServ";
 import {juguetes} from "../assets/js/ProdServ";
 import {higiene} from "../assets/js/ProdServ";
+import Minicarrito from "./minicarrito";
 
 export default {
   name: "Producto",
   components: {
+    Minicarrito,
     Header,
     NavBar,
     Footer,
@@ -96,7 +99,7 @@ export default {
   methods:{
     info(productoSeleccionado){
       for (let producto of this.productos){
-        if(producto.name == productoSeleccionado){
+        if(producto.name === productoSeleccionado){
           this.description = producto.description
           this.image = require('../assets/img/prodServ/' + producto.image)
           console.log(this.name)
@@ -105,7 +108,10 @@ export default {
     },
     irAProductos(){
       this.$router.go(-1)
-  }
+  },
+    addItemToCart (item) {
+      this.$emit("pushItem", item)
+    }
 }
 }
 </script>
