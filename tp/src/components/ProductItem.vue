@@ -2,8 +2,7 @@
   <div>
       <div class="producto">
         <h4>{{nombre}}</h4>
-        <p>{{descripcion}}</p>
-        <img class="Menu-img" v-bind:src="require('../assets/img/prodServ/' + categoria + '/' + imagen)" width="100px">
+        <img class="Menu-img" v-bind:src="require('../assets/img/prodServ/' + categoria + '/' + imagen)" width="100px" :title="descripcion">
        <p id="precio">${{precio}}</p>
        <p class="agregar" v-on:click="addItem(name, price)">AGREGAR</p>
       </div>
@@ -26,7 +25,6 @@ export default {
     },
   }
 }
-
 </script>
 
 <style scoped>
@@ -38,10 +36,11 @@ export default {
   display:flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   margin: 20px;
   flex-basis:30%;
   width: 200px;
-  height: auto;
+  height: 400px;
 }
 .producto:hover{
   cursor:pointer

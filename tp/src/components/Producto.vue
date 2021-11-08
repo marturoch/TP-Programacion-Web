@@ -18,6 +18,7 @@
                      v-bind:nombre="snack.name"
                      v-bind:imagen="snack.image"
                      v-bind:precio="snack.price"
+                     v-bind:descripcion="snack.description"
                      v-bind:categoria="'snacks'"
                      v-on:addItem="addItemToCart($event)">
        </ProductItem>
@@ -28,6 +29,7 @@
               v-bind:nombre="alimento.name"
               v-bind:imagen="alimento.image"
               v-bind:precio="alimento.price"
+              v-bind:descripcion="alimento.description"
               v-bind:categoria="'alimentos'"
               v-on:addItem="addItemToCart($event)">
         </ProductItem>
@@ -38,16 +40,18 @@
               v-bind:nombre="juguete.name"
               v-bind:imagen="juguete.image"
               v-bind:precio="juguete.price"
+              v-bind:descripcion="juguete.description"
               v-bind:categoria="'juguetes'"
               v-on:addItem="addItemToCart($event)">
         </ProductItem>
       </div>
 
       <div class="seccion" v-if="$route.params.nombre==='higiene'">
-        <ProductItem v-for="(higiene, index) in higiene" v-bind:key="index"
-              v-bind:nombre="higiene.name"
-              v-bind:imagen="higiene.image"
-              v-bind:precio="higiene.price"
+        <ProductItem v-for="(higieneprod, index) in higiene" v-bind:key="index"
+              v-bind:nombre="higieneprod.name"
+              v-bind:imagen="higieneprod.image"
+              v-bind:precio="higieneprod.price"
+              v-bind:descipcion="higieneprod.description"
               v-bind:categoria="'higiene'"
               v-on:addItem="addItemToCart($event)">
         </ProductItem>
