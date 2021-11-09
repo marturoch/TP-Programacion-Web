@@ -5,11 +5,11 @@
     <form class="form-container" method="post" @submit="registrarse()">
 
       <div class="form-data">
-        <label>NOMBRE <span class="required-field">*</span></label><input type="text" required v-model="nombre">
+        <label>NOMBRE <span class="required-field">*</span></label><input type="text" required v-model="name">
       </div>
 
       <div class="form-data">
-        <label>APELLIDO <span class="required-field">*</span></label><input type="text" required v-model="apellido">
+        <label>APELLIDO <span class="required-field">*</span></label><input type="text" required v-model="surname">
       </div>
 
       <div class="form-data">
@@ -17,10 +17,10 @@
       </div>
 
       <div class="form-data">
-        <label>CONTRASEÑA<span class="required-field">*</span></label><input type="password" required>
+        <label>CONTRASEÑA<span class="required-field">*</span></label><input type="password" v-model="password" required>
       </div>
       <div>
-        <input type="submit" value="REGISTRARSE" class="registro">
+        <input type="submit" value="REGISTRARSE" class="registro" @click="registrarse()">
       </div>
 
     </form>
@@ -36,6 +36,7 @@
 import Header from "./Header";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import axios from "axios";
 
 export default {
   name: "Registrarse",
@@ -44,20 +45,40 @@ export default {
     NavBar,
     Footer
   },
+  created() {
+    axios.get("https://jsonplaceholder.typicode.com/todos/1").then((result) => {
+      console.log(result.data);
+    })
+  },
+  data() {
+    return {
+      name:"",
+      surname:"",
+      email: "",
+      password:"",
+    }
+  },
   methods: {
     logearse(){
       this.$router.push('/login')
     },
     registrarse () {
-      this.$router.push({name:"RutaRegistroExitoso", params:{clientName: this.nombre}})
-      //axios.post("https://localhost:8080/registrarse")
-      //.then(rsp => {
-      //  this.$router.push({name:"RutaRegistroExitoso", params:{clientName: this.nombre}})
-      //})
-      //.catch (err => {
-      //  console.log("Server Error in regisrarse()" + err)
-      //  this.$router.push({name:"NotFoundView", params:{clientName: this.nombre}})
-      //})
+      //this.$router.push({name:"RutaRegistroExitoso", params:{clientName: this.nombre}})
+      axios.post("https://localhost:5000/api/v1/registro",
+          {
+            user: this.name,
+            surname: this.surname,
+            email: this.email,
+            password: this.password,
+          })
+      .then(response => {
+        console.log(response)
+        this.$router.push({name:"RutaRegistroExitoso", params:{clientName: this.name}})
+      })
+      .catch (error => {
+        console.log("Server Error in registrarse()" + error)
+        this.$router.push({name:"NotFoundView", params:{clientName: this.name}})
+      })
     }
   }
 }

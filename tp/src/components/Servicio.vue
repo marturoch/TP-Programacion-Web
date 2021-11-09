@@ -41,7 +41,7 @@ export default {
   methods:{
     info(productoSeleccionado){
       for (let producto of this.productos){
-        if(producto.name == productoSeleccionado){
+        if(producto.name === productoSeleccionado){
           this.description = producto.description
           this.image = require('../assets/img/prodServ/' + producto.image)
         }

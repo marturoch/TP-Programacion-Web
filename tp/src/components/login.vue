@@ -22,6 +22,7 @@
 import Header from "./Header";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import axios from "axios";
 
 export default {
   name: "login",
@@ -29,6 +30,11 @@ export default {
     Header,
     NavBar,
     Footer
+  },
+  created() {
+    axios.get("https://jsonplaceholder.typicode.com/todos/1").then((result) => {
+      console.log(result.data);
+    })
   },
   data() {
     return {
