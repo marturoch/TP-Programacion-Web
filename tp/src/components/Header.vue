@@ -5,10 +5,10 @@
         <p>ENVIO SIN CARGO EN COMPRAS SUPERIORES A $6.000</p>
       </div>
       <div class="cuentaYcarrito">
-        <router-link v-if="logged === false" class="login" to="/login">INGRESAR/REGISTRARSE</router-link>
-        <router-link v-if="logged" class="miCuenta" to="/perfil">Mi Cuenta</router-link>
-        <router-link v-if="logged===false" class="carrito" to="/carrito">CARRITO</router-link>
-        <router-link v-if="logged===false" class="carrito" to="/minicarrito">MINICARRITO</router-link>
+        <router-link v-if="status!=='logged'" class="login" to="/login">INGRESAR/REGISTRARSE</router-link>
+        <router-link v-if="status==='logged'" class="miCuenta" to="/perfil">Mi Cuenta</router-link>
+        <router-link v-if="status==='logged'" class="carrito" to="/carrito">CARRITO</router-link>
+        <router-link v-if="status==='logged'" class="carrito" to="/minicarrito">MINICARRITO</router-link>
       </div>
     </div>
     <div id="header_2">
@@ -28,9 +28,12 @@
 <script>
 export default {
   name: "Header.vue",
-  data(){
-    return{
-      logged: false,}}}
+  data() {
+    return {
+      status: localStorage.getItem('status')
+    }
+  }
+}
 </script>
 
 <style scoped>

@@ -1,20 +1,19 @@
 <template>
   <div>
-    <Header></Header>
+    <Header v-bind:status="status"></Header>
     <NavBar></NavBar>
-    <form class="form-container" v-if="registrarse === false">
+    <form class="form-container" @submit.prevent="login()">
       <div class="form-data">
-        <label>MAIL <span class="required-field">*</span></label><input type="email" required>
+        <label>MAIL <span class="required-field">*</span></label><input type="email" v-model="mail" required>
       </div>
       <div class="form-data">
-        <label>CONTRASEÑA <span class="required-field">*</span></label><input type="password" required>
+        <label>CONTRASEÑA <span class="required-field">*</span></label><input type="password" v-model="password" required>
       </div>
       <div>
         <input type="submit" value="Login" class="registro">
       </div>
     </form>
-    <p v-if="registrarse === false">No tienes cuenta? Registrate 👉<span @click="registro()">AQUI👈</span></p>
-    <Registrarse v-if="registrarse" v-on:login="logeo()"></Registrarse>
+    <p>No tienes cuenta? Registrate 👉<span @click="registrarse()">AQUI👈</span></p>
     <Footer></Footer>
   </div>
 </template>
@@ -23,29 +22,32 @@
 import Header from "./Header";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import Registrarse from "./Registrarse";
 
 export default {
   name: "login",
   components:{
     Header,
     NavBar,
-    Footer,
-    Registrarse
+    Footer
   },
   data() {
     return {
-      registrarse: false
+      status:"notlogged",
+      mail: "",
+      password:"",
+      perfiles: []
     }
   },
   methods:{
-    registro(){
-      this.registrarse = true;
-      console.log(this.registrarse)
-
+    registrarse(){
+      this.$router.push('/registrarse')
     },
-    logeo(){
-      this.registrarse = false;
+    login(){
+      this.status = "logged"
+      this.perfiles.push({mail:this.mail, password:this.password})
+      localStorage.setItem('status', this.status)
+      localStorage.setItem('perfil', JSON.stringify(this.perfiles))
+      this.$router.push('/')
     }
   }
 }

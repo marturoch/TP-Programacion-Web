@@ -1,6 +1,8 @@
 <template>
   <div>
-    <form class="form-container" method="post" @submit="registrarse()" v-if="logearse === false">
+    <Header></Header>
+    <NavBar></NavBar>
+    <form class="form-container" method="post" @submit="registrarse()">
 
       <div class="form-data">
         <label>NOMBRE <span class="required-field">*</span></label><input type="text" required v-model="nombre">
@@ -22,31 +24,30 @@
       </div>
 
     </form>
-    <p v-if="logearse === false">Ya tienes cuenta? Inicia sesión 👉<span @click="$emit('login', true)">AQUI👈</span></p>
-    <login v-if="logearse"></login>
+    <p>Ya tienes cuenta? Inicia sesión<span @click="logearse()">AQUI👈</span></p>
     <div>
       <router-link :to="{name:'Home'}">Volver al Inicio</router-link>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import login from "./login";
+import Header from "./Header";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 export default {
   name: "Registrarse",
   components:{
-    login
+    Header,
+    NavBar,
+    Footer
   },
-  data() {
-    return {
-      logearse: false,
-      nombre: "",
-      apellido:"",
-      email: "",
-    }
-},
   methods: {
+    logearse(){
+      this.$router.push('/login')
+    },
     registrarse () {
       this.$router.push({name:"RutaRegistroExitoso", params:{clientName: this.nombre}})
       //axios.post("https://localhost:8080/registrarse")

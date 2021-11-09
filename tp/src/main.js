@@ -16,11 +16,11 @@ import HomeView from "./Views/HomeView";
 import Producto from "./components/Producto";
 import Servicio from "./components/Servicio";
 import NotFoundView from "./Views/NotFoundView";
-import login from "./components/login";
 import Carrito from "./components/Carrito";
 import Registrarse from "./components/Registrarse";
 import RegistroExitoso from "./components/RegistroExitoso";
 import minicarrito from "./components/minicarrito";
+import login from "./components/login";
 
 const routes = [
   {path: '/', name: "Home", component:HomeView},

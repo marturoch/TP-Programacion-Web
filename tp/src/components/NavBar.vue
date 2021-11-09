@@ -13,7 +13,9 @@ export default {
   name: "NavBar.vue",
   data(){
     return{
-      logged: false,}}}
+      logged: false,}
+  }
+}
 </script>
 
 <style scoped>

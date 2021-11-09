@@ -49,7 +49,8 @@ export default {
       datos: false,
       pedidos: false,
       mascotas: false,
-      salir: false
+      salir: false,
+      status: 'logged'
     }
   },
   methods:{
@@ -69,7 +70,9 @@ export default {
       this.mascotas = true;
     },
     salirFunction(){
-      this.salir = true
+      this.status = 'notlogged'
+      localStorage.setItem('status', this.status)
+      this.$router.push("/")
     }
   }
 }
