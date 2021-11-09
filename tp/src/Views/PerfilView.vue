@@ -4,10 +4,10 @@
     <NavBar></NavBar>
     <div class="hola">
       <div class="secciones">
-        <p @click="todoFalse(); datosFunction()" :class="{seccionMarcada:datos}">Mis Datos</p>
-        <p @click="todoFalse(); pedidosFunction()" :class="{seccionMarcada:pedidos}">Pedidos</p>
-        <p @click="todoFalse(); mascotasFunction()" :class="{seccionMarcada:mascotas}">Mis mascotas</p>
-        <p @click="todoFalse(); salirFunction()" :class="{seccionMarcada:salir}">Salir</p>
+        <p @click="todoFalse(); datosFunction()" :class="{seccionMarcada:datos}" id="datos">Mis Datos</p>
+        <p @click="todoFalse(); pedidosFunction()" :class="{seccionMarcada:pedidos}" id="pedidos">Pedidos</p>
+        <p @click="todoFalse(); mascotasFunction()" :class="{seccionMarcada:mascotas}" id="mascotas">Mis mascotas</p>
+        <p @click="todoFalse(); salirFunction()" :class="{seccionMarcada:salir}" id="salir">Salir</p>
       </div>
 
       <div class="seccion" v-if="datos">
@@ -87,6 +87,7 @@ export default {
   padding:20px;
   border-radius:5%;
 }
+
 .hola{
   padding:20px;
   display:flex;
@@ -94,9 +95,26 @@ export default {
 }
 .seccion{
   flex-basis: 80%;
+
 }
 .seccionMarcada{
   color: #CE6AAEF7;
 }
 
+#datos:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+#pedidos:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+#mascotas:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+#salir:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
 </style>

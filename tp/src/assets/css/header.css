@@ -5,7 +5,7 @@
     color: white;
     font-size: 12px;
     padding: 14px 14px;
-    display: flex
+    display: revert;
 }
 
 #header_2 {
@@ -74,4 +74,14 @@ h1 {
     justify-content: flex-end;
     display:flex;
     align-items: center;
+}
+.miCuenta {
+    padding: 15px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #D90368;
+    border-radius: 90px;
+    font-weight: bold;
+    justify-content: flex-end;
 }

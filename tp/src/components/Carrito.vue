@@ -152,25 +152,6 @@ export default {
 
 <style scoped>
 
-#carrito {
-  color: black;
-  align-items: center;
-}
-table {
-  background-color: white;
-  text-align: center;
-  align-items: center;
-  width: 1200px;
-  border: #D90368;
-}
-
-.carrito-container {
-  display: inline-block;
-  border-width: 10px;
-  border-color: black;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: black
-}
 @import "../assets/css/carrito.css";
 
 </style>

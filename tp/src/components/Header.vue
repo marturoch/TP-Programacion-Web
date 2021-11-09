@@ -1,9 +1,6 @@
 <template>
   <div>
     <div id="header_1">
-      <div class ="enviogratis">
-        <p>ENVIO SIN CARGO EN COMPRAS SUPERIORES A $6.000</p>
-      </div>
       <div class="cuentaYcarrito">
         <router-link v-if="status!=='logged'" class="login" to="/login">INGRESAR/REGISTRARSE</router-link>
         <router-link v-if="status==='logged'" class="miCuenta" to="/perfil">Mi Cuenta</router-link>
