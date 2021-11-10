@@ -17,7 +17,8 @@ const productos = [
     {
         name:"petFind",
         image:"petfind.jpg",
-        description:"Descripcion petFind"
+        description:"Descripcion petFind",
+        price:900
 
     },
     {

@@ -1,69 +1,74 @@
 <template>
-<div>
-  <Header></Header>
-  <NavBar></NavBar>
-  {{info($route.params.nombre)}}
-  <H1>{{$route.params.nombre}}</H1>
-  <br>
-  <div class="container">
-    <div class="fotoDescripcion">
-      <img :src="image" width="250px">
+  <div>
+    <Header></Header>
+    <NavBar></NavBar>
+    {{info($route.params.nombre)}}
+    <H1>{{$route.params.nombre}}</H1>
+    <br>
+    <div class="container">
+      <div class="fotoDescripcion">
+        <img :src="image" width="250px" alt="imagen">
+      </div>
+
+      <div>
+        <div class="seccion" v-if="$route.params.nombre==='snacks'">
+          <ProductItem v-for="(snack, index) in snacks" v-bind:key="index"
+                       v-bind:nombre="snack.name"
+                       v-bind:imagen="snack.image"
+                       v-bind:precio="snack.price"
+                       v-bind:descripcion="snack.description"
+                       v-bind:categoria="'snacks'"
+                       v-on:modificarPedido="addItemToCart($event)">
+          </ProductItem>
+        </div>
+
+        <div class="seccion" v-if="$route.params.nombre==='alimentos'">
+          <ProductItem v-for="(alimento, index) in alimentos" v-bind:key="index"
+                       v-bind:nombre="alimento.name"
+                       v-bind:imagen="alimento.image"
+                       v-bind:precio="alimento.price"
+                       v-bind:descripcion="alimento.description"
+                       v-bind:categoria="'alimentos'"
+                       v-on:modificarPedido="addItemToCart($event)">
+          </ProductItem>
+        </div>
+
+        <div class="seccion" v-if="$route.params.nombre==='juguetes'">
+          <ProductItem v-for="(juguete, index) in juguetes" v-bind:key="index"
+                       v-bind:nombre="juguete.name"
+                       v-bind:imagen="juguete.image"
+                       v-bind:precio="juguete.price"
+                       v-bind:descripcion="juguete.description"
+                       v-bind:categoria="'juguetes'"
+                       v-on:modificarPedido="addItemToCart($event)">
+          </ProductItem>
+        </div>
+
+        <div class="seccion" v-if="$route.params.nombre==='higiene'">
+          <ProductItem v-for="(higieneprod, index) in higiene" v-bind:key="index"
+                       v-bind:nombre="higieneprod.name"
+                       v-bind:imagen="higieneprod.image"
+                       v-bind:precio="higieneprod.price"
+                       v-bind:descripcion="higieneprod.description"
+                       v-bind:categoria="'higiene'"
+                       v-on:modificarPedido="addItemToCart($event)">
+          </ProductItem>
+        </div>
+
+        <div class="seccion" v-if="$route.params.nombre==='petFind'">
+          <p>{{productos[3].description}}</p>
+          <p>{{productos[3].price}}</p>
+        </div>
+
+        <p id="agregar" @click="agregar()">AGREGAR A CARRITO</p>
+        <br>
+        <p v-if="agregado">Carrito Modificado</p>
+        <br>
+        <p class="botonVolver" @click="irAProductos">VOLVER A PRODUCTOS</p>
+      </div>
     </div>
-
-    <div>
-     <div class="seccion" v-if="$route.params.nombre==='snacks'">
-       <ProductItem v-for="(snack, index) in snacks" v-bind:key="index"
-                     v-bind:nombre="snack.name"
-                     v-bind:imagen="snack.image"
-                     v-bind:precio="snack.price"
-                     v-bind:descripcion="snack.description"
-                     v-bind:categoria="'snacks'"
-                     v-on:modificarPedido="addItemToCart($event)">
-       </ProductItem>
-     </div>
-
-      <div class="seccion" v-if="$route.params.nombre==='alimentos'">
-        <ProductItem v-for="(alimento, index) in alimentos" v-bind:key="index"
-              v-bind:nombre="alimento.name"
-              v-bind:imagen="alimento.image"
-              v-bind:precio="alimento.price"
-              v-bind:descripcion="alimento.description"
-              v-bind:categoria="'alimentos'"
-              v-on:modificarPedido="addItemToCart($event)">
-        </ProductItem>
-      </div>
-
-      <div class="seccion" v-if="$route.params.nombre==='juguetes'">
-        <ProductItem v-for="(juguete, index) in juguetes" v-bind:key="index"
-              v-bind:nombre="juguete.name"
-              v-bind:imagen="juguete.image"
-              v-bind:precio="juguete.price"
-              v-bind:descripcion="juguete.description"
-              v-bind:categoria="'juguetes'"
-              v-on:modificarPedido="addItemToCart($event)">
-        </ProductItem>
-      </div>
-
-      <div class="seccion" v-if="$route.params.nombre==='higiene'">
-        <ProductItem v-for="(higieneprod, index) in higiene" v-bind:key="index"
-              v-bind:nombre="higieneprod.name"
-              v-bind:imagen="higieneprod.image"
-              v-bind:precio="higieneprod.price"
-              v-bind:descripcion="higieneprod.description"
-              v-bind:categoria="'higiene'"
-              v-on:modificarPedido="addItemToCart($event)">
-        </ProductItem>
-      </div>
-
-      <div class="seccion" v-if="$route.params.nombre==='petFind'">
-        <p>{{productos[3].description}}</p>
-      </div>
-
-      <p class="botonVolver" @click="irAProductos">VOLVER A PRODUCTOS</p>
-    </div>
+    <Footer></Footer>
   </div>
-  <Footer></Footer>
-</div>
 </template>
 
 <script>
@@ -94,7 +99,8 @@ export default {
       higiene: higiene,
       description: "",
       image: "",
-      pedidos: []
+      pedidos: [],
+      agregado: false
     }
   },
   methods: {
@@ -111,6 +117,7 @@ export default {
       this.$router.go(-1)
     },
     addItemToCart(item) {
+      this.agregado = false
       if (this.pedidos.length !== 0){
         let obj = this.pedidos.find(o => o.name === item.name);
 
@@ -130,15 +137,18 @@ export default {
       else{
         this.pedidos.push(item)
       }
+    },
+    agregar(){
+      this.agregado = true
+      localStorage.pedidos = JSON.stringify(this.pedidos)
     }
-  },
-  watch:{
-    pedidos: {
-      handler(nuevosPedidos) {
-        localStorage.pedidos = JSON.stringify(nuevosPedidos)
-      },
-      deep: true
-    }
+    /* watch:{
+       pedidos: {
+         handler(nuevosPedidos) {
+           localStorage.pedidos = JSON.stringify(nuevosPedidos)
+         },
+         deep: true
+       }*/
   },
   mounted(){
     if(localStorage.pedidos){
@@ -192,5 +202,15 @@ h2{
 }
 p{
   align-items: center;
+}
+#agregar{
+  padding:20px;
+  color: #820263;
+  border:5px dotted #820263;
+  background-color: rgba(224, 207, 220, 0.98);
+}
+#agregar:hover{
+  cursor:pointer;
+  opacity:70%;
 }
 </style>

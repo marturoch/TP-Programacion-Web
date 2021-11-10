@@ -9,17 +9,14 @@
       <div class="fotoDescripcion">
         <img :src="image" width="300px">
         <h3>{{description}}</h3>
+        <p class="precio">${{price}}</p>
       </div>
-      <p class="precio">${{price}}</p>
       <div>
-        <p class="boton" @click="agregarServicio($route.params.nombre, description, price)">AGREGAR SERVICIO</p>
-        <p class="boton" @click="eliminarServicio($route.params.nombre, description, price)">ELIMINAR SERVICIO</p>
+        <p class="boton" @click="agregarServicio($route.params.nombre, description, price)">AGREGAR SERVICIO AL CARRITO</p>
+        <p class="boton" @click="eliminarServicio($route.params.nombre, description, price)">ELIMINAR SERVICIO DEL CARRITO</p>
       </div>
       <div class="agregoElimino" v-if="agregado">
-        <p>SERVICIO AGREGADO</p>
-      </div>
-      <div class="agregoElimino" v-if="eliminado">
-        <p>SERVICIO ELIMINADO</p>
+        <p>SERVICIO AGREGADO AL CARRITO</p>
       </div>
       <div>
         <p class="botonVolver" @click="irAServicios">VOLVER A SERVICIOS</p>
@@ -52,8 +49,7 @@ export default {
       servicioPedido: {name:"", price:"", quantity:1 , tipo:'servicio'},
       servicioEliminado: {name:"", price:"", quantity:1 , tipo:'servicio'},
       repetido: false,
-      agregado: false,
-      eliminado: false
+      agregado: false
     }
   },
   methods:{
@@ -83,7 +79,7 @@ export default {
         if (!this.repetido){
           this.pedidos.push(this.servicioPedido)
           this.agregado = true
-          this.eliminado = false
+          localStorage.pedidos = JSON.stringify(this.pedidos)
         }
       }
     },
@@ -97,22 +93,26 @@ export default {
         if (obj){
           let index = this.pedidos.indexOf(obj)
           this.pedidos.pop(index)
-          this.eliminado = true
           this.agregado = false
+          localStorage.pedidos = JSON.stringify(this.pedidos)
+        }
       }
-    }
-  }},
-  watch:{
-     pedidos: {
-       handler(nuevosPedidos) {
-         localStorage.pedidos = JSON.stringify(nuevosPedidos)
-       },
-       deep: true
-     }
-  },
+    }},
+  /* watch:{
+      pedidos: {
+        handler(nuevosPedidos) {
+          localStorage.pedidos = JSON.stringify(nuevosPedidos)
+        },
+        deep: true
+      }
+   },*/
   mounted(){
     if(localStorage.pedidos){
       this.pedidos = JSON.parse(localStorage.pedidos)
+      let obj = this.pedidos.find(o => o.name === this.$route.params.nombre);
+      if (obj){
+        this.agregado = true
+      }
     }
   }
 }
@@ -177,8 +177,7 @@ p{
   padding: 0px 5px;
   background-color: #820263;
 }
-.precio {
-  font-size: 30px;
-
+.precio{
+  font-size:30px;
 }
 </style>

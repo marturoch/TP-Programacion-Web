@@ -1,19 +1,19 @@
 <template>
-    <div class="planes" >
-      <div class ="info">
-        <h2 class="planes-title">·· {{name}} ··</h2>
-        <h4 class="planes-tipo">
-          <strong>{{tipo}}</strong>
-        </h4>
-        <p class="planes-precio">${{precio}}/mes</p>
-        <div class="planes-info">
-          <p>● {{item1}}</p>
-          <p>● {{item2}}</p>
-          <p>● {{item3}}</p>
-        </div>
+  <div class="planes" >
+    <div class ="info">
+      <h2 class="planes-title">·· {{name}} ··</h2>
+      <h4 class="planes-tipo">
+        <strong>{{tipo}}</strong>
+      </h4>
+      <p class="planes-precio">${{precio}}/mes</p>
+      <div class="planes-info">
+        <p>● {{item1}}</p>
+        <p>● {{item2}}</p>
+        <p>● {{item3}}</p>
       </div>
-      <p class="seleccionar" v-on:click="agregarPlan(name, precio)">SELECCIONAR </p>
     </div>
+    <p class="seleccionar" v-on:click="agregarPlan(name, precio)">SELECCIONAR</p>
+  </div>
 </template>
 
 <script>
@@ -38,7 +38,7 @@ export default {
       this.plan.price = precio
       this.$emit('modificarPlan', this.plan)
     }
-    }
+  }
 }
 </script>
 

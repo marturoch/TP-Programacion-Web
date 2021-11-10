@@ -12,7 +12,8 @@
               <thead class="encabezado">
               <tr>
                 <th class = "eliminar"></th>
-                <th class="nombre-producto">PRODUCTO</th>
+                <th class="nombre-producto"></th>
+                <th class="nombre-producto">TIPO</th>
                 <th class="precio-producto">PRECIO</th>
                 <th class="cantidad-producto">CANTIDAD</th>
                 <th class="subtotal-producto">SUBTOTAL</th>
@@ -20,10 +21,14 @@
               </thead>
               <tbody>
               <tr v-for="(pedido, index) in pedidos" v-bind:key="index">
-                <td class = "eliminar" v-on:click="removeItem(index)">x</td>
+                <td class ="eliminar" @click="removeItem(index)">x</td>
                 <td class="nombre-producto" data-title="Producto">{{pedido.name}}</td>
-                <td class="precio-producto" data-title="Precio">$ {{pedido.price}}</td>
-                <td class="cantidad-producto" data-title="Cantidad">{{pedido.quantity}}</td>
+                <td class="tipo" data-title="Tipo">{{pedido.tipo}}</td>
+                <td class="precio-producto" data-title="Precio">${{pedido.price}}</td>
+                <td class="cantidad-producto" data-title="Cantidad">
+                  {{pedido.quantity}}
+                  <p @click="modificar(pedido, pedido.tipo)" id="botonModificar">MODIFICAR</p>
+                </td>
                 <td class="subtotal-producto" data-title="Subtotal">"{{subtotal}}"</td>
               </tr>
               </tbody>
@@ -32,10 +37,13 @@
         </div>
       </div>
       <div>
-        <h2>Total del carrito: $ </h2>
+        <h2>Total del carrito: $</h2>
       </div>
       <div>
         <p class="checkout" @click="checkout()">CHECKOUT</p>
+      </div>
+      <div>
+        <h2>Total del carrito</h2>
       </div>
 
       <div v-if="checkOut" class="informacion_cliente">
@@ -85,7 +93,7 @@
             <br><br>
           </div>
           <div>
-            <p class="hacer_pedido" >HACER PEDIDO</p>
+            <p class="hacer_pedido">HACER PEDIDO</p>
             <br><br>
           </div>
         </form>
@@ -106,10 +114,10 @@ import axios from "axios"
 export default {
   name: "Carrito",
   created() {
-  axios.get("https://jsonplaceholder.typicode.com/todos/1").then((result) => {
-    console.log(result.data);
-  })
-},
+    axios.get("https://jsonplaceholder.typicode.com/todos/1").then((result) => {
+      console.log(result.data);
+    })
+  },
   components:{
     Header,
     NavBar,
@@ -128,26 +136,39 @@ export default {
         coments: this.coments,
         shopping_cart: this.$route.params['shoppingCart'],
       })
-      .then(response => {
-        console.log(response)
-        this.$router.push({name: "CheckoutSuccessRoute", params: {order_id: response.data["order_id"]}})
-      })
-      .catch(error => {
-        console.log(error);
-        this.$router.push({name: "CheckoutServerErrorRoute"})
-      })
-},
-  checkout(){
+          .then(response => {
+            console.log(response)
+            this.$router.push({name: "CheckoutSuccessRoute", params: {order_id: response.data["order_id"]}})
+          })
+          .catch(error => {
+            console.log(error);
+            this.$router.push({name: "CheckoutServerErrorRoute"})
+          })
+    },
+    checkout(){
       if (!localStorage.status){
         this.$router.push("/login?check=true")
       }
       else{
         this.checkOut = true
       }
-  },
-  removeItem(index) {
-    this.pedidos.splice(index, 1);
     },
+    removeItem(index){
+      this.pedidos.splice(index,1)
+      localStorage.setItem('pedidos', JSON.stringify(this.pedidos))
+
+    },
+    modificar(pedido, tipo){
+      if (tipo === "snacks" || tipo === "alimentos" || tipo === "juguetes" || tipo === "higiene") {
+        this.$router.push('/productos/' + tipo)
+      }
+      else if (tipo === "plan"){
+        this.$router.push('/planes/')
+      }
+      else if (tipo === "servicio"){
+        this.$router.push('/servicios/' + pedido.name)
+      }
+    }
   },
   data() {
     return {
@@ -161,14 +182,15 @@ export default {
       coments: "",
       pedidos: [],
       checkOut: false,
-      subtotal: "$"
+      subtotal: "$",
+      categoria: ""
     }
   },
-  /*watch:{
+  watch:{
     pedidos(nuevoPedido){
-      this.subtotal = nuevoPedido.quantity * nuevoPedido.price
+      localStorage.setItem('pedidos', JSON.strinigfy(nuevoPedido))
     }
-  },*/
+  },
   mounted(){
     if(localStorage.pedidos){
       this.pedidos = JSON.parse(localStorage.pedidos)

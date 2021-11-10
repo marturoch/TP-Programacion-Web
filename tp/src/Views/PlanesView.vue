@@ -28,7 +28,6 @@ import Plan from "../components/Plan";
 import {planes} from "../assets/js/planes";
 import RecomendacionBoton from "../components/RecomendacionBoton";
 import Footer from "../components/Footer";
-
 export default {
   name: "PlanesView",
   components: {
@@ -50,7 +49,6 @@ export default {
       if (this.pedidos.length !== 0){
         this.plan = plan
         let obj = this.pedidos.find(o => o.tipo === plan.tipo);
-
         if (obj){
           let index = this.pedidos.indexOf(obj)
           this.pedidos[index].name = plan.name
@@ -83,8 +81,8 @@ export default {
       if (obj){
         let index = this.pedidos.indexOf(obj)
         this.planSeleccionado =  this.pedidos[index].name
-  }
-}}}
+      }
+    }}}
 </script>
 
 <style scoped>
@@ -114,6 +112,3 @@ export default {
   font-size:30px;
 }
 </style>
-
-
-
