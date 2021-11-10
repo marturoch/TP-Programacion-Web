@@ -12,6 +12,11 @@
     margin:20px;
 }
 
+.aqui{
+    text-decoration: underline;
+    color: blue;
+}
+
 label, input {
     flex-direction:column;
     margin: 20px;
@@ -26,7 +31,6 @@ input {
 }
 
 .form-container {
-
     margin: auto;
     width: 50%;
     background-color: rgba(0,0,0,.04);
@@ -59,4 +63,16 @@ span:hover {
     color: red;
 }
 
+#fieldset-container{
+    border-radius: 5px;
+}
 
+.boton-enviar{
+    width: auto;
+    color: white;
+    background-color: #820263;
+    border: solid 1px;
+    border-color: #820263;
+    border-radius: 5px;
+    padding: 20px;
+}

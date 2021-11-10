@@ -24,7 +24,7 @@
       </div>
 
     </form>
-    <p>Ya tienes cuenta? Inicia sesión<span @click="logearse()">AQUI👈</span></p>
+    <p>¿Ya tienes cuenta? Inicia sesión 👉 <span class="aqui" @click="logearse()">AQUI</span>👈</p>
     <div>
       <router-link :to="{name:'Home'}">Volver al Inicio</router-link>
     </div>

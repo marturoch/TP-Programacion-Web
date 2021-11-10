@@ -56,7 +56,7 @@
         </div>
 
         <div class="form-data">
-          <input type="submit" value="ENVIAR">
+          <input class="boton-enviar" type="submit" value="ENVIAR">
         </div>
 
       </fieldset>

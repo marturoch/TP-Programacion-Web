@@ -13,7 +13,7 @@
         <input type="submit" value="Login" class="registro">
       </div>
     </form>
-    <p>No tienes cuenta? Registrate 👉<span @click="registrarse()">AQUI👈</span></p>
+    <p>No tienes cuenta? Registrate 👉<span class="aqui" @click="registrarse()"> AQUI </span>👈</p>
     <Footer></Footer>
   </div>
 </template>
