@@ -71,8 +71,14 @@ export default {
     },
     salirFunction(){
       this.status = 'notlogged'
-      localStorage.setItem('status', this.status)
+      localStorage.removeItem('status')
+      localStorage.removeItem('perfil')
       this.$router.push("/")
+    }
+  },
+  mounted(){
+    if(!localStorage.status){
+      this.$router.push("/login")
     }
   }
 }

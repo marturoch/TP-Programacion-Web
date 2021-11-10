@@ -1,10 +1,14 @@
 <template>
   <div>
-      <div class="producto">
+      <div class="producto" :title="descripcion">
         <h4>{{nombre}}</h4>
-        <img class="Menu-img" v-bind:src="require('../assets/img/prodServ/' + categoria + '/' + imagen)" width="100px" :title="descripcion">
+        <img class="Menu-img" v-bind:src="require('../assets/img/prodServ/' + categoria + '/' + imagen)" width="100px">
        <p id="precio">${{precio}}</p>
-       <p class="agregar" v-on:click="addItem(name, price)">AGREGAR</p>
+       <div>
+         <p class="agregar" v-on:click="agregarProducto(nombre, precio)">+</p>
+         <p class="eliminar" v-on:click="eliminarProducto()">-</p>
+         <p class="cantidad">{{ cantidad }}</p>
+       </div>
       </div>
   </div>
 </template>
@@ -19,12 +23,36 @@ export default {
       "precio",
       "descripcion"
   ],
-  methods: {
-    addItem(name,price) {
-      this.$emit("addItem", {name: name, price: price})
+  data(){
+    return{
+      pedido: {name:"", price:"", quantity:""},
+      cantidad: 0
+    }
+  },
+  methods:{
+    agregarProducto(nombre,precio){
+      this.cantidad+=1
+      if (this.pedido.name === ""){
+        this.pedido.name = nombre
+        this.pedido.price = precio
+        this.pedido.quantity = this.cantidad
+      }
+      else{
+        if (this.pedido.name === nombre) {
+            this.pedido.quantity = this.cantidad
+      }
+    }
+      this.$emit('modificarPedido', this.pedido)
     },
-  }
-}
+    eliminarProducto() {
+      if (this.cantidad !== 0){
+        this.cantidad -= 1
+        this.pedido.quantity = this.cantidad
+        this.$emit('modificarPedido', this.pedido)
+      }
+
+    }
+}}
 </script>
 
 <style scoped>
@@ -57,17 +85,25 @@ p{
   text-align: justify;
 }
 
-.agregar{
+.agregar, .eliminar{
   text-decoration: none;
   color:white;
   background-color: #820263;
   border-radius: 20px;
   padding:10px;
   cursor: pointer;
-  align-items: flex-end;
+  margin-right:10px;
+  width:20px;
+  align-items: center;
 
 }
-.agregar:hover{
+.agregar:hover, .eliminar:hover{
   opacity: 50%;
+}
+.cantidad{
+  border:2px solid black;
+  width:40px;
+  height:18px;
+  padding:5px;
 }
 </style>

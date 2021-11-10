@@ -11,6 +11,7 @@
       </div>
      </div>
     <br><br>
+    <router-link :to="{name:'Login'}" class="volver">Iniciar Sesion</router-link>
     <router-link :to="{name:'Home'}" class="volver">Volver al Inicio</router-link>
     <Footer></Footer>
   </div>

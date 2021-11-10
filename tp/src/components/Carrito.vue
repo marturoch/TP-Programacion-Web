@@ -20,13 +20,13 @@
               </tr>
               </thead>
               <tbody>
-              <tr>
+              <tr v-for="(pedido, index) in pedidos" v-bind:key="index">
                 <td class = "eliminar"></td>
                 <td class="imagen"></td>
-                <td class="nombre-producto" data-title="Producto">""</td>
-                <td class="precio-producto" data-title="Precio">""</td>
-                <td class="cantidad-producto" data-title="Cantidad">""</td>
-                <td class="subtotal-producto" data-title="Subtotal">""</td>
+                <td class="nombre-producto" data-title="Producto">{{pedido.name}}</td>
+                <td class="precio-producto" data-title="Precio">$ {{pedido.price}}</td>
+                <td class="cantidad-producto" data-title="Cantidad">{{pedido.quantity}}</td>
+                <td class="subtotal-producto" data-title="Subtotal">"{{subtotal}}"</td>
               </tr>
               </tbody>
             </table>
@@ -34,9 +34,13 @@
         </div>
       </div>
       <div>
+        <p @click="checkout()">CHECKOUT</p>
+      </div>
+      <div>
         <h2>Total del carrito</h2>
       </div>
-      <div class="informacion_cliente">
+
+      <div v-if="checkOut" class="informacion_cliente">
         <br>
         <h3>Detalles del cliente </h3>
         <form action="">
@@ -89,6 +93,7 @@
         </form>
       </div>
     </div>
+
     <Footer></Footer>
   </div>
 </template>
@@ -133,7 +138,16 @@ export default {
         console.log(error);
         this.$router.push({name: "CheckoutServerErrorRoute"})
       })
-}},
+},
+  checkout(){
+      if (!localStorage.status){
+        this.$router.push("/login?check=true")
+      }
+      else{
+        this.checkOut = true
+      }
+  }
+  },
   data() {
     return {
       name: "",
@@ -143,8 +157,23 @@ export default {
       localidad:"",
       postalCode:"",
       email:"",
-      coments: ""
-
+      coments: "",
+      pedidos: [],
+      checkOut: false,
+      subtotal: "$"
+    }
+  },
+  /*watch:{
+    pedidos(nuevoPedido){
+      this.subtotal = nuevoPedido.quantity * nuevoPedido.price
+    }
+  },*/
+  mounted(){
+    if(localStorage.pedidos){
+      this.pedidos = JSON.parse(localStorage.pedidos)
+    }
+    if(localStorage.status){
+      this.status = JSON.parse(localStorage.status)
     }
   }
 }

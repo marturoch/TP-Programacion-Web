@@ -12,7 +12,7 @@
           <p>● {{item3}}</p>
         </div>
       </div>
-      <p class="seleccionar" v-on:click="addItem(name, price)">SELECCIONAR </p>
+      <p class="seleccionar" v-on:click="agregarPlan(name, precio)">SELECCIONAR </p>
     </div>
 </template>
 
@@ -27,11 +27,18 @@ export default {
     "item3",
     "precio",
   ],
-  methods: {
-    addItem(name,price) {
-      this.$emit("addItem", {name: name, price: price})
+  data(){
+    return{
+      plan: {name:"", price:"", quantity:1 ,  tipo:'plan'}
     }
-  }
+  },
+  methods: {
+    agregarPlan(name,precio) {
+      this.plan.name = name
+      this.plan.price = precio
+      this.$emit('modificarPlan', this.plan)
+    }
+    }
 }
 </script>
 

@@ -36,12 +36,13 @@ export default {
       console.log(result.data);
     })
   },
+
   data() {
     return {
       status:"notlogged",
       mail: "",
       password:"",
-      perfiles: []
+      perfil: [],
     }
   },
   methods:{
@@ -50,10 +51,20 @@ export default {
     },
     login(){
       this.status = "logged"
-      this.perfiles.push({mail:this.mail, password:this.password})
+      this.perfil.push({mail:this.mail, password:this.password})
       localStorage.setItem('status', this.status)
-      localStorage.setItem('perfil', JSON.stringify(this.perfiles))
-      this.$router.push('/')
+      localStorage.setItem('perfil', JSON.stringify(this.perfil))
+      if (this.$route.query.check){
+        this.$router.push('/carrito')
+      }
+      else{
+        this.$router.push('/')
+      }
+    }
+  },
+  mounted(){
+    if(localStorage.status){
+      this.$router.push("/perfil")
     }
   }
 }

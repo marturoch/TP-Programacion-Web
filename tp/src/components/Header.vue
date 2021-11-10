@@ -4,8 +4,8 @@
       <div class="cuentaYcarrito">
         <router-link v-if="status!=='logged'" class="login" to="/login">INGRESAR/REGISTRARSE</router-link>
         <router-link v-if="status==='logged'" class="miCuenta" to="/perfil">Mi Cuenta</router-link>
-        <router-link v-if="status==='logged'" class="carrito" to="/carrito">CARRITO</router-link>
-        <router-link v-if="status==='logged'" class="carrito" to="/minicarrito">MINICARRITO</router-link>
+        <router-link class="carrito" to="/carrito">CARRITO</router-link>
+<!--        <router-link v-if="status==='logged'" class="carrito" to="/minicarrito">MINICARRITO</router-link>&ndash;&gt;-->
       </div>
     </div>
     <div id="header_2">

@@ -11,9 +11,11 @@
           <Plan class="plan-container" v-for="(plan, index) in planes" v-bind:key="index" :class="{ active: index === isActive }"
                 v-bind:name="plan.name"
                 v-bind:tipo="plan.tipo"
+                v-bind:precio="plan.price"
                 v-bind:item1="plan.item1"
                 v-bind:item2="plan.item2"
-                v-bind:item3="plan.item3">
+                v-bind:item3="plan.item3"
+                v-on:modificarPlan="modificarPlan($event)">
           </Plan>
         </div>
         <RecomendacionBoton></RecomendacionBoton>
@@ -31,6 +33,7 @@ import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Plan from "../components/Plan";
+import RecomendacionBoton from "../components/RecomendacionBoton";
 
 export default {
   name: "RecomendacionView",
@@ -39,7 +42,8 @@ export default {
     Plan,
     Header,
     NavBar,
-    Footer
+    Footer,
+    RecomendacionBoton
   },
   data() {
     return {
@@ -47,7 +51,8 @@ export default {
       puntaje: 0,
       planes: planes,
       showButton: true,
-      isActive: null
+      isActive: null,
+      pedidos: []
     }
   },
   methods: {
@@ -70,6 +75,36 @@ export default {
     },
     volverAFormulario(){
       this.show = false;
+    },
+    modificarPlan(plan){
+      if (this.pedidos.length !== 0){
+        let obj = this.pedidos.find(o => o.tipo === plan.tipo);
+
+        if (obj){
+          let index = this.pedidos.indexOf(obj)
+          this.pedidos[index].name = plan.name
+          this.pedidos[index].price = plan.price
+        }
+        else{
+          this.pedidos.push(plan)
+        }
+      }
+      else{
+        this.pedidos.push(plan)
+      }
+    }
+  },
+  watch:{
+    pedidos: {
+      handler(nuevosPedidos) {
+        localStorage.pedidos = JSON.stringify(nuevosPedidos)
+      },
+      deep: true
+    }
+  },
+  mounted(){
+    if(localStorage.pedidos){
+      this.pedidos = JSON.parse(localStorage.pedidos)
     }
   }
 }

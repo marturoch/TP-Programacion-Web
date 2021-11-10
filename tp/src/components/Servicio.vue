@@ -9,6 +9,9 @@
       <div class="fotoDescripcion">
         <img :src="image" width="300px">
         <h3>{{description}}</h3>
+        <h2>{{price}}</h2>
+        <p @click="agregarServicio($route.params.nombre, description, price)">SELECCIONAR</p>
+        <p @click="eliminarServicio($route.params.nombre, description, price)">ELIMINAR</p>
       </div>
       <div>
         <p class="botonVolver" @click="irAServicios">VOLVER A SERVICIOS</p>
@@ -35,7 +38,12 @@ export default {
     return {
       productos: servicios,
       description: "",
-      image:""
+      image:"",
+      price:"",
+      pedidos:[],
+      servicioPedido: {name:"", price:"", quantity:1 , tipo:'servicio'},
+      servicioEliminado: {name:"", price:"", quantity:1 , tipo:'servicio'},
+      repetido: false
     }
   },
   methods:{
@@ -44,11 +52,52 @@ export default {
         if(producto.name === productoSeleccionado){
           this.description = producto.description
           this.image = require('../assets/img/prodServ/' + producto.image)
+          this.price = producto.price
         }
       }
     },
     irAServicios(){
       this.$router.go(-1)
+    },
+    agregarServicio(nombre, descripcion, precio){
+      this.servicioPedido.name = nombre
+      this.servicioPedido.description = descripcion
+      this.servicioPedido.price = precio
+
+      if(this.pedidos.length !== 0){
+        let obj = this.pedidos.find(o => o.name === this.servicioPedido.name);
+        if (obj){
+          this.repetido = true
+        }
+        if (!this.repetido){
+          this.pedidos.push(this.servicioPedido)
+        }
+      }
+    },
+    eliminarServicio(nombre, descripcion, precio){
+      this.servicioEliminado.name = nombre
+      this.servicioEliminado.description = descripcion
+      this.servicioEliminado.price = precio
+
+      if(this.pedidos.length !== 0){
+        let obj = this.pedidos.find(o => o.name === this.servicioEliminado.name);
+        if (obj){
+          let index = this.pedidos.indexOf(obj)
+          this.pedidos.pop(index)
+      }
+    }
+  }},
+  watch:{
+     pedidos: {
+       handler(nuevosPedidos) {
+         localStorage.pedidos = JSON.stringify(nuevosPedidos)
+       },
+       deep: true
+     }
+  },
+  mounted(){
+    if(localStorage.pedidos){
+      this.pedidos = JSON.parse(localStorage.pedidos)
     }
   }
 }

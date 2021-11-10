@@ -12,7 +12,6 @@
     </div>
 
     <div>
-
      <div class="seccion" v-if="$route.params.nombre==='snacks'">
        <ProductItem v-for="(snack, index) in snacks" v-bind:key="index"
                      v-bind:nombre="snack.name"
@@ -20,7 +19,7 @@
                      v-bind:precio="snack.price"
                      v-bind:descripcion="snack.description"
                      v-bind:categoria="'snacks'"
-                     v-on:addItem="addItemToCart($event)">
+                     v-on:modificarPedido="addItemToCart($event)">
        </ProductItem>
      </div>
 
@@ -31,7 +30,7 @@
               v-bind:precio="alimento.price"
               v-bind:descripcion="alimento.description"
               v-bind:categoria="'alimentos'"
-              v-on:addItem="addItemToCart($event)">
+              v-on:modificarPedido="addItemToCart($event)">
         </ProductItem>
       </div>
 
@@ -42,7 +41,7 @@
               v-bind:precio="juguete.price"
               v-bind:descripcion="juguete.description"
               v-bind:categoria="'juguetes'"
-              v-on:addItem="addItemToCart($event)">
+              v-on:modificarPedido="addItemToCart($event)">
         </ProductItem>
       </div>
 
@@ -51,9 +50,9 @@
               v-bind:nombre="higieneprod.name"
               v-bind:imagen="higieneprod.image"
               v-bind:precio="higieneprod.price"
-              v-bind:descipcion="higieneprod.description"
+              v-bind:descripcion="higieneprod.description"
               v-bind:categoria="'higiene'"
-              v-on:addItem="addItemToCart($event)">
+              v-on:modificarPedido="addItemToCart($event)">
         </ProductItem>
       </div>
 
@@ -97,26 +96,59 @@ export default {
       juguetes: juguetes,
       higiene: higiene,
       description: "",
-      image:""
+      image: "",
+      pedidos: []
     }
   },
-  methods:{
-    info(productoSeleccionado){
-      for (let producto of this.productos){
-        if(producto.name === productoSeleccionado){
+  methods: {
+    info(productoSeleccionado) {
+      for (let producto of this.productos) {
+        if (producto.name === productoSeleccionado) {
           this.description = producto.description
           this.image = require('../assets/img/prodServ/' + producto.image)
           console.log(this.name)
         }
       }
     },
-    irAProductos(){
+    irAProductos() {
       this.$router.go(-1)
-  },
-    addItemToCart (item) {
-      this.$emit("pushItem", item)
+    },
+    addItemToCart(item) {
+      if (this.pedidos.length !== 0){
+        let obj = this.pedidos.find(o => o.name === item.name);
+
+        if (obj){
+          let index = this.pedidos.indexOf(obj)
+          if (item.quantity === 0){
+            this.pedidos.splice(index, 1);
+          }
+          else{
+            this.pedidos[index].quantity = item.quantity
+          }
+        }
+        else{
+          this.pedidos.push(item)
+        }
+      }
+      else{
+        this.pedidos.push(item)
+      }
     }
-}
+  },
+  watch:{
+    pedidos: {
+      handler(nuevosPedidos) {
+        localStorage.pedidos = JSON.stringify(nuevosPedidos)
+      },
+      deep: true
+    }
+  },
+  mounted(){
+    if(localStorage.pedidos){
+      this.pedidos = JSON.parse(localStorage.pedidos)
+    }
+  }
+
 }
 </script>
 

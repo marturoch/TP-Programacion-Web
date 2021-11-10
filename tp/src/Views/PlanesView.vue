@@ -11,7 +11,7 @@
             v-bind:item1="plan.item1"
             v-bind:item2="plan.item2"
             v-bind:item3="plan.item3"
-            v-on:addItem="($event)">
+            v-on:modificarPlan="modificarPlan($event)">
       </Plan>
     </div>
     <RecomendacionBoton></RecomendacionBoton>
@@ -39,7 +39,40 @@ export default {
   },
   data(){
     return {
-      planes: planes
+      planes: planes,
+      pedidos: []
+    }
+  },
+  methods: {
+    modificarPlan(plan){
+      if (this.pedidos.length !== 0){
+        let obj = this.pedidos.find(o => o.tipo === plan.tipo);
+
+        if (obj){
+          let index = this.pedidos.indexOf(obj)
+          this.pedidos[index].name = plan.name
+          this.pedidos[index].price = plan.price
+        }
+        else{
+          this.pedidos.push(plan)
+        }
+      }
+      else{
+        this.pedidos.push(plan)
+      }
+    }
+  },
+  watch:{
+    pedidos: {
+      handler(nuevosPedidos) {
+        localStorage.pedidos = JSON.stringify(nuevosPedidos)
+      },
+      deep: true
+    }
+  },
+  mounted(){
+    if(localStorage.pedidos){
+      this.pedidos = JSON.parse(localStorage.pedidos)
     }
   }
 }
