@@ -2,3 +2,37 @@
     background-color: #FFF5E1;
     background-color: white;
 }
+h1 {
+    text-transform: uppercase;
+    color: black;
+    font-size: 60px;
+}
+
+#info-main {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border:4px solid #820263;
+    width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+
+}
+
+.info-main-h2 {
+    text-transform: uppercase;
+    color: #A82885;
+    font-family: 'Permanent Marker';
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+#banner-left {
+    color: #A82885;
+}
