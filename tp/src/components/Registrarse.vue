@@ -73,11 +73,11 @@ export default {
           })
       .then(response => {
         console.log(response)
-        this.$router.push({name:"RutaRegistroExitoso", params:{clientName: this.name}})
+        this.$router.push({name:"RutaRegistroExitoso", params:{clientName: response.data["name"]}})
       })
       .catch (error => {
-        console.log("Server Error in registrarse()" + error)
-        this.$router.push({name:"NotFoundView", params:{clientName: this.name}})
+        console.log(error)
+        this.$router.push({name:"NotFoundView"})
       })
     }
   }
