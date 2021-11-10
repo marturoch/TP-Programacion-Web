@@ -12,7 +12,6 @@
               <thead class="encabezado">
               <tr>
                 <th class = "eliminar"></th>
-                <th class="imagen"></th>
                 <th class="nombre-producto">PRODUCTO</th>
                 <th class="precio-producto">PRECIO</th>
                 <th class="cantidad-producto">CANTIDAD</th>
@@ -21,8 +20,7 @@
               </thead>
               <tbody>
               <tr v-for="(pedido, index) in pedidos" v-bind:key="index">
-                <td class = "eliminar"></td>
-                <td class="imagen"></td>
+                <td class = "eliminar" v-on:click="removeItem(index)">x</td>
                 <td class="nombre-producto" data-title="Producto">{{pedido.name}}</td>
                 <td class="precio-producto" data-title="Precio">$ {{pedido.price}}</td>
                 <td class="cantidad-producto" data-title="Cantidad">{{pedido.quantity}}</td>
@@ -34,10 +32,10 @@
         </div>
       </div>
       <div>
-        <p @click="checkout()">CHECKOUT</p>
+        <h2>Total del carrito: $ </h2>
       </div>
       <div>
-        <h2>Total del carrito</h2>
+        <p class="checkout" @click="checkout()">CHECKOUT</p>
       </div>
 
       <div v-if="checkOut" class="informacion_cliente">
@@ -87,7 +85,7 @@
             <br><br>
           </div>
           <div>
-            <button>HACER PEDIDO</button>
+            <p class="hacer_pedido" >HACER PEDIDO</p>
             <br><br>
           </div>
         </form>
@@ -146,7 +144,10 @@ export default {
       else{
         this.checkOut = true
       }
-  }
+  },
+  removeItem(index) {
+    this.pedidos.splice(index, 1);
+    },
   },
   data() {
     return {

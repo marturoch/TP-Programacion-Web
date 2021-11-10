@@ -2,7 +2,6 @@
 <div>
   <Header></Header>
   <NavBar></NavBar>
-  <minicarrito></minicarrito>
   {{info($route.params.nombre)}}
   <H1>{{$route.params.nombre}}</H1>
   <br>
@@ -77,12 +76,10 @@ import {snacks} from "../assets/js/ProdServ";
 import {alimentos} from "../assets/js/ProdServ";
 import {juguetes} from "../assets/js/ProdServ";
 import {higiene} from "../assets/js/ProdServ";
-import Minicarrito from "./minicarrito";
 
 export default {
   name: "Producto",
   components: {
-    Minicarrito,
     Header,
     NavBar,
     Footer,

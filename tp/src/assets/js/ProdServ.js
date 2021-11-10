@@ -30,20 +30,20 @@ const servicios = [
     {
         name:"peluqueria",
         image:"peluquera.jpg",
-        description:"El precio puede varias dependiendo del tamano de su mascota. Para un mantenimiento superior de su mascota, Dog Care recomienda bano 1 vez al mes, y corte cada 6 semanas.",
+        description:"Para un mantenimiento superior de su mascota, Dog Care recomienda bañarlo 1 vez al mes, y corte cada 6 semanas.",
         price:900
     },
     {
         name:"paseador",
         image:"paseador.png",
         description:"Paseador particular - $300 la hora",
-        price:900
+        price:300
     },
     {
         name:"adiestrador",
         image:"adiestrador.jpg",
         description:"Servicio de adiestramiento canino particular - $600 la hora. Duracion estimada del curso: 3 meses. Frecuencia: 1 vez por semana. Duracion de clases: 1 hora",
-        price:900
+        price:600
 
     }
 ]

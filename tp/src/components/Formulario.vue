@@ -9,7 +9,8 @@
         </div>
 
         <div class="form-data">
-          <label>Fecha Nacimiento: </label><input type="date" v-model="date" required>
+          <label>Fecha Nacimiento: </label>
+          <input type="date" v-model="date" class="fecha" required>
           <br>
         </div>
 
@@ -17,6 +18,14 @@
           <label>Sexo: </label><br>
           <input name="sexo" type="radio" value="Hembra" v-model="sexo" required>Hembra<br>
           <input name="sexo" type="radio" value="Macho" v-model="sexo" required>Macho<br>
+        </div>
+
+        <div class="form-data">
+        <label>Sexo: </label>
+          <select v-model="sexo" required>
+            <option value="hembra">Hembra</option>
+            <option value="macho">Macho</option>
+          </select>
         </div>
 
         <div class="form-data">

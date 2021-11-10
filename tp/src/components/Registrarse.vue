@@ -9,7 +9,7 @@
       </div>
 
       <div class="form-data">
-        <label>APELLIDO <span class="required-field">*</span></label><input type="text" required v-model="surname">
+        <label>APELLIDO<span class="required-field">*</span></label><input type="text" required v-model="surname">
       </div>
 
       <div class="form-data">

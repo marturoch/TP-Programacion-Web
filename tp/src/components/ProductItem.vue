@@ -4,10 +4,10 @@
         <h4>{{nombre}}</h4>
         <img class="Menu-img" v-bind:src="require('../assets/img/prodServ/' + categoria + '/' + imagen)" width="100px">
        <p id="precio">${{precio}}</p>
-       <div>
-         <p class="agregar" v-on:click="agregarProducto(nombre, precio)">+</p>
-         <p class="eliminar" v-on:click="eliminarProducto()">-</p>
+       <div class="quantity">
+         <p class="eliminar" v-on:click="eliminarProducto()" title="eliminar">-</p>
          <p class="cantidad">{{ cantidad }}</p>
+         <p class="agregar" v-on:click="agregarProducto(nombre, precio)" title="agregar">+</p>
        </div>
         <div class="agregoElimino" v-if="agregado">
           <p>PRODUCTO AGREGADO</p>
@@ -97,6 +97,7 @@ export default {
 p{
   font-size:15px;
   text-align: justify;
+
 }
 
 .agregar, .eliminar{
@@ -109,6 +110,7 @@ p{
   margin-right:10px;
   width:20px;
   align-items: center;
+  text-align: center;
 
 }
 .agregar:hover, .eliminar:hover{
@@ -117,13 +119,19 @@ p{
 .cantidad{
   border:2px solid black;
   width:40px;
+  margin-right: 10px;
   height:18px;
   padding:5px;
+  text-align: center;
 }
 .agregoElimino{
   opacity:25%;
   color:white;
   padding: 0px 5px;
   background-color: #820263;
+}
+.quantity {
+  display: flex;
+  align-items: center ;
 }
 </style>

@@ -17,15 +17,15 @@
     color: blue;
 }
 
-label, input {
+label {
     flex-direction:column;
     margin: 20px;
     padding: 20px;
 }
 
 input {
-    box-sizing: border-box;
-    width: 300px;
+    width: auto;
+    height: auto;
     line-height: 2px;
     background-color: rgba(0,0,0,.07)
 }

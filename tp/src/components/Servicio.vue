@@ -9,8 +9,8 @@
       <div class="fotoDescripcion">
         <img :src="image" width="300px">
         <h3>{{description}}</h3>
-        <h2>{{price}}</h2>
       </div>
+      <p class="precio">${{price}}</p>
       <div>
         <p class="boton" @click="agregarServicio($route.params.nombre, description, price)">AGREGAR SERVICIO</p>
         <p class="boton" @click="eliminarServicio($route.params.nombre, description, price)">ELIMINAR SERVICIO</p>
@@ -176,5 +176,9 @@ p{
   color:white;
   padding: 0px 5px;
   background-color: #820263;
+}
+.precio {
+  font-size: 30px;
+
 }
 </style>
