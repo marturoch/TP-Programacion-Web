@@ -18,7 +18,7 @@
                 v-on:modificarPlan="modificarPlan($event)">
           </Plan>
         </div>
-        <RecomendacionBoton></RecomendacionBoton>
+        <h3 id="planSeleccionado">PLAN SELECCIONADO: {{planSeleccionado}}</h3>
         <br><br>
       <p class="botonVolver" v-if="show" @click="volverAFormulario()">VOLVER A FORMULARIO</p>
     </div>
@@ -33,7 +33,6 @@ import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Plan from "../components/Plan";
-import RecomendacionBoton from "../components/RecomendacionBoton";
 
 export default {
   name: "RecomendacionView",
@@ -43,7 +42,6 @@ export default {
     Header,
     NavBar,
     Footer,
-    RecomendacionBoton
   },
   data() {
     return {
@@ -52,7 +50,8 @@ export default {
       planes: planes,
       showButton: true,
       isActive: null,
-      pedidos: []
+      pedidos: [],
+      planSeleccionado: ""
     }
   },
   methods: {
@@ -84,13 +83,16 @@ export default {
           let index = this.pedidos.indexOf(obj)
           this.pedidos[index].name = plan.name
           this.pedidos[index].price = plan.price
+          this.planSeleccionado = plan.name
         }
         else{
           this.pedidos.push(plan)
+          this.planSeleccionado = plan.name
         }
       }
       else{
         this.pedidos.push(plan)
+        this.planSeleccionado = plan.name
       }
     }
   },
@@ -105,6 +107,11 @@ export default {
   mounted(){
     if(localStorage.pedidos){
       this.pedidos = JSON.parse(localStorage.pedidos)
+      let obj = this.pedidos.find(o => o.tipo === "plan");
+      if (obj){
+        let index = this.pedidos.indexOf(obj)
+        this.planSeleccionado =  this.pedidos[index].name
+      }
     }
   }
 }
@@ -133,5 +140,17 @@ export default {
         align-items: center;
         width:22%;
         height:550px;
+      }
+      #planSeleccionado{
+        text-transform: uppercase;
+        color: #F75C03;
+        margin-top:80px;
+        font-size:30px;
+      }
+      .botonVolver{
+        background-color: #820263;
+        color:white;
+        padding:20px;
+        border-radius:5px;
       }
     </style>

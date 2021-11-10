@@ -10,8 +10,16 @@
         <img :src="image" width="300px">
         <h3>{{description}}</h3>
         <h2>{{price}}</h2>
-        <p @click="agregarServicio($route.params.nombre, description, price)">SELECCIONAR</p>
-        <p @click="eliminarServicio($route.params.nombre, description, price)">ELIMINAR</p>
+      </div>
+      <div>
+        <p class="boton" @click="agregarServicio($route.params.nombre, description, price)">AGREGAR SERVICIO</p>
+        <p class="boton" @click="eliminarServicio($route.params.nombre, description, price)">ELIMINAR SERVICIO</p>
+      </div>
+      <div class="agregoElimino" v-if="agregado">
+        <p>SERVICIO AGREGADO</p>
+      </div>
+      <div class="agregoElimino" v-if="eliminado">
+        <p>SERVICIO ELIMINADO</p>
       </div>
       <div>
         <p class="botonVolver" @click="irAServicios">VOLVER A SERVICIOS</p>
@@ -43,7 +51,9 @@ export default {
       pedidos:[],
       servicioPedido: {name:"", price:"", quantity:1 , tipo:'servicio'},
       servicioEliminado: {name:"", price:"", quantity:1 , tipo:'servicio'},
-      repetido: false
+      repetido: false,
+      agregado: false,
+      eliminado: false
     }
   },
   methods:{
@@ -68,9 +78,12 @@ export default {
         let obj = this.pedidos.find(o => o.name === this.servicioPedido.name);
         if (obj){
           this.repetido = true
+          this.agregado = true
         }
         if (!this.repetido){
           this.pedidos.push(this.servicioPedido)
+          this.agregado = true
+          this.eliminado = false
         }
       }
     },
@@ -84,6 +97,8 @@ export default {
         if (obj){
           let index = this.pedidos.indexOf(obj)
           this.pedidos.pop(index)
+          this.eliminado = true
+          this.agregado = false
       }
     }
   }},
@@ -141,5 +156,25 @@ h2{
 }
 p{
   align-items: center;
+}
+.boton {
+  margin: 10px;
+  padding: 10px;
+  border: 4px solid #820263;
+  border-radius: 10px;
+  color: white;
+  background-color: #820263;
+}
+.boton:hover{
+  cursor:pointer;
+  opacity: 60%;
+}
+.agregoElimino{
+  opacity:25%;
+  margin-top:15px;
+  border-radius:5px;
+  color:white;
+  padding: 0px 5px;
+  background-color: #820263;
 }
 </style>

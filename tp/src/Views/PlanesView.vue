@@ -13,6 +13,7 @@
             v-bind:item3="plan.item3"
             v-on:modificarPlan="modificarPlan($event)">
       </Plan>
+      <h3 id="planSeleccionado">PLAN SELECCIONADO: {{planSeleccionado}}</h3>
     </div>
     <RecomendacionBoton></RecomendacionBoton>
     <br><br>
@@ -40,25 +41,30 @@ export default {
   data(){
     return {
       planes: planes,
-      pedidos: []
+      pedidos: [],
+      planSeleccionado: "",
     }
   },
   methods: {
     modificarPlan(plan){
       if (this.pedidos.length !== 0){
+        this.plan = plan
         let obj = this.pedidos.find(o => o.tipo === plan.tipo);
 
         if (obj){
           let index = this.pedidos.indexOf(obj)
           this.pedidos[index].name = plan.name
           this.pedidos[index].price = plan.price
+          this.planSeleccionado = plan.name
         }
         else{
           this.pedidos.push(plan)
+          this.planSeleccionado = plan.name
         }
       }
       else{
         this.pedidos.push(plan)
+        this.planSeleccionado = plan.name
       }
     }
   },
@@ -73,9 +79,12 @@ export default {
   mounted(){
     if(localStorage.pedidos){
       this.pedidos = JSON.parse(localStorage.pedidos)
-    }
+      let obj = this.pedidos.find(o => o.tipo === "plan");
+      if (obj){
+        let index = this.pedidos.indexOf(obj)
+        this.planSeleccionado =  this.pedidos[index].name
   }
-}
+}}}
 </script>
 
 <style scoped>
@@ -98,7 +107,12 @@ export default {
   height:550px;
   background-color: white;
 }
-
+#planSeleccionado{
+  text-transform: uppercase;
+  color: #F75C03;
+  margin-top:80px;
+  font-size:30px;
+}
 </style>
 
 

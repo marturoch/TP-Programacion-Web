@@ -9,6 +9,12 @@
          <p class="eliminar" v-on:click="eliminarProducto()">-</p>
          <p class="cantidad">{{ cantidad }}</p>
        </div>
+        <div class="agregoElimino" v-if="agregado">
+          <p>PRODUCTO AGREGADO</p>
+        </div>
+        <div class="agregoElimino" v-if="eliminado">
+          <p>PRODUCTO ELIMINADO</p>
+        </div>
       </div>
   </div>
 </template>
@@ -26,7 +32,9 @@ export default {
   data(){
     return{
       pedido: {name:"", price:"", quantity:""},
-      cantidad: 0
+      cantidad: 0,
+      agregado: false,
+      eliminado: false
     }
   },
   methods:{
@@ -43,14 +51,20 @@ export default {
       }
     }
       this.$emit('modificarPedido', this.pedido)
+      this.agregado = true
+      this.eliminado = false
     },
     eliminarProducto() {
       if (this.cantidad !== 0){
         this.cantidad -= 1
         this.pedido.quantity = this.cantidad
         this.$emit('modificarPedido', this.pedido)
+        this.eliminado = true
+        this.agregado = false
       }
-
+      else{
+        this.eliminado = false
+      }
     }
 }}
 </script>
@@ -105,5 +119,11 @@ p{
   width:40px;
   height:18px;
   padding:5px;
+}
+.agregoElimino{
+  opacity:25%;
+  color:white;
+  padding: 0px 5px;
+  background-color: #820263;
 }
 </style>
