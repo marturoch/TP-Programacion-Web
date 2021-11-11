@@ -1,7 +1,6 @@
 <template>
   <div id="mini_carrito">
     <h2 id="titulo_carrito">Carrito de Compras</h2>
-    <img src="../assets/img/carrito.png" alt="carrito">
     <hr>
     <div v-for="(item,index) in shoppingCart" v-bind:key="index">
       <span class="item_remove" v-on:click="removeItem(index)">x</span>
