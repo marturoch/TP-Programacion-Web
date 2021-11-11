@@ -35,7 +35,7 @@ export default {
   },
   methods:{
     agregarPerro() {
-      axios.post("https://localhost:5000/api/v1/perro",
+      axios.post("https://localhost:5000/api/v1/perros",
           {
             name: this.name,
             raza: this.raza,

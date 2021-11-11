@@ -170,7 +170,7 @@ export default {
       }
     },
     pedido(){
-      axios.post("https://localhost:5000/api/v1/orden",
+      axios.post("https://localhost:5000/api/v1/orders",
           {
             name: this.name,
             surname: this.surname,
