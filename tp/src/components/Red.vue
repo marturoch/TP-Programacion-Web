@@ -3,7 +3,7 @@
     <Header></Header>
     <NavBar></NavBar>
     <div class="contenedor-red">
-      <dog-form/>
+      <dogForm/>
 
       <div class="contenedor-cartas">
         <dog-card/>

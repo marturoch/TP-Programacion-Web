@@ -47,7 +47,7 @@ export default {
   },
   methods:{
     registrarse(){
-      this.$router.push('/registrarse')
+      this.$router.push('/registro')
     },
     login(){
       this.status = "logged"

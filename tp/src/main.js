@@ -21,6 +21,8 @@ import Registrarse from "./components/Registrarse";
 import RegistroExitoso from "./components/RegistroExitoso";
 import minicarrito from "./components/minicarrito";
 import login from "./components/login";
+import PedidoExitoso from "./components/PedidoExitoso";
+import PedidoRechazado from "./components/PedidoRechazado";
 
 const routes = [
   {path: '/', name: "Home", component:HomeView},
@@ -35,8 +37,10 @@ const routes = [
   {path: '/perfil', name:"Perfil", component:PerfilView},
   {path: '/carrito', name:"Carrito", component:Carrito},
   {path: '/minicarrito', name:"minicarrito", component: minicarrito},
-  {path: '/registrarse', name:"Registro", component:Registrarse},
-  {path: '/registrarse/exitoso', name:"RutaRegistroExitoso", component:RegistroExitoso},
+  {path: '/registro', name:"Registro", component:Registrarse},
+  {path: '/registro/exitoso', name:"RutaRegistroExitoso", component:RegistroExitoso},
+  {path: '/carrito/pedidoExitoso', name:"PedidoExitoso", component:PedidoExitoso},
+  {path: '/carrito/pedidoRechazado', name:"PedidoRechazado", component:PedidoRechazado},
   {path: '/*', component:NotFoundView}
 ]
 

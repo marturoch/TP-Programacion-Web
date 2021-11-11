@@ -68,7 +68,7 @@
 
           <div id="localidad">
             <label for="localidad">LOCALIDAD/CIUDAD *</label><br>
-            <input autocomplete type="text" name="" id="localidad" v-model="localidad" required>
+            <input autocomplete type="text" name="" id="localidad" v-model="location" required>
           </div>
 
           <div id="codigo_postal">
@@ -93,7 +93,7 @@
             <br><br>
           </div>
           <div>
-            <p class="hacer_pedido">HACER PEDIDO</p>
+            <p class="hacer_pedido" @click="pedido()">HACER PEDIDO</p>
             <br><br>
           </div>
         </form>
@@ -168,6 +168,27 @@ export default {
       else if (tipo === "servicio"){
         this.$router.push('/servicios/' + pedido.name)
       }
+    },
+    pedido(){
+      axios.post("https://localhost:5000/api/v1/orden",
+          {
+            name: this.name,
+            surname: this.surname,
+            address: this.address,
+            phoneNumber: this.phoneNumber,
+            location: this.location,
+            postalCode: this.postalCode,
+            email: this.email,
+            pedidos: this.pedidos
+          })
+          .then(response => {
+            console.log(response)
+            this.$router.push({name:"PedidoExitoso", params:{name: this.name}})
+          })
+          .catch (error => {
+            console.log("Server Error in pedido()" + error)
+            this.$router.push({name:"PedidoRechazado", params:{name: this.name}})
+          })
     }
   },
   data() {
@@ -176,7 +197,7 @@ export default {
       surname: "",
       address: "",
       phoneNumber: "",
-      localidad:"",
+      location:"",
       postalCode:"",
       email:"",
       coments: "",
