@@ -2,7 +2,7 @@
 <div class="rechazado">
   <Header></Header>
   <br>
-  <p>PEDIDO RECHAZADO</p>
+  <p>EL PEDIDO HA SIDO RECHAZADO</p>
   <br>
   <img src="../assets/img/carritos/cross.png">
   <br>
@@ -33,6 +33,7 @@ export default {
 
 p {
   font-size: 20px;
+  text-align: center;
   color: black;
   font-family: inherit;
 }
@@ -47,5 +48,8 @@ p {
 }
 .botonVolver:hover {
   cursor: pointer;
+}
+.rechazado {
+  align-items: center;
 }
 </style>

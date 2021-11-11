@@ -125,7 +125,7 @@ export default {
   },
   methods: {
     orderCart() {
-      axios.post("http://localhost:5000/api/v1/orders",{
+      axios.post("http://localhost:5001/api/v1/orders",{
         user: this.name,
         surname: this.surname,
         address: this.address,
@@ -170,7 +170,7 @@ export default {
       }
     },
     pedido(){
-      axios.post("https://localhost:5000/api/v1/orders",
+      axios.post("http://localhost:5001/api/v1/orders",
           {
             name: this.name,
             surname: this.surname,
@@ -209,7 +209,7 @@ export default {
   },
   watch:{
     pedidos(nuevoPedido){
-      localStorage.setItem('pedidos', JSON.strinigfy(nuevoPedido))
+      localStorage.setItem('pedidos', JSON.stringify(nuevoPedido))
     }
   },
   mounted(){

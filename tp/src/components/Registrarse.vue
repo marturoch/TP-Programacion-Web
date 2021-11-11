@@ -64,7 +64,7 @@ export default {
     },
     registrarse () {
       //this.$router.push({name:"RutaRegistroExitoso", params:{clientName: this.nombre}})
-      axios.post("https://localhost:5000/api/v1/registros",
+      axios.post("http://localhost:5000/api/v1/registros",
           {
             user: this.name,
             surname: this.surname,
