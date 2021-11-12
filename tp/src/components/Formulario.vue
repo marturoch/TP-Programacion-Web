@@ -137,7 +137,7 @@ export default {
       if (this.seleccionEnfermedad == 'Si'){
         this.puntaje+=10
       }
-      if (this.seleccionVacuna == "No"){
+      if (this.seleccionVacuna == "Si"){
         this.puntaje+= 10;
       }
       if(this.seleccionEdad == "Mayor a 6 años"){
