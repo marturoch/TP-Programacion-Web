@@ -21,10 +21,10 @@
         </div>
 
         <div class="form-data">
-        <label>Sexo: </label>
-          <select v-model="sexo" required>
-            <option value="hembra">Hembra</option>
-            <option value="macho">Macho</option>
+        <label>Edad: </label>
+          <select v-model="edad" required>
+            <option value="joven">Menor a 9 años</option>
+            <option value="viejo">Mayor a 9 años</option>
           </select>
         </div>
 
