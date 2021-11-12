@@ -21,14 +21,43 @@
         <div class="form-data">
           <label>Raza: </label>
           <select v-model="raza" required>
-            <option>Raza 1</option>
-            <option>Raza 2</option>
-            <option>Raza 3</option>
-            <option>Raza 4</option>
-            <option>Raza 5</option>
-            <option>Raza 6</option>
-            <option>Raza 7</option>
-            <option>Raza 8</option>
+            <option>Akita Inu</option>
+            <option>American Pit Bull Terrier</option>
+            <option>American Staffordshire Terrier</option>
+            <option>Beagle</option>
+            <option>Border Collie</option>
+            <option>Border Terrier</option>
+            <option>Boston Terrier</option>
+            <option>Boyero de Berna</option>
+            <option>Braco</option>
+            <option>Bull Terrier</option>
+            <option>Bulldog</option>
+            <option>Bull Mastín</option>
+            <option>Bóxer</option>
+            <option>Caniche</option>
+            <option>Chihuahua</option>
+            <option>Chow Chow</option>
+            <option>Cocker</option>
+            <option>Doberman</option>
+            <option>Dogo</option>
+            <option>Dálmata</option>
+            <option>Fox Terrier</option>
+            <option>Galgo</option>
+            <option>Golden Retriver</option>
+            <option>Gran Danés</option>
+            <option>Husky Siberiano</option>
+            <option>Jack Russell Terrier</option>
+            <option>Labrador Retriever</option>
+            <option>Mastín</option>
+            <option>Pastor Alemán</option>
+            <option>Pequinés</option>
+            <option>Rottweiler</option>
+            <option>Sabueso</option>
+            <option>San Bernardo</option>
+            <option>Shar Pei</option>
+            <option>Schnauzer</option>
+            <option>Terranova</option>
+            <option>Yorkshire terrier</option>
           </select>
         </div>
 
