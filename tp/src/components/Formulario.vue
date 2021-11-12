@@ -38,9 +38,6 @@
             <option name="enfermedad" >Si</option>
             <option name="enfermedad" >No</option>
           </select>
-          <div v-if="especificacionEnfermedad">
-            <label>Cual?</label><input type="text" required>
-          </div>
         </div>
 
         <div class="form-data">
@@ -49,9 +46,6 @@
             <option name="vacuna" >Si</option>
             <option name="vacuna" >No</option>
           </select>
-          <div v-if="especificacionVacuna">
-            <label>Cual? </label><input type="text" required>
-          </div>
         </div>
 
         <div class="form-data">
