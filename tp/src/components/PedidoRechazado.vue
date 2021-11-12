@@ -2,7 +2,8 @@
 <div class="rechazado">
   <Header></Header>
   <br>
-  <p>EL PEDIDO HA SIDO RECHAZADO</p>
+  <p>EL PEDIDO HA SIDO RECHAZADO</p><br>
+  <p>No hemos podido registrar tu orden, prueba de nuevo en otro momento</p>
   <br>
   <img src="../assets/img/carritos/cross.png">
   <br>

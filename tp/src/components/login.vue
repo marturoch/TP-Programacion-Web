@@ -2,7 +2,9 @@
   <div>
     <Header v-bind:status="status"></Header>
     <NavBar></NavBar>
+    <br><br>
     <form class="form-container" @submit.prevent="login()">
+      <br>
       <div class="form-data">
         <label>MAIL <span class="required-field">*</span></label><input type="email" v-model="mail" required>
       </div>
@@ -10,10 +12,11 @@
         <label>CONTRASEÑA <span class="required-field">*</span></label><input type="password" v-model="password" required>
       </div>
       <div>
-        <input type="submit" value="Login" class="registro">
+        <input type="submit" value="Iniciar Sesión" class="registro">
       </div>
+      <br>
     </form>
-    <p>No tienes cuenta? Registrate 👉<span class="aqui" @click="registrarse()"> AQUI </span>👈</p>
+    <p>¿No tienes una cuenta? Registrate 👉<span class="aqui" @click="registrarse()"> AQUI </span>👈</p>
     <Footer></Footer>
   </div>
 </template>

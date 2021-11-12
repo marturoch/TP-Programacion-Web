@@ -1,0 +1,49 @@
+<template>
+  <div>
+    <Header></Header>
+    <NavBar></NavBar>
+    <p>Tu mascota no ha podido integrarse a la Red de Mascotas</p>
+    <p>Intente de nuevo más tarde</p>
+    <router-link :to="{name:'RedView'}" class="reintentar">REINTENTAR</router-link>
+    <br>
+    <div class="contenedor-cartas">
+      <dog-card/>
+      <dog-card/>
+      <dog-card/>
+      <dog-card/>
+      <dog-card/>
+      <dog-card/>
+    </div>
+  <Footer></Footer>
+  </div>
+</template>
+
+<script>
+import Header from "./Header";
+import NavBar from "./NavBar";
+import dogCard from "./dogCard";
+import Footer from "./Footer";
+
+export default {
+  name: "PerroRechazado",
+  components: {
+    Header,
+    NavBar,
+    dogCard,
+    Footer
+  }
+}
+</script>
+
+<style scoped>
+.reintentar {
+  text-decoration: none;
+  align-items: center;
+  color:black;
+  background-color: cornflowerblue;
+  border-radius: 100px;
+  padding:10px;
+  height: 50px;
+  width: 140px
+}
+</style>

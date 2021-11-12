@@ -2,6 +2,7 @@
   <div>
     <Header></Header>
     <NavBar></NavBar>
+    <br><br><br>
     <form class="form-container" method="post" @submit="registrarse()">
 
       <div class="form-data">
@@ -17,17 +18,21 @@
       </div>
 
       <div class="form-data">
-        <label>CONTRASEÑA<span class="required-field">*</span></label><input type="password" v-model="password" required>
+        <label>CONTRASEÑA<span class="required-field">*</span></label><input type="password" required v-model="password">
       </div>
       <div>
-        <input type="submit" value="REGISTRARSE" class="registro" @click="registrarse()">
+        <input type="submit" value="REGISTRARSE" class="registro">
+        <br><br>
       </div>
 
     </form>
-    <p>¿Ya tienes cuenta? Inicia sesión 👉 <span class="aqui" @click="logearse()">AQUI</span>👈</p>
+    <br>
+    <p>¿Ya tienes una cuenta? Inicia sesión 👉 <span class="aqui" @click="logearse()">AQUI</span>👈</p>
+    <br><br><br>
     <div>
-      <router-link :to="{name:'Home'}">Volver al Inicio</router-link>
+      <router-link :to="{name:'Home'}" class="volver">Volver al Inicio</router-link>
     </div>
+    <br><br>
     <Footer></Footer>
   </div>
 </template>
@@ -63,7 +68,6 @@ export default {
       this.$router.push('/login')
     },
     registrarse () {
-      //this.$router.push({name:"RutaRegistroExitoso", params:{clientName: this.nombre}})
       axios.post("http://localhost:5000/api/v1/registros",
           {
             user: this.name,
@@ -73,11 +77,11 @@ export default {
           })
       .then(response => {
         console.log(response)
-        this.$router.push({name:"RutaRegistroExitoso", params:{clientName: response.data["name"]}})
+        this.$router.push({name:"RutaRegistroExitoso"})
       })
       .catch (error => {
         console.log(error)
-        this.$router.push({name:"NotFoundView"})
+        this.$router.push({name:"RutaRegistroRechazado"})
       })
     }
   }

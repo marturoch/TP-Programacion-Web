@@ -49,41 +49,48 @@
       <div v-if="checkOut" class="informacion_cliente">
         <br>
         <h3>Detalles del cliente </h3>
-        <form action="">
+        <form action="" method="POST" @submit="pedido()">
           <div id="nom_y_ap">
             <div>
-              <label for="nombre">NOMBRE *</label><br>
+              <label for="nombre">NOMBRE<span class="required-field">*</span></label><br>
               <input type="name" name="" required id="nombre" autocomplete v-model="name">
+              <br><br>
             </div>
             <div>
-              <label for="apellido">APELLIDO *</label><br>
+              <label for="apellido">APELLIDO<span class="required-field">*</span></label><br>
               <input type="family-name" required name="" id="apellido" autocomplete v-model="surname">
+              <br><br>
             </div>
           </div>
 
           <div id="direc">
-            <label for="direc">DIRECCIÓN</label><br>
+            <label for="direc">DIRECCIÓN<span class="required-field">*</span></label><br>
             <input autocomplete type="street-address" name="" v-model="address" id="direc" required placeholder="Nombre y Número de la Calle">
+            <br><br>
           </div>
 
           <div id="localidad">
-            <label for="localidad">LOCALIDAD/CIUDAD *</label><br>
+            <label for="localidad">LOCALIDAD/CIUDAD<span class="required-field">*</span></label><br>
             <input autocomplete type="text" name="" id="localidad" v-model="location" required>
+            <br><br>
           </div>
 
           <div id="codigo_postal">
-            <label for="cp">CÓDIGO POSTAL</label><br>
+            <label for="cp">CÓDIGO POSTAL<span class="required-field">*</span></label><br>
             <input autocomplete type="postal-code" name="" id="cp" v-model="postalCode" required>
+            <br><br>
           </div>
 
           <div id="telefono">
-            <label for="tel">TELÉFONO</label><br>
+            <label for="tel">TELÉFONO<span class="required-field">*</span></label><br>
             <input autocomplete type="tel" name="" id="tel" v-model="phoneNumber" required>
+            <br><br>
           </div>
 
           <div id="email">
-            <label for="email">DIRECCIÓN DE CORREO ELECTRÓNICO</label><br>
+            <label for="email">DIRECCIÓN DE CORREO ELECTRÓNICO<span class="required-field">*</span></label><br>
             <input autocomplete type="email" required name="" id="email" v-model="email">
+            <br><br>
           </div>
           <br><br><br>
           <div id="nota">
@@ -93,7 +100,7 @@
             <br><br>
           </div>
           <div>
-            <p class="hacer_pedido" @click="pedido()">HACER PEDIDO</p>
+            <input type="submit" class="hacer_pedido" value="HACER PEDIDO" @submit="pedido()">
             <br><br>
           </div>
         </form>

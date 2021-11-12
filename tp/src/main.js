@@ -23,6 +23,11 @@ import minicarrito from "./components/minicarrito";
 import login from "./components/login";
 import PedidoExitoso from "./components/PedidoExitoso";
 import PedidoRechazado from "./components/PedidoRechazado";
+import RegistroRechazado from "./components/RegistroRechazado";
+import PerroAgregadoExitosamente from "./components/PerroAgregadoExitosamente";
+import PerroRechazado from "./components/PerroRechazado";
+import PerroEliminadoExitosamente from "./components/PerroEliminadoExitosamente";
+import PerroSinEliminar from "./components/PerroSinEliminar";
 
 const routes = [
   {path: '/', name: "Home", component:HomeView},
@@ -32,6 +37,10 @@ const routes = [
   {path: '/servicios', name: "Servicios", component:ServicesView},
   {path: '/servicios/:nombre', name: "Servicio", component:Servicio},
   {path: '/red-de-mascotas', name: "Red", component:RedView},
+  {path: '/red-de-mascotas/agregado', name: "PerroAgregadoExitosamente", component:PerroAgregadoExitosamente},
+  {path: '/red-de-mascotas/rechazado', name: "PerroRechazado", component:PerroRechazado},
+  {path: '/red-de-mascotas/eliminado', name: "PerroEliminadoExitosamente", component:PerroEliminadoExitosamente},
+  {path: '/red-de-mascotas/sin-eliminar', name: "PerroSinEliminar", component:PerroSinEliminar},
   {path: '/recomendacion', name: "Recomendacion", component:RecomendacionView},
   {path: '/login', name:"Login", component:login},
   {path: '/perfil', name:"Perfil", component:PerfilView},
@@ -39,6 +48,7 @@ const routes = [
   {path: '/minicarrito', name:"minicarrito", component: minicarrito},
   {path: '/registro', name:"Registro", component:Registrarse},
   {path: '/registro/exitoso', name:"RutaRegistroExitoso", component:RegistroExitoso},
+  {path: '/registro/rechazado', name:"RutaRegistroRechazado", component:RegistroRechazado},
   {path: '/carrito/pedidoExitoso', name:"PedidoExitoso", component:PedidoExitoso},
   {path: '/carrito/pedidoRechazado', name:"PedidoRechazado", component:PedidoRechazado},
   {path: '/*', component:NotFoundView}

@@ -2,7 +2,9 @@
   <div class="aceptado">
     <Header></Header>
     <br>
-    <p>EL PEDIDO HA SIDO ACEPTADO</p>
+    <p>GRACIAS POR COMPRAR EN DOG-CARE</p>
+    <br>
+    <p>Estamos elaborando su pedido</p>
     <br>
     <img src="../assets/img/carritos/check.png">
     <br>

@@ -4,12 +4,13 @@
     <iframe :src="mapa" width="350" height="250" style="border-radius: 12px;" allowfullscreen="" loading="lazy"></iframe>
     <h4 class="datos-contacto">DATOS DE CONTACTO</h4>
     <h5 class="datos-contacto">{{tel}}</h5>
-    <h5 class="datos-contacto">dogcare@gmail.com</h5>
+    <a href=""><h5 class="datos-contacto" >dogcare@gmail.com</h5></a>
     <p>
-      <img src="../assets/img/botones/facebook.png" width="50px" style="float:right;">
-      <img src="../assets/img/botones/instagram.png" width="50px" style="float:right;">
-      <img src="../assets/img/botones/whatsapp.png" width="50px" style="float:right;">
-    </p>
+      <a href="https://www.facebook.com/" target="_blank"><img src="../assets/img/botones/facebook.png" width="50px" style="float:right;"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="../assets/img/botones/instagram.png" width="50px" style="float:right;"></a>
+      <a href="https://wa.me/+5492804207539" target="_blank"><img src="../assets/img/botones/whatsapp.png" width="50px" style="float:right;"></a>
+    </p><br>
+    <h4>© 2021 DOG CARE Todos los derechos reservados | Términos de uso y compromiso de privacidad</h4>
   </div>
 </template>
 

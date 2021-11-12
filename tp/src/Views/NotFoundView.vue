@@ -2,7 +2,13 @@
   <div>
     <Header></Header>
     <div>
-      <h2>Not found :(</h2>
+      <br>
+      <img src="../assets/img/notfound.svg" class="notfound">
+      <h2>Esta página no está disponible</h2>
+      <h3>Es posible que el enlace esté roto o que se haya eliminado la página</h3>
+      <h3>Verifica que el enlace que quieres abrir es correcto.</h3>
+      <br>
+      <router-link :to="{name:'Home'}" class="volver">Volver al Inicio</router-link>
     </div>
   </div>
 </template>
@@ -19,4 +25,8 @@ export default {
 
 <style scoped>
 
+.notfound {
+  height: 100px;
+  wiidth: 100px
+}
 </style>
