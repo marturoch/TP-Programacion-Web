@@ -29,13 +29,14 @@ export default {
   ],
   data(){
     return{
-      plan: {name:"", price:"", quantity:1 ,  tipo:'plan'}
+      plan: {name:"", price:"", quantity:1 ,  tipo:'plan', subtotal:""}
     }
   },
   methods: {
     agregarPlan(name,precio) {
       this.plan.name = name
       this.plan.price = precio
+      this.plan.subtotal = precio
       this.$emit('modificarPlan', this.plan)
     }
   }

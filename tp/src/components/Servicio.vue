@@ -46,8 +46,8 @@ export default {
       image:"",
       price:"",
       pedidos:[],
-      servicioPedido: {name:"", price:"", quantity:1 , tipo:'servicio'},
-      servicioEliminado: {name:"", price:"", quantity:1 , tipo:'servicio'},
+      servicioPedido: {name:"", price:"", quantity:1 , tipo:'servicio', subtotal:""},
+      servicioEliminado: {name:"", price:"", quantity:1 , tipo:'servicio', subtotal:""},
       repetido: false,
       agregado: false
     }
@@ -59,6 +59,7 @@ export default {
           this.description = producto.description
           this.image = require('../assets/img/prodServ/' + producto.image)
           this.price = producto.price
+          this.subtotal = producto.price
         }
       }
     },
@@ -69,6 +70,7 @@ export default {
       this.servicioPedido.name = nombre
       this.servicioPedido.description = descripcion
       this.servicioPedido.price = precio
+      this.servicioPedido.subtotal = precio
 
       if(this.pedidos.length !== 0){
         let obj = this.pedidos.find(o => o.name === this.servicioPedido.name);
@@ -87,6 +89,7 @@ export default {
       this.servicioEliminado.name = nombre
       this.servicioEliminado.description = descripcion
       this.servicioEliminado.price = precio
+      this.servicioEliminado.subtotal = precio
 
       if(this.pedidos.length !== 0){
         let obj = this.pedidos.find(o => o.name === this.servicioEliminado.name);

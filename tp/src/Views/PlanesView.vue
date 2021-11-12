@@ -53,7 +53,9 @@ export default {
           let index = this.pedidos.indexOf(obj)
           this.pedidos[index].name = plan.name
           this.pedidos[index].price = plan.price
+          this.pedidos[index].subtotal = plan.price
           this.planSeleccionado = plan.name
+
         }
         else{
           this.pedidos.push(plan)
