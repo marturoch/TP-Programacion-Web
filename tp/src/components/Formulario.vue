@@ -5,16 +5,6 @@
         <legend>INFORMACION SOBRE SU MASCOTA</legend>
 
         <div class="form-data">
-          <label>Nombre: </label><input type="text" v-model="name" required >
-        </div>
-
-        <div class="form-data">
-          <label>Fecha Nacimiento: </label>
-          <input type="date" v-model="date" class="fecha" required>
-          <br>
-        </div>
-
-        <div class="form-data">
           <label>Sexo: </label><br>
           <input name="sexo" type="radio" value="Hembra" v-model="sexo" required>Hembra<br>
           <input name="sexo" type="radio" value="Macho" v-model="sexo" required>Macho<br>
@@ -23,8 +13,8 @@
         <div class="form-data">
         <label>Edad: </label>
           <select v-model="edad" required>
-            <option value="joven">Menor a 9 años</option>
-            <option value="viejo">Mayor a 9 años</option>
+            <option value="joven">Menor a 6 años</option>
+            <option value="viejo">Mayor a 6 años</option>
           </select>
         </div>
 
