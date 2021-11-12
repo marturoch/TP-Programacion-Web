@@ -49,7 +49,7 @@
       <div v-if="checkOut" class="informacion_cliente">
         <br>
         <h3>Detalles del cliente </h3>
-        <form action="" method="POST" @submit="pedido()">
+        <form @submit.prevent=pedido()>
           <div id="nom_y_ap">
             <div>
               <label for="nombre">NOMBRE<span class="required-field">*</span></label><br>
@@ -100,7 +100,7 @@
             <br><br>
           </div>
           <div>
-            <input type="submit" class="hacer_pedido" value="HACER PEDIDO" @submit="pedido()">
+            <input type="submit" class="hacer_pedido" value="HACER PEDIDO">
             <br><br>
           </div>
         </form>
@@ -131,27 +131,6 @@ export default {
     Footer
   },
   methods: {
-    orderCart() {
-      axios.post("http://localhost:5000/api/v1/orders",{
-        user: this.name,
-        surname: this.surname,
-        address: this.address,
-        phone_number: this.phoneNumber,
-        localidad: this.localidad,
-        postalCode: this.postalCode,
-        email: this.email,
-        coments: this.coments,
-        shopping_cart: this.$route.params['shoppingCart'],
-      })
-          .then(response => {
-            console.log(response)
-            this.$router.push({name: "CheckoutSuccessRoute", params: {order_id: response.data["order_id"]}})
-          })
-          .catch(error => {
-            console.log(error);
-            this.$router.push({name: "CheckoutServerErrorRoute"})
-          })
-    },
     checkout(){
       if (!localStorage.status){
         this.$router.push("/login?check=true")

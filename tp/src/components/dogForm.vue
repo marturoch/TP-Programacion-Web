@@ -1,7 +1,7 @@
 <template>
     <div class="form-container">
         <h3>¿Perdiste tu perro? Ingresá su información y agregalo a la RED</h3>
-        <form method="POST" @submit="agregarPerro()">
+        <form @submit.prevent="agregarPerro()">
           <div class="formulario">
             <label>Responde al nombre de:</label>
             <input required v-model="name">
@@ -28,7 +28,7 @@
           </div>
             <div >
               <h4>¡Recuerda que mientras más completa sea la información, más sencillo será buscarlo!</h4>
-              <input type="submit" class="agregar_a_la_red" value="Agregar a la RED" @submit="agregarPerro()">
+              <input type="submit" class="agregar_a_la_red" value="Agregar a la RED">
             </div>
         </form>
     </div>
