@@ -2,6 +2,7 @@
   <div>
     <Header></Header>
     <NavBar></NavBar>
+    <img src="../assets/img/netfail.png">
     <p>Tu mascota no ha podido integrarse a la Red de Mascotas</p>
     <p>Intente de nuevo más tarde</p>
     <router-link :to="{name:'RedView'}" class="reintentar">REINTENTAR</router-link>
@@ -45,5 +46,9 @@ export default {
   padding:10px;
   height: 50px;
   width: 140px
+}
+img {
+  width: 200px;
+  height: 200px;
 }
 </style>

@@ -58,10 +58,10 @@ export default {
     recomendacionPlan(puntaje) {
       this.puntaje = puntaje
       this.show = true
-      if (this.puntaje <= 5) {
+      if (this.puntaje <= 10) {
         this.isActive = 2
       }
-      else if (this.puntaje >= 5){
+      else if (this.puntaje >= 15){
         this.isActive = 3
       }
       else{
