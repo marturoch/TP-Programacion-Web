@@ -25,7 +25,7 @@ export default {
   ],
   data(){
     return{
-      pedido: {name:"", price:"", quantity:"", tipo:this.categoria},
+      pedido: {name:"", price:"", quantity:"", tipo:this.categoria, subtotal:""},
       cantidad: 0,
       agregado: false,
       eliminado: false
@@ -38,10 +38,12 @@ export default {
         this.pedido.name = nombre
         this.pedido.price = precio
         this.pedido.quantity = this.cantidad
+        this.pedido.subtotal = parseInt(this.pedido.price) * parseInt(this.pedido.quantity)
       }
       else{
         if (this.pedido.name === nombre) {
           this.pedido.quantity = this.cantidad
+          this.pedido.subtotal = parseInt(this.pedido.price) * parseInt(this.pedido.quantity)
         }
       }
       this.$emit('modificarPedido', this.pedido)

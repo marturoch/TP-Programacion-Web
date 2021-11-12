@@ -29,7 +29,7 @@
                   {{pedido.quantity}}
                   <p @click="modificar(pedido, pedido.tipo)" id="botonModificar">MODIFICAR</p>
                 </td>
-                <td class="subtotal-producto" data-title="Subtotal">"{{subtotal}}"</td>
+                <td class="subtotal-producto" data-title="Subtotal">${{pedido.subtotal}}</td>
               </tr>
               </tbody>
             </table>
@@ -37,7 +37,7 @@
         </div>
       </div>
       <div>
-        <h2>Total del carrito: $</h2>
+        <h2>Total del carrito: $ {{total}}</h2>
       </div>
       <div>
         <p class="checkout" @click="checkout()">CHECKOUT</p>
@@ -189,13 +189,18 @@ export default {
       coments: "",
       pedidos: [],
       checkOut: false,
-      subtotal: "$",
+      total: "",
       categoria: ""
     }
   },
   watch:{
     pedidos(nuevoPedido){
       localStorage.setItem('pedidos', JSON.stringify(nuevoPedido))
+      let contador = 0
+      for (let pedido of nuevoPedido){
+        contador += pedido.subtotal
+      this.total = contador
+      }
     }
   },
   mounted(){
@@ -204,6 +209,7 @@ export default {
     }
     if(localStorage.status){
       this.status = JSON.parse(localStorage.status)
+
     }
   }
 }
