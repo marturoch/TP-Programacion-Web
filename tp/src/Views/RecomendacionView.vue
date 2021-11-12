@@ -61,10 +61,7 @@ export default {
       if (this.puntaje <= 5) {
         this.isActive = 2
       }
-      else if (this.puntaje > 5 && this.puntaje <=10){
-        this.isActive = 2
-      }
-      else if (this.puntaje > 10 && this.puntaje <= 15){
+      else if (this.puntaje >= 5){
         this.isActive = 3
       }
       else{

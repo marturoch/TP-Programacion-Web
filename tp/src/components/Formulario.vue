@@ -12,7 +12,7 @@
 
         <div class="form-data">
         <label>Edad: </label>
-          <select v-model="edad" required>
+          <select @change="especificarEdad()" v-model="seleccionEdad" required>
             <option value="joven">Menor a 6 años</option>
             <option value="viejo">Mayor a 6 años</option>
           </select>
@@ -97,22 +97,24 @@ export default {
     return {
       name:"",
       date:"",
-      sexo:"",
+      edad:"",
       raza:"",
       seleccionVacuna:"",
       seleccionEnfermedad:"",
+      seleccionEdad:"",
       especificacionVacuna: "",
       especificacionEnfermedad:"",
+      especificacionEdad:"",
       puntaje:0
     }
   },
   methods: {
     especificarVacuna() {
-      if (this.seleccionVacuna == "Si") {
+      if (this.seleccionVacuna == "No") {
         this.especificacionVacuna = true;
       }
       else{
-        this.especificacionVacuna = false;
+        this.especificacionVacuna = true;
       }
     },
     especificarEnfermedad() {
@@ -123,25 +125,25 @@ export default {
         this.especificacionEnfermedad = false;
       }
     },
+    especificarEdad() {
+      if (this.seleccionEdad == "Mayor a 6") {
+        this.especificacionEnfermedad = true;
+      }
+      else{
+        this.especificacionEnfermedad = false;
+      }
+    },
     recomendacion(){
       if (this.seleccionEnfermedad == 'Si'){
-        this.puntaje+=5
+        this.puntaje+=10
       }
-      if(this.seleccionVacuna == "Si"){
-        this.puntaje+=5
+      if (this.seleccionVacuna == "No"){
+        this.puntaje+= 10;
       }
-      if (this.raza == "Raza 1" || this.raza == "Raza 2"){
-        this.puntaje+= 1;
+      if(this.seleccionEdad == "Mayor a 6 años"){
+        this.puntaje+=15
       }
-      else if (this.raza == "Raza 3" || this.raza == "Raza 4"){
-        this.puntaje+= 6;
-      }
-      else if (this.raza == "Raza 5" || this.raza == "Raza 6"){
-        this.puntaje+= 11;
-      }
-      else if (this.raza == "Raza 7" || this.raza == "Raza 8"){
-        this.puntaje+= 16;
-      }
+
       return console.log(this.puntaje)
     }}}
 </script>
