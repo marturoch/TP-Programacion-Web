@@ -27,7 +27,7 @@
 
     </form>
     <br>
-    <p v-if="registrado">Ya hay una cuenta existente con ese email</p>
+    <p v-if="registrado" style="color:orangered"><strong>Ya hay una cuenta existente asociada con ese email</strong></p>
     <br>
     <p>¿Ya tienes una cuenta? Inicia sesión 👉 <span class="aqui" @click="logearse()">AQUI</span>👈</p>
     <br><br><br>
@@ -73,13 +73,16 @@ export default {
     registrarse() {
       axios.post("http://localhost:5000/api/v1/registros",
           {
-            email: this.email
+            name: this.name,
+            surname: this.surname,
+            email: this.email,
+            password: this.password
           })
           .then(response => {
             console.log(response)
             if (response.data.mensaje === "Ya hay una cuenta asociada a este email") {
-              this.$router.push('/registro?error=registrado')
               this.registrado = true
+              this.email = ""
             } else {
               this.$router.push('/login')
             }
