@@ -3,15 +3,16 @@
     <Header></Header>
     <NavBar></NavBar>
     <div class="contenedor-red">
+      {{perrosRed()}}
       <dog-form/>
 
       <div class="contenedor-cartas">
-        <dog-card/>
-        <dog-card/>
-        <dog-card/>
-        <dog-card/>
-        <dog-card/>
-        <dog-card/>
+        <dogCard v-for="(perro, index) in perros" v-bind:key="index"
+                     v-bind:name="perro.name"
+                     v-bind:raza="perro.raza"
+                     v-bind:edad="perro.edad"
+                     v-bind:lugar="perro.lugar">
+        </dogCard>
       </div>
 
     </div>
@@ -25,6 +26,7 @@ import dogForm from '../components/dogForm.vue'
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import axios from "axios";
 
 export default {
   name: "RedView",
@@ -34,6 +36,20 @@ export default {
     Header,
     NavBar,
     Footer
+  },
+  methods: {
+    perrosRed() {
+      axios.get("http://localhost:5000/api/v1/perros")
+          .then(response => {
+            console.log(response.data)
+            this.perros = response.data
+            console.log(this.perros)
+          })}
+  },
+  data() {
+    return {
+      perros: ""
+    }
   }
 }
 </script>

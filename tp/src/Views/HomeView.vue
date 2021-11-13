@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <Header v-bind:info_perfil="this.$route.params['info_perfil']"></Header>
     <NavBar></NavBar>
     <banners></banners>
     <Main></Main>

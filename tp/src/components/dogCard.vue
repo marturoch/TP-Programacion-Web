@@ -1,17 +1,30 @@
 <template>
     <div class="card-container">
         <div></div>
-        <h4>Nombre</h4>
-        <p>Raza</p>
-        <p>Edad</p>
-        <p>Last Seen</p>
+        <h4>Nombre: {{name}}</h4>
+        <p>Raza: {{raza}}</p>
+        <p>Edad: {{edad}}</p>
+        <p>Last Seen: {{lugar}}</p>
     </div>
 </template>
 
 <script>
+
 export default {
   name: "dogCard",
+  data() {
+    return {
+      perros: ""
+    }
+  },
+  props: [
+      "name",
+      "raza",
+      "edad",
+      "lugar"
+  ]
 }
+
 </script>
 
 <style scoped>

@@ -59,27 +59,11 @@ export default {
           .then(response => {
             console.log(response)
             this.$router.push({name: "PerroAgregadoExitosamente", params: {name: response.data["name"]}})
+            this.$emit
           })
           .catch (error => {
             console.log("Server Error in agregarPerro()" + error)
             this.$router.push({name: "PerroRechazado", params: {name: error.data["name"]}})
-          })
-    },
-    eliminarPerro() {
-      axios.delete("http://localhost:5000/api/v1/perros",
-          {
-            name: this.name,
-            raza: this.raza,
-            edad: this.edad,
-            lugar: this.lugar,
-          })
-          .then(response => {
-            console.log(response)
-            this.$router.push({name: "PerroEliminadoExitosamente", params: {name: response.data["name"]}})
-          })
-          .catch (error => {
-            console.log("Server Error in agregarPerro()" + error)
-            this.$router.push({name: "PerroSinEliminar", params: {name: error.data["name"]}})
           })
     }
   }

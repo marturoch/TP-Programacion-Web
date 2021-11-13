@@ -8,16 +8,7 @@
     <br>
     <p class="p2">¡Espero que lo encuentres pronto, ahora todos estamos alerta!</p>
     <br>
-    <div class="contenedor-red">
-      <div class="contenedor-cartas">
-        <dog-card/>
-        <dog-card/>
-        <dog-card/>
-        <dog-card/>
-        <dog-card/>
-        <dog-card/>
-      </div>
-    </div>
+    <p class="botonVolver" @click="irARed()">VOLVER A LA RED</p>
     <Footer></Footer>
   </div>
 </template>
@@ -25,7 +16,6 @@
 <script>
 import Header from "./Header";
 import NavBar from "./NavBar";
-import dogCard from "./dogCard";
 import Footer from "./Footer";
 
 export default {
@@ -33,26 +23,18 @@ export default {
   components: {
     Header,
     NavBar,
-    dogCard,
     Footer
+  },
+  methods: {
+    irARed() {
+      this.$router.go(-1)
+    },
   }
 }
 </script>
 
 <style scoped>
 
-.contenedor-cartas{
-  padding: 40px 0px;
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.contenedor-red {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .p1 {
   font-size: 35px;
   color: black;
@@ -68,5 +50,20 @@ export default {
 img {
   width: 400px;
   height: 400px;
+}
+.botonVolver{
+  cursor:pointer;
+  border-radius:50%;
+  text-align: center;
+  width:90px;
+  height:90px;
+  background-color: #820263;
+  color:white;
+  padding:12px;
+  margin-top:40px;
+  font-size:12px;
+}
+.botonVolver:hover {
+  opacity: 60%;
 }
 </style>

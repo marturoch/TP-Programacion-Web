@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header v-bind:status="status"></Header>
+    <Header v-bind:status="status" v-bind:info_perfil="info_perfil"></Header>
     <NavBar></NavBar>
     <br><br>
     <form class="form-container" @submit.prevent="login()">
@@ -47,7 +47,8 @@ export default {
       mail: "",
       password: "",
       perfil: [],
-      registrado: ""
+      registrado: "",
+      info_perfil: ""
     }
   },
   methods: {
@@ -63,6 +64,8 @@ export default {
             for (let registro of this.registros){
               if ((registro.email === this.mail) && (registro.password === this.password)){
                 this.registrado = true
+                this.info_perfil = registro
+                console.log(this.info_perfil)
               }
             }
             if(this.registrado){
@@ -73,7 +76,7 @@ export default {
               if (this.$route.query.check) {
                 this.$router.push('/carrito')
               } else {
-                this.$router.push('/')
+                this.$router.push({name:"Home", params:{info_perfil:this.info_perfil}})
               }
             }
             else{

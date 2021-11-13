@@ -3,8 +3,9 @@
     <div id="header_1">
       <div class="cuentaYcarrito">
         <router-link v-if="status!=='logged'" class="login" to="/login">INGRESAR/REGISTRARSE</router-link>
-        <router-link v-if="status==='logged'" class="miCuenta" to="/perfil">Mi Cuenta</router-link>
+        <p v-if="status==='logged'" class="miCuenta" @click="ir_cuenta()">Mi Cuenta</p>
         <router-link class="carrito" to="/carrito">CARRITO</router-link>
+        <p class="info">{{info_perfil}}</p>
 <!--        <router-link v-if="status==='logged'" class="carrito" to="/minicarrito">MINICARRITO</router-link>&ndash;&gt;-->
       </div>
     </div>
@@ -28,6 +29,14 @@ export default {
   data() {
     return {
       status: localStorage.getItem('status')
+    }
+  },
+  props: [
+      "info_perfil"
+  ],
+  methods: {
+    ir_cuenta() {
+      this.$router.push({name:"Perfil", params:{info_perfil:this.info_perfil}})
     }
   }
 }

@@ -85,3 +85,6 @@ h1 {
     font-weight: bold;
     justify-content: flex-end;
 }
+.info {
+    color: white
+}
