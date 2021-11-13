@@ -17,6 +17,7 @@
             <h3>Apellido: {{this.surname}}</h3>
             <h3>Email: {{this.email}}</h3>
             <h3>Contraseña: {{this.password}}</h3>
+            <h3>Id: {{this.id}}</h3>
           </div>
         <h3 class="eliminar_cuenta" @click="eliminarCuenta()">Borrar Cuenta</h3>
       </div>
@@ -70,7 +71,7 @@ export default {
       email: this.$route.params["info_perfil"]["email"],
       name: this.$route.params["info_perfil"]["name"],
       surname: this.$route.params["info_perfil"]["surname"],
-      id: this.$route.params["info_perfil"]["id"],
+      id: this.$route.params["info_perfil"]["user_id"],
     }
   },
   methods:{
@@ -92,9 +93,9 @@ export default {
       this.$router.push("/")
     },
     cambiar_password() {
-        axios.put(`http://localhost:5000/api/v1/registro/0000000005`,
+        axios.put("http://localhost:5000/api/v1/registros/" + this.id,
             {
-              password: this.newpassword
+              newpassword: this.newpassword
             })
             .then(response => {
               console.log(response)
@@ -111,16 +112,13 @@ export default {
         this.status = 'notlogged'
         this.$router.push('/')
 
-        axios.delete("http://localhost:5000/api/v1/registro/" + this.id,
-            {
-              id: this.id
-            })
+        axios.delete("http://localhost:5000/api/v1/registros/" + this.id
             .then(response => {
               console.log(response)
               })
             .catch(error => {
               console.log(error)
-            })
+            }))
       }
     },
 
