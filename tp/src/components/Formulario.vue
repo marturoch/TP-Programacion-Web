@@ -13,8 +13,8 @@
         <div class="form-data">
         <label>Edad: </label>
           <select @change="especificarEdad()" v-model="seleccionEdad" required>
-            <option value="joven">Menor a 6 </option>
-            <option value="viejo">Mayor a 6 </option>
+            <option value="joven">Menor a 9 </option>
+            <option value="viejo">Mayor a 9 </option>
           </select>
         </div>
 
@@ -126,7 +126,7 @@ export default {
       }
     },
     especificarEdad() {
-      if (this.seleccionEdad == "Mayor a 6") {
+      if (this.seleccionEdad == "Mayor a 9") {
         this.especificacionEdad = true;
       }
       else{
