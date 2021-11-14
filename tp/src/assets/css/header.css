@@ -85,6 +85,7 @@ h1 {
     font-weight: bold;
     justify-content: flex-end;
 }
-.info {
-    color: white
+.miCueta:hover, .carrito:hover, login:hover {
+    cursor: pointer;
+    opacity: 80%;
 }

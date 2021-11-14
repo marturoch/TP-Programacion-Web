@@ -105,14 +105,8 @@ export default {
             })
       },
     eliminarCuenta() {
-      const resultado = window.confirm("¿Estás seguro que deseas eliminar tu cuenta?");
-      if (resultado === true) {
-        localStorage.removeItem('status')
-        localStorage.removeItem('perfil')
-        this.status = 'notlogged'
-        this.$router.push('/')
 
-        axios.delete("http://localhost:5000/api/v1/registros/" + this.id
+        axios.delete("http://localhost:5000/api/v1/delete/" + this.id
             .then(response => {
               console.log(response)
               })
@@ -128,7 +122,7 @@ export default {
     }
   }
 }
-}
+
 </script>
 
 <style scoped>

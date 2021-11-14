@@ -5,7 +5,6 @@
         <router-link v-if="status!=='logged'" class="login" to="/login">INGRESAR/REGISTRARSE</router-link>
         <p v-if="status==='logged'" class="miCuenta" @click="ir_cuenta()">Mi Cuenta</p>
         <router-link class="carrito" to="/carrito">CARRITO</router-link>
-        <p class="info">{{info_perfil}}</p>
 <!--        <router-link v-if="status==='logged'" class="carrito" to="/minicarrito">MINICARRITO</router-link>&ndash;&gt;-->
       </div>
     </div>
