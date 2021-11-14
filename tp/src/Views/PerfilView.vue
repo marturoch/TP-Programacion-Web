@@ -30,7 +30,7 @@
           <br>
           <p>{{mensaje}}</p>
           <br><br><br>
-          <input type="submit" value="CAMBIAR">
+          <input type="submit" class="cambiar" value="CAMBIAR">
         </form>
       </div>
 
@@ -182,7 +182,7 @@ export default {
 .eliminar_cuenta {
   text-decoration: none;
   color:white;
-  background-color: #820263;
+  background-color: #D90368;
   border-radius: 100px;
   margin-left: 518px;
   height: 50px;
@@ -191,5 +191,21 @@ export default {
 }
 .eliminar_cuenta:hover {
   cursor: pointer;
+}
+.cambiar {
+  text-decoration: none;
+  color:white;
+  background-color: #D90368;
+  border-radius: 100px;
+  margin-left: px;
+  height: 50px;
+  width: 120px;
+  font-size: 18px;
+  padding-top: 22px;
+  padding-left: 18px;
+}
+.cambiar:hover {
+  cursor: pointer;
+  opacity: 70%
 }
 </style>
