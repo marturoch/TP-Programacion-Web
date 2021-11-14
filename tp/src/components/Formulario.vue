@@ -135,13 +135,16 @@ export default {
     },
     recomendacion(){
       if (this.seleccionEnfermedad == 'Si'){
-        this.puntaje+=10
+        this.puntaje+=20
       }
-      if (this.seleccionVacuna == "Si"){
-        this.puntaje+= 10;
+      if (this.seleccionVacuna == "No"){
+        this.puntaje+=20
       }
       if(this.seleccionEdad == "Mayor a 6 años"){
-        this.puntaje+=15
+        this.puntaje+=30
+      }
+      if(this.seleccionEdad == "Menor a 6 años"){
+        this.puntaje+=5
       }
 
       return console.log(this.puntaje)
