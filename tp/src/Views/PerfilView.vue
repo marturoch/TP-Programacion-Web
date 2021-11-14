@@ -93,36 +93,40 @@ export default {
       this.$router.push("/")
     },
     cambiar_password() {
-        axios.put("http://localhost:5000/api/v1/registros/" + this.id,
-            {
+      let id_usuario = this.id;
+      axios.put('http://localhost:5000/api/v1/registros/' + id_usuario,
+          {
               newpassword: this.newpassword
             })
-            .then(response => {
-              console.log(response)
+          .then(response => {
+            console.log(response)
               })
-            .catch(error => {
-              console.log(error)
+          .catch(error => {
+            console.log(error)
             })
       },
     eliminarCuenta() {
-
-        axios.delete("http://localhost:5000/api/v1/delete/" + this.id
-            .then(response => {
-              console.log(response)
-              })
-            .catch(error => {
-              console.log(error)
-            }))
-      }
+      let id_usuario = this.id;
+      axios.delete('http://localhost:5000/api/v1/registros/' + id_usuario)
+          .then(response => {
+            const resultado = window.confirm("¿Estás seguro que deseas eliminar tu cuenta?");
+            if (resultado === true) {
+              localStorage.removeItem('status')
+              localStorage.removeItem('perfil')
+              this.status = 'notlogged'
+              this.$router.push('/')
+            }
+            console.log(response)})
+          .catch(error => {
+            console.log(error)
+        })
     },
-
   mounted(){
     if(!localStorage.status){
       this.$router.push("/login")
     }
-  }
+  }}
 }
-
 </script>
 
 <style scoped>
