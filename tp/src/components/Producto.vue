@@ -55,11 +55,6 @@
           </ProductItem>
         </div>
 
-        <div class="seccion" v-if="$route.params.nombre==='petFind'">
-          <p>{{productos[3].description}}</p>
-          <p>{{productos[3].price}}</p>
-        </div>
-
         <p id="agregar" @click="agregar()">AGREGAR A CARRITO</p>
         <br>
         <p v-if="agregado">Carrito Modificado</p>

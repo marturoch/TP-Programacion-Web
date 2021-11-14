@@ -15,13 +15,6 @@ const productos = [
 
     },
     {
-        name:"petFind",
-        image:"petfind.jpg",
-        description:"Descripcion petFind",
-        price:900
-
-    },
-    {
         name:"higiene",
         image:"higiene_ppal.png",
 

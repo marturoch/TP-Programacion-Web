@@ -16,22 +16,19 @@
             <h3>Nombre: {{this.name}}</h3>
             <h3>Apellido: {{this.surname}}</h3>
             <h3>Email: {{this.email}}</h3>
-            <h3>Contraseña: {{this.password}}</h3>
             <h3>Id: {{this.id}}</h3>
           </div>
+        <p>{{mensaje_error}}</p>
         <h3 class="eliminar_cuenta" @click="eliminarCuenta()">Borrar Cuenta</h3>
       </div>
 
       <div class="seccion" v-if="pass">
         <h2>Cambiar contraseña</h2>
         <form  @submit.prevent="cambiar_password()">
-
-          <label>Nombre: </label><h3>{{this.name}}</h3>
-          <label>Apellido: </label><h3>{{this.surname}}</h3>
-          <label>Email: </label><h3>{{this.email}}</h3>
-          <label>Contraseña actual: </label><input type="password">
           <br>
           <label>Contraseña nueva: </label><input type="password" v-model="newpassword">
+          <br>
+          <p>{{mensaje}}</p>
           <br><br><br>
           <input type="submit" value="CAMBIAR">
         </form>
@@ -72,6 +69,8 @@ export default {
       name: this.$route.params["info_perfil"]["name"],
       surname: this.$route.params["info_perfil"]["surname"],
       id: this.$route.params["info_perfil"]["user_id"],
+      mensaje: "",
+      mensaje_error: ""
     }
   },
   methods:{
@@ -100,6 +99,7 @@ export default {
             })
           .then(response => {
             console.log(response)
+            this.mensaje = "Tu contraseña se ha actualizado correctamente"
               })
           .catch(error => {
             console.log(error)
@@ -119,6 +119,7 @@ export default {
             console.log(response)})
           .catch(error => {
             console.log(error)
+            this.mensaje_error = "Tu cuenta no se ha podido eliminar"
         })
     },
   mounted(){
