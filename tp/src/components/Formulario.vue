@@ -13,8 +13,8 @@
         <div class="form-data">
         <label>Edad: </label>
           <select @change="especificarEdad()" v-model="seleccionEdad" required>
-            <option value="joven">Menor a 6 años</option>
-            <option value="viejo">Mayor a 6 años</option>
+            <option value="joven">Menor a 6 </option>
+            <option value="viejo">Mayor a 6 </option>
           </select>
         </div>
 
@@ -110,11 +110,11 @@ export default {
   },
   methods: {
     especificarVacuna() {
-      if (this.seleccionVacuna == "No") {
+      if (this.seleccionVacuna == "Si") {
         this.especificacionVacuna = true;
       }
       else{
-        this.especificacionVacuna = true;
+        this.especificacionVacuna = false;
       }
     },
     especificarEnfermedad() {
@@ -127,26 +127,22 @@ export default {
     },
     especificarEdad() {
       if (this.seleccionEdad == "Mayor a 6") {
-        this.especificacionEnfermedad = true;
+        this.especificacionEdad = true;
       }
       else{
-        this.especificacionEnfermedad = false;
+        this.especificacionEdad = false;
       }
     },
     recomendacion(){
       if (this.seleccionEnfermedad == 'Si'){
         this.puntaje+=20
       }
-      if (this.seleccionVacuna == "No"){
-        this.puntaje+=20
+      if (this.seleccionVacuna == 'Si'){
+        this.puntaje+=15
       }
-      if(this.seleccionEdad == "Mayor a 6 años"){
-        this.puntaje+=30
+      if (this.seleccionVacuna == 'No') {
+        this.puntaje += 20
       }
-      if(this.seleccionEdad == "Menor a 6 años"){
-        this.puntaje+=5
-      }
-
       return console.log(this.puntaje)
     }}}
 </script>
