@@ -3,7 +3,7 @@
         <h3>¿Perdiste tu perro? Ingresá su información y agregalo a la RED</h3>
         <form @submit.prevent="agregarPerro()">
           <div class="formulario">
-            <label>Responde al nombre de:</label>
+            <label> Nombre:</label>
             <input required v-model="name">
           </div>
 
@@ -18,7 +18,7 @@
           </div>
 
           <div class="formulario">
-            <label>Lugar donde lo viste por última vez:</label>
+            <label> Ubicación de donde se perdio:</label>
             <input v-model="lugar"><br>
           </div>
 
@@ -90,7 +90,8 @@ button{
 }
 
 input {
-  margin-right: 300px;
+  margin-right: 100px;
+
 }
 
 .agregar_a_la_red {

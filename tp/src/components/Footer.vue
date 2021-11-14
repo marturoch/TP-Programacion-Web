@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <h4>DIRECCION</h4>
+    <h4>DIRECCIÓN</h4>
     <iframe :src="mapa" width="350" height="250" style="border-radius: 12px;" allowfullscreen="" loading="lazy"></iframe>
     <h4 class="datos-contacto">DATOS DE CONTACTO</h4>
     <h5 class="datos-contacto">{{tel}}</h5>

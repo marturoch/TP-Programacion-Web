@@ -2,7 +2,7 @@
   <div>
     <div class="banner">
       <br>
-      <img src="../assets/img/banners/banner2.png">
+      <img   class=" img-perros" src="../assets/img/banners/banner2.png">
       <br>
     </div>
   </div>
@@ -14,7 +14,5 @@ export default {
 }
 </script>
 <style scoped>
-img{
-  width:100%;
-}
+@import "../assets/css/banner.css";
 </style>

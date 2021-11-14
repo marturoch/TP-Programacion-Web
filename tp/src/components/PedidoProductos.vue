@@ -47,24 +47,5 @@ export default {
 </script>
 
 <style scoped>
-.planes-container{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-bottom:50px;
-}
-.plan-container{
-  display:flex;
-  border: 2px solid black;
-  border-radius: 10px;
-  flex-direction:column;
-  justify-content: space-between;
-  padding:0px 5px 20px 5px;
-  align-items: center;
-  width:22%;
-  height:550px;
-  background-color: white;
-}
-
+@import "../assets/css/PedidoProductos.css";
 </style>
