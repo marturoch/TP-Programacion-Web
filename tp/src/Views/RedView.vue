@@ -5,7 +5,7 @@
     <br>
     <div>
       <div class="botones">
-        <p class="agregar" @click="mostrar=true">AGREGÁ TU MASCOTA A LA RED</p>
+        <p class="agregar-red" @click="mostrar=true">AGREGÁ TU MASCOTA A LA RED</p>
         <br>
         <p @click="perrosRed()" class="red_completa">VER RED COMPLETA</p>
       </div>

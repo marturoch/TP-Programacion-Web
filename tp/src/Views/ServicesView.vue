@@ -40,6 +40,4 @@ export default {
 </script>
 <style scoped>
 @import "../assets/css/ServicesView.css";
-
-
 </style>
