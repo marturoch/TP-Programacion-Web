@@ -66,7 +66,9 @@ button {
   background-color: #820263;
   border-radius: 20px;
   padding:10px;
-  cursor: pointer
+  cursor: pointer;
+  display:flex;
+  justify-content: center
 }
 
 .seleccionar:hover {
@@ -80,14 +82,11 @@ button {
   margin: 20px;
   background-color: #D6FDD6;
 }
-
 .planes-info {
   color: black;
   text-align: left;
   font-weight: bold;
-
 }
-
 .planes-precio {
   color: black;
 }
@@ -95,11 +94,6 @@ button {
 .planes-tipo {
   color: black;
 }
-
-.info {
-  margin-left: 10px;
-}
-
 .planes:hover {
   border-color: #D90368;
   border-width: 5px;

@@ -87,6 +87,7 @@ export default {
       if (obj){
         let index = this.pedidos.indexOf(obj)
         this.planSeleccionado =  this.pedidos[index].name
+        this.seleccion = true
       }
       else{
         this.seleccion = false
@@ -96,23 +97,19 @@ export default {
 
 <style scoped>
 .planes-container{
-  display:flex;
+  display:flex;;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-bottom:50px;
+  justify-content: center;
+  margin-bottom: 10px
 }
 .plan-container{
-  display:flex;
   border: 2px solid black;
-  border-radius: 10px;
-  flex-direction:column;
+  width:300px;
+  padding: 10px;
+  display:flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding:0px 5px 20px 5px;
-  align-items: center;
-  width:22%;
-  height:550px;
-  background-color: white;
+  margin: 20px
 }
 #planSeleccionado{
   text-transform: uppercase;

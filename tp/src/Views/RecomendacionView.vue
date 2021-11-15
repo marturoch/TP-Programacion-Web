@@ -123,21 +123,19 @@ export default {
   background-color: rgba(217, 3, 104, 0.2);
 }
 .planes-container{
-  display:flex;
+  display:flex;;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-bottom:50px;
+  justify-content: center;
+  margin-bottom: 10px
 }
 .plan-container{
+  border: 2px solid black;
+  width:300px;
+  padding: 10px;
   display:flex;
-  border:2px solid black;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: space-between;
-  padding:0px 5px 20px 5px;
-  align-items: center;
-  width:22%;
-  height:550px;
+  margin: 20px
 }
 #planSeleccionado{
   text-transform: uppercase;

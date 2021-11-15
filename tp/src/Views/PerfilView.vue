@@ -2,22 +2,23 @@
   <div>
     <Header></Header>
     <NavBar></NavBar>
-    <div class="hola">
+
+    <div class="info">
+
       <div class="secciones">
         <p @click="todoFalse(); datosFunction()" :class="{seccionMarcada:datos}" id="datos">Mis Datos</p>
-        <p @click="todoFalse(); passwordFunction()" :class="{seccionMarcada:password}" id="contraseña">Cambiar contraseña</p>
+        <p @click="todoFalse(); passwordFunction()" :class="{seccionMarcada:pass}" id="contraseña">Cambiar contraseña</p>
         <p @click="todoFalse(); salirFunction()" :class="{seccionMarcada:salir}" id="salir">Salir</p>
       </div>
 
-
       <div class="seccion" v-if="datos">
         <h2>Mis Datos</h2>
-          <div class="datos_usuario">
+        <div class="datos_usuario">
             <h3>Nombre: {{perfil["name"]}}</h3>
             <h3>Apellido: {{perfil["surname"]}}</h3>
             <h3>Email: {{perfil["email"]}}</h3>
             <h3>Id: {{perfil["user_id"]}}</h3>
-          </div>
+        </div>
         <p>{{mensaje_error}}</p>
         <h3 class="eliminar_cuenta" @click="eliminarCuenta()">Borrar Cuenta</h3>
       </div>
@@ -77,9 +78,13 @@ export default {
     },
     datosFunction(){
       this.datos = true;
+      this.pass = false;
+      this.salir = false;
     },
     passwordFunction(){
       this.pass = true;
+      this.datos = false;
+      this.salir = false;
     },
     salirFunction(){
       this.status = 'notlogged'
@@ -136,24 +141,30 @@ export default {
   color:white;
   padding:20px;
   border-radius:5%;
+  margin-right:20px
 }
-
-.hola{
+.info{
   padding:20px;
   display:flex;
-  align-items: center;
+  align-items: baseline;
+  justify-content: center;
+  align-content: left;
 }
 .seccion{
-  flex-basis: 80%;
-
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
 }
 .seccionMarcada{
   color: #CE6AAEF7;
 }
-
 #datos:hover {
   cursor: pointer;
   opacity: 90%;
+}
+h3{
+  font-size:20px;
 }
 #contraseña:hover {
   cursor: pointer;
@@ -165,16 +176,14 @@ export default {
   opacity: 90%;
 }
 .datos_usuario {
-  display: block;
   color: white;
   align-items: center;
-  margin-left: 300px;
   font-size: 20px;
   background-color: darkgray;
-  width: 50%;
   text-align: left;
   border: 20px;
-  padding: 20px
+  padding: 20px;
+  width: 400px;
 
 }
 .eliminar_cuenta {
@@ -182,10 +191,13 @@ export default {
   color:white;
   background-color: #D90368;
   border-radius: 100px;
-  margin-left: 518px;
-  height: 50px;
-  width: 200px;
-  padding-top: 20px;
+  height:30px;
+  width: 100px;
+  padding:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:15px
 }
 .eliminar_cuenta:hover {
   cursor: pointer;
