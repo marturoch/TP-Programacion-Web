@@ -86,6 +86,7 @@ export default {
       localStorage.removeItem('status')
       localStorage.removeItem('perfil')
       this.$router.push("/")
+      localStorage.removeItem('pedidos')
     },
     cambiar_password() {
       let id_usuario = this.perfil["user_id"];

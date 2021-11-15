@@ -62,13 +62,13 @@
 
           <div id="direc">
             <label for="direc">DIRECCIÓN<span class="required-field">*</span></label><br>
-            <input autocomplete type="street-address" name="" v-model="address" id="direc" required placeholder="Nombre y Número de la Calle">
+            <input autocomplete type="street-address" name="" v-model="address" required placeholder="Nombre y Número de la Calle">
             <br><br>
           </div>
 
           <div id="localidad">
             <label for="localidad">LOCALIDAD/CIUDAD<span class="required-field">*</span></label><br>
-            <input autocomplete type="text" name="" id="localidad" v-model="location" required>
+            <input autocomplete type="text" name="" v-model="location" required>
             <br><br>
           </div>
 
@@ -80,13 +80,13 @@
 
           <div id="telefono">
             <label for="tel">TELÉFONO<span class="required-field">*</span></label><br>
-            <input autocomplete type="tel" name="" id="tel" v-model="phoneNumber" required>
+            <input autocomplete type="number" name="" id="tel" v-model="phoneNumber" required>
             <br><br>
           </div>
 
           <div id="email">
             <label for="email">DIRECCIÓN DE CORREO ELECTRÓNICO<span class="required-field">*</span></label><br>
-            <input autocomplete type="email" required name="" id="email" v-model="email">
+            <input autocomplete type="email" required name=""  v-model="email">
             <br><br>
           </div>
           <br><br><br>
@@ -117,11 +117,6 @@ import axios from "axios"
 
 export default {
   name: "Carrito",
-  created() {
-    axios.get("https://jsonplaceholder.typicode.com/todos/1").then((result) => {
-      console.log(result.data);
-    })
-  },
   components:{
     Header,
     NavBar,
@@ -207,7 +202,6 @@ export default {
     }
     if(localStorage.status){
       this.status = JSON.parse(localStorage.status)
-
     }
   }
 }
