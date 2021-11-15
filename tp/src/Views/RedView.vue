@@ -25,7 +25,8 @@
                      v-bind:name="perro.name"
                      v-bind:raza="perro.raza"
                      v-bind:edad="perro.edad"
-                     v-bind:lugar="perro.lugar">
+                     v-bind:lugar="perro.lugar"
+                     v-bind:img="perro.img" >
         </dogCard>
       </div>
     </div>
@@ -58,8 +59,12 @@ export default {
             this.perros = response.data
             console.log(this.perros)
             this.mostrar = false
+          })
+          .catch(error => {
+            window.alert("no se ha logrado cargar la red de mascotas perdidas")
+            console.log("Server Error in perrosRed()" + error)
           })},
-    buscarPerro () {
+    buscarPerro() {
       let nombre_perro = this.nombreperro
       axios.get('http://localhost:5000/api/v1/perro?name=' + nombre_perro)
           .then(response => {
@@ -74,7 +79,8 @@ export default {
             }
           })
           .catch(error => {
-            console.log(error.data)
+            console.log("Server Error in buscarPerro()" + error)
+            window.alert("hubo un error al tratar de buscar una mascota perdida con ese nombre")
           })
     }
   },
@@ -97,12 +103,8 @@ export default {
 }
 
 .contenedor-cartas{
-  padding: 40px 0px;
-  width: 80%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+
 }
 
 .agregar {
@@ -116,6 +118,9 @@ export default {
   justify-content: flex-end;
 }
 
+.agregar:hover {
+  cursor: pointer
+}
 .red_completa {
   padding: 15px;
   margin: 10px;
@@ -127,6 +132,9 @@ export default {
   justify-content: flex-end;
 }
 
+.red_completa:hover {
+  cursor: pointer
+}
 .botones {
   display: flex;
   justify-content: center;

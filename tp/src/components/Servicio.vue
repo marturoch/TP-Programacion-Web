@@ -8,8 +8,10 @@
     <div class="container">
       <div class="fotoDescripcion">
         <img :src="image" width="300px">
-        <h3>{{description}}</h3>
-        <p class="precio">${{price}}</p>
+        <div class="info_mostrar">
+          <h3>{{description}}</h3>
+          <p class="precio">${{price}}</p>
+        </div>
       </div>
       <div>
         <p class="boton" @click="agregarServicio($route.params.nombre, description, price)">AGREGAR SERVICIO AL CARRITO</p>
@@ -101,14 +103,6 @@ export default {
         }
       }
     }},
-  /* watch:{
-      pedidos: {
-        handler(nuevosPedidos) {
-          localStorage.pedidos = JSON.stringify(nuevosPedidos)
-        },
-        deep: true
-      }
-   },*/
   mounted(){
     if(localStorage.pedidos){
       this.pedidos = JSON.parse(localStorage.pedidos)
@@ -182,5 +176,10 @@ p{
 }
 .precio{
   font-size:30px;
+}
+.info_mostrar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 </style>

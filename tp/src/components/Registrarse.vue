@@ -52,11 +52,6 @@ export default {
     NavBar,
     Footer
   },
-  created() {
-    axios.get("https://jsonplaceholder.typicode.com/todos/1").then((result) => {
-      console.log(result.data);
-    })
-  },
   data() {
     return {
       name: "",
@@ -88,7 +83,8 @@ export default {
             }
           })
           .catch(error => {
-            console.log(error)
+            window.alert("no se ha podido registrar su información, intente de nuevo más tarde")
+            console.log("Server Error in registrarse()" + error)
           })
     }
   }

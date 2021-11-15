@@ -13,10 +13,10 @@
       <div class="seccion" v-if="datos">
         <h2>Mis Datos</h2>
           <div class="datos_usuario">
-            <h3>Nombre: {{this.name}}</h3>
-            <h3>Apellido: {{this.surname}}</h3>
-            <h3>Email: {{this.email}}</h3>
-            <h3>Id: {{this.id}}</h3>
+            <h3>Nombre: {{perfil["name"]}}</h3>
+            <h3>Apellido: {{perfil["surname"]}}</h3>
+            <h3>Email: {{perfil["email"]}}</h3>
+            <h3>Id: {{perfil["user_id"]}}</h3>
           </div>
         <p>{{mensaje_error}}</p>
         <h3 class="eliminar_cuenta" @click="eliminarCuenta()">Borrar Cuenta</h3>
@@ -26,7 +26,7 @@
         <h2>Cambiar contraseña</h2>
         <form  @submit.prevent="cambiar_password()">
           <br>
-          <label>Contraseña nueva: </label><input type="password" v-model="newpassword">
+          <label>Contraseña nueva: </label><input type="password" required v-model="newpassword">
           <br>
           <p>{{mensaje}}</p>
           <br><br><br>
@@ -64,13 +64,9 @@ export default {
       salir: false,
       status: 'logged',
       newpassword: "",
-      password: this.$route.params["info_perfil"]["password"],
-      email: this.$route.params["info_perfil"]["email"],
-      name: this.$route.params["info_perfil"]["name"],
-      surname: this.$route.params["info_perfil"]["surname"],
-      id: this.$route.params["info_perfil"]["user_id"],
       mensaje: "",
-      mensaje_error: ""
+      mensaje_error: "",
+      perfil: JSON.parse(localStorage.getItem('perfil'))
     }
   },
   methods:{
@@ -92,21 +88,22 @@ export default {
       this.$router.push("/")
     },
     cambiar_password() {
-      let id_usuario = this.id;
+      let id_usuario = this.perfil["user_id"];
       axios.put('http://localhost:5000/api/v1/registros/' + id_usuario,
           {
               newpassword: this.newpassword
             })
           .then(response => {
             console.log(response)
-            this.mensaje = "Tu contraseña se ha actualizado correctamente"
+            this.mensaje = response.data["mensaje"]
               })
           .catch(error => {
-            console.log(error)
+            console.log("Server Error in cambiar_password()" + error)
+            this.mensaje = "Tu contraseña no se ha podido actualizar"
             })
       },
     eliminarCuenta() {
-      let id_usuario = this.id;
+      let id_usuario = this.perfil["user_id"];
       axios.delete('http://localhost:5000/api/v1/registros/' + id_usuario)
           .then(response => {
             const resultado = window.confirm("¿Estás seguro que deseas eliminar tu cuenta?");
@@ -118,7 +115,7 @@ export default {
             }
             console.log(response)})
           .catch(error => {
-            console.log(error)
+            console.log("Server Error in eliminarCuenta()" + error)
             this.mensaje_error = "Tu cuenta no se ha podido eliminar"
         })
     },
@@ -197,7 +194,6 @@ export default {
   color:white;
   background-color: #D90368;
   border-radius: 100px;
-  margin-left: px;
   height: 50px;
   width: 120px;
   font-size: 18px;

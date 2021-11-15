@@ -4,7 +4,7 @@
     <iframe :src="mapa" width="350" height="250" style="border-radius: 12px;" allowfullscreen="" loading="lazy"></iframe>
     <h4 class="datos-contacto">DATOS DE CONTACTO</h4>
     <h5 class="datos-contacto">{{tel}}</h5>
-    <a href=""><h5 class="datos-contacto" >dogcare@gmail.com</h5></a>
+    <a href="mailto:dogcare@gmail.com"><h5 class="datos-contacto" >dogcare@gmail.com</h5></a>
     <p>
       <a href="https://www.facebook.com/" target="_blank"><img src="../assets/img/botones/facebook.png" width="50px" style="float:right;"></a>
       <a href="https://www.instagram.com/" target="_blank"><img src="../assets/img/botones/instagram.png" width="50px" style="float:right;"></a>

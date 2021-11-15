@@ -35,12 +35,6 @@ export default {
     NavBar,
     Footer
   },
-  created() {
-    axios.get("https://jsonplaceholder.typicode.com/todos/1").then((result) => {
-      console.log(result.data);
-    })
-  },
-
   data() {
     return {
       status: "notlogged",
@@ -72,11 +66,11 @@ export default {
               this.status = "logged"
               this.perfil.push({mail: this.mail, password: this.password})
               localStorage.setItem('status', this.status)
-              localStorage.setItem('perfil', JSON.stringify(this.perfil))
+              localStorage.setItem('perfil', JSON.stringify(this.info_perfil))
               if (this.$route.query.check) {
                 this.$router.push('/carrito')
               } else {
-                this.$router.push({name:"Home", params:{info_perfil:this.info_perfil}})
+                this.$router.push({name:"Home"})
               }
             }
             else{
@@ -86,8 +80,8 @@ export default {
             }
           })
           .catch(error => {
-            console.log("Server Error in pedido()" + error)
-            this.$router.push({name: "PedidoRechazado", params: {name: this.name}})
+            window.alert("no se ha logrado verificar que el usuario y la contraseña sean correctas")
+            console.log("Server Error in login()" + error)
           })
   }},
   mounted() {

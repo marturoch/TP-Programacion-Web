@@ -24,7 +24,7 @@
 
           <div class="formulario">
             <label title="tamaño recomendado: 1200x1200">Foto</label>
-            <input title="tamaño recomendado: 1200x1200" required type="file" accept="application/jpg, .jpeg, .png">
+            <input id ="img" @change="addImage" title="tamaño recomendado: 1200x1200" required type="file" accept="application/jpg, .jpeg, .png">
           </div>
             <div >
               <h4>¡Recuerda que mientras más completa sea la información, más sencillo será buscarlo!</h4>
@@ -44,7 +44,9 @@ export default {
       name: "",
       raza: "",
       edad: "",
-      lugar: ""
+      lugar: "",
+      img: "",
+      files: ""
     }
   },
   methods:{
@@ -55,6 +57,7 @@ export default {
             raza: this.raza,
             edad: this.edad,
             lugar: this.lugar,
+            img: this.img
           })
           .then(response => {
             console.log(response)
@@ -65,6 +68,21 @@ export default {
             console.log("Server Error in agregarPerro()" + error)
             this.$router.push({name: "PerroRechazado", params: {name: error.data["name"]}})
           })
+    },
+    addImage: function(e) {
+      const tmpFiles = e.target.files
+      if (tmpFiles.length === 0) {
+        return false;
+      }
+      const file = tmpFiles[0]
+      this.files = file
+      const self = this
+      const reader = new FileReader()
+      reader.onload = function(e) {
+        self.img = e.target.result
+      }
+      reader.readAsDataURL(file)
+      console.log(this.img)
     }
   }
 }

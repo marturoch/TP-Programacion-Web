@@ -42,9 +42,6 @@
       <div>
         <p class="checkout" @click="checkout()">CHECKOUT</p>
       </div>
-      <div>
-        <h2>Total del carrito</h2>
-      </div>
 
       <div v-if="checkOut" class="informacion_cliente">
         <br>
@@ -170,6 +167,7 @@ export default {
           .then(response => {
             console.log(response)
             this.$router.push({name:"PedidoExitoso", params:{name: this.name}})
+            localStorage.removeItem("pedidos")
           })
           .catch (error => {
             console.log("Server Error in pedido()" + error)

@@ -8,7 +8,9 @@
     <br>
     <p class="p2">¡Espero que lo encuentres pronto, ahora todos estamos alerta!</p>
     <br>
-    <p class="botonVolver" @click="irARed()">VOLVER A LA RED</p>
+    <div class="boton_volv">
+      <p class="botonVolver" @click="irARed()">VOLVER A LA RED</p>
+    </div>
     <Footer></Footer>
   </div>
 </template>
@@ -53,6 +55,7 @@ img {
 }
 .botonVolver{
   cursor:pointer;
+  align-items: center;
   border-radius:50%;
   text-align: center;
   width:90px;
@@ -61,9 +64,14 @@ img {
   color:white;
   padding:12px;
   margin-top:40px;
-  font-size:12px;
+  font-size:15px;
 }
+
 .botonVolver:hover {
   opacity: 60%;
+}
+.boton_volv {
+  display: flex;
+  justify-content: center;
 }
 </style>

@@ -137,13 +137,6 @@ export default {
       this.agregado = true
       localStorage.pedidos = JSON.stringify(this.pedidos)
     }
-    /* watch:{
-       pedidos: {
-         handler(nuevosPedidos) {
-           localStorage.pedidos = JSON.stringify(nuevosPedidos)
-         },
-         deep: true
-       }*/
   },
   mounted(){
     if(localStorage.pedidos){
