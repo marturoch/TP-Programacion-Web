@@ -14,8 +14,8 @@
         </div>
       </div>
       <div>
-        <p class="boton" @click="agregarServicio($route.params.nombre, description, price)">AGREGAR SERVICIO AL CARRITO</p>
-        <p class="boton" @click="eliminarServicio($route.params.nombre, description, price)">ELIMINAR SERVICIO DEL CARRITO</p>
+        <p v-if="eliminar" class="boton" @click="agregarServicio($route.params.nombre, description, price)">AGREGAR SERVICIO AL CARRITO</p>
+        <p v-if="!eliminar" class="boton" @click="eliminarServicio($route.params.nombre)">ELIMINAR SERVICIO DEL CARRITO</p>
       </div>
       <div class="agregoElimino" v-if="agregado">
         <p>SERVICIO AGREGADO AL CARRITO</p>
@@ -49,9 +49,9 @@ export default {
       price:"",
       pedidos:[],
       servicioPedido: {name:"", price:"", quantity:1 , tipo:'servicio', subtotal:""},
-      servicioEliminado: {name:"", price:"", quantity:1 , tipo:'servicio', subtotal:""},
       repetido: false,
-      agregado: false
+      agregado: false,
+      eliminar: true
     }
   },
   methods:{
@@ -79,26 +79,31 @@ export default {
         if (obj){
           this.repetido = true
           this.agregado = true
+          this.eliminar = false
         }
         if (!this.repetido){
           this.pedidos.push(this.servicioPedido)
           this.agregado = true
+          this.eliminar = false
           localStorage.pedidos = JSON.stringify(this.pedidos)
         }
       }
+      else{
+        this.pedidos.push(this.servicioPedido)
+        this.agregado = true
+        this.eliminar = false
+        localStorage.pedidos = JSON.stringify(this.pedidos)
+      }
     },
-    eliminarServicio(nombre, descripcion, precio){
-      this.servicioEliminado.name = nombre
-      this.servicioEliminado.description = descripcion
-      this.servicioEliminado.price = precio
-      this.servicioEliminado.subtotal = precio
+    eliminarServicio(nombre){
 
       if(this.pedidos.length !== 0){
-        let obj = this.pedidos.find(o => o.name === this.servicioEliminado.name);
+        let obj = this.pedidos.find(o => o.name === nombre);
         if (obj){
           let index = this.pedidos.indexOf(obj)
           this.pedidos.pop(index)
           this.agregado = false
+          this.eliminar = true
           localStorage.pedidos = JSON.stringify(this.pedidos)
         }
       }
@@ -109,6 +114,7 @@ export default {
       let obj = this.pedidos.find(o => o.name === this.$route.params.nombre);
       if (obj){
         this.agregado = true
+        this.eliminar = true
       }
     }
   }

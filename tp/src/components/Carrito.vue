@@ -37,11 +37,13 @@
         </div>
       </div>
       <div>
-        <h2>Total del carrito: $ {{total}}</h2>
+        <h2 v-if="hayTotal">Total del carrito: $ {{total}}</h2>
       </div>
       <div>
-        <p class="checkout" @click="checkout()">CHECKOUT</p>
+        <p v-if="hayTotal" class="checkout" @click="checkout()">CHECKOUT</p>
+        <h3 v-if="!hayTotal">Todavia no has agregado productos a tu carrito</h3>
       </div>
+
 
       <div v-if="checkOut" class="informacion_cliente">
         <br>
@@ -134,7 +136,9 @@ export default {
     removeItem(index){
       this.pedidos.splice(index,1)
       localStorage.setItem('pedidos', JSON.stringify(this.pedidos))
-
+      if (this.pedidos.length === 0){
+        this.hayTotal = false
+      }
     },
     modificar(pedido, tipo){
       if (tipo === "snacks" || tipo === "alimentos" || tipo === "juguetes" || tipo === "higiene") {
@@ -183,7 +187,8 @@ export default {
       pedidos: [],
       checkOut: false,
       total: "",
-      categoria: ""
+      categoria: "",
+      hayTotal: true
     }
   },
   watch:{
@@ -199,6 +204,9 @@ export default {
   mounted(){
     if(localStorage.pedidos){
       this.pedidos = JSON.parse(localStorage.pedidos)
+    }
+    if(this.pedidos.length === 0){
+      this.hayTotal = false
     }
     if(localStorage.status){
       this.status = JSON.parse(localStorage.status)

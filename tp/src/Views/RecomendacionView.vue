@@ -19,7 +19,7 @@
               v-on:modificarPlan="modificarPlan($event)">
         </Plan>
       </div>
-      <h3 id="planSeleccionado">PLAN SELECCIONADO: {{planSeleccionado}}</h3>
+      <h3 v-if="seleccion" id="planSeleccionado">PLAN SELECCIONADO: {{planSeleccionado}}</h3>
       <br><br>
       <p class="botonVolver" v-if="show" @click="volverAFormulario()">VOLVER A FORMULARIO</p>
     </div>
@@ -51,7 +51,8 @@ export default {
       showButton: true,
       isActive: null,
       pedidos: [],
-      planSeleccionado: ""
+      planSeleccionado: "",
+      seleccion: false
     }
   },
   methods: {
@@ -80,15 +81,18 @@ export default {
           this.pedidos[index].price = plan.price
           this.pedidos[index].subtotal = plan.price
           this.planSeleccionado = plan.name
+          this.seleccion = true
         }
         else{
           this.pedidos.push(plan)
           this.planSeleccionado = plan.name
+          this.seleccion = true
         }
       }
       else{
         this.pedidos.push(plan)
         this.planSeleccionado = plan.name
+        this.seleccion = true
       }
     }
   },
@@ -107,6 +111,7 @@ export default {
       if (obj){
         let index = this.pedidos.indexOf(obj)
         this.planSeleccionado =  this.pedidos[index].name
+        this.seleccion = true
       }
     }
   }

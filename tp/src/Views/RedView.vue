@@ -15,6 +15,7 @@
         <input class="buscador" type="search" @keyup.enter="buscarPerro()" v-model="nombreperro">
         <br>
         <p class = "mensaje">{{mensaje}}</p>
+        <p v-if="noRed">Por ahora no hay mascotas en la red</p>
       </div>
     </div>
 
@@ -59,6 +60,9 @@ export default {
             this.perros = response.data
             console.log(this.perros)
             this.mostrar = false
+            if (this.perros.length === 0){
+              this.noRed = true
+            }
           })
           .catch(error => {
             window.alert("no se ha logrado cargar la red de mascotas perdidas")
@@ -89,6 +93,8 @@ export default {
       perros: "",
       nombreperro: "",
       mostrar: "",
+      noRed: false,
+      mensaje: ""
     }
   }
 }

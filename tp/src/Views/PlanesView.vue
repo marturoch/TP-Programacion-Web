@@ -13,7 +13,7 @@
             v-bind:item3="plan.item3"
             v-on:modificarPlan="modificarPlan($event)">
       </Plan>
-      <h3 id="planSeleccionado">PLAN SELECCIONADO: {{planSeleccionado}}</h3>
+      <h3 v-if="seleccion" id="planSeleccionado">PLAN SELECCIONADO: {{planSeleccionado}}</h3>
     </div>
     <RecomendacionBoton></RecomendacionBoton>
     <br><br>
@@ -42,6 +42,7 @@ export default {
       planes: planes,
       pedidos: [],
       planSeleccionado: "",
+      seleccion: false
     }
   },
   methods: {
@@ -55,16 +56,19 @@ export default {
           this.pedidos[index].price = plan.price
           this.pedidos[index].subtotal = plan.price
           this.planSeleccionado = plan.name
+          this.seleccion = true
 
         }
         else{
           this.pedidos.push(plan)
           this.planSeleccionado = plan.name
+          this.seleccion = true
         }
       }
       else{
         this.pedidos.push(plan)
         this.planSeleccionado = plan.name
+        this.seleccion = true
       }
     }
   },
@@ -83,6 +87,9 @@ export default {
       if (obj){
         let index = this.pedidos.indexOf(obj)
         this.planSeleccionado =  this.pedidos[index].name
+      }
+      else{
+        this.seleccion = false
       }
     }}}
 </script>
