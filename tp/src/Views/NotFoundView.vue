@@ -24,9 +24,5 @@ export default {
 </script>
 
 <style scoped>
-
-.notfound {
-  height: 100px;
-  wiidth: 100px
-}
+@import "../assets/css/notFoundView.css";
 </style>

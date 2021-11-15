@@ -39,11 +39,7 @@ export default {
 }
 </script>
 <style scoped>
-.servicios-container{
-  display:flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
+@import "../assets/css/ServicesView.css";
 
 
 </style>

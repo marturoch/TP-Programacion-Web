@@ -29,14 +29,5 @@ export default {
 </script>
 
 <style scoped>
-.volver {
-  text-decoration: none;
-  color:white;
-  background-color: #820263;
-  border-radius: 20px;
-  padding:10px;
-  cursor: pointer;
-  height: 50px;
-  width: 140px
-}
+@import "../assets/css/registroRechazado.css";
 </style>

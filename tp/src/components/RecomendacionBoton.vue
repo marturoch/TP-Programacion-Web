@@ -15,14 +15,5 @@ export default {
 </script>
 
 <style scoped>
-.botonRecomendar {
-  font-size: 15px;
-  width: 20%;
-  display:inline-block;
-  background-color: #D90368;
-  border-radius: 100px;
-  text-decoration: none;
-  color:white;
-  padding:10px;
-}
+@import "../assets/css/recomendacionBoton.css";
 </style>

@@ -40,10 +40,6 @@ export default {
 }
 </script>
 <style scoped>
-.todosProductos{
-  display:flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
+@import "../assets/css/ProductosView.css";
 
 </style>
