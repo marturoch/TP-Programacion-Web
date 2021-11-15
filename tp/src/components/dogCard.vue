@@ -37,7 +37,6 @@ export default {
   background-color: white;
   padding: 0 ;
   width: 200px;
-  margin:10px;
   align-items: center;
 }
 .card-container {

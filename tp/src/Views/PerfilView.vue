@@ -198,8 +198,7 @@ export default {
   height: 50px;
   width: 120px;
   font-size: 18px;
-  padding-top: 22px;
-  padding-left: 18px;
+  padding:10px;
 }
 .cambiar:hover {
   cursor: pointer;
