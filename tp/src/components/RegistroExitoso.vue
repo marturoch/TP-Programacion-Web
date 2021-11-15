@@ -30,5 +30,24 @@ export default {
 </script>
 
 <style scoped>
-@import "../assets/css/registroExsitoso.css";
+.volver {
+  text-decoration: none;
+  color:white;
+  background-color: #820263;
+  border-radius: 20px;
+  padding:10px;
+  cursor: pointer;
+  height: 50px;
+  width: 140px
+}
+.name {
+  color: black;
+  font-size: 30px;
+}
+
+.agradecimiento {
+  color: black;
+  font-size: 25px;
+}
+
 </style>

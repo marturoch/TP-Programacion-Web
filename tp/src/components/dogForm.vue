@@ -1,34 +1,36 @@
 <template>
-    <div class="form-container">
+    <div class="form-red-container">
         <h3>¿Perdiste tu perro? Ingresá su información y agregalo a la RED</h3>
         <form @submit.prevent="agregarPerro()">
-          <div class="formulario">
+          <div class="formulario-red">
             <label> Nombre:</label>
-            <input required v-model="name">
+            <input class="input-red" required v-model="name">
           </div>
 
-          <div class="formulario">
+          <div class="formulario-red">
             <label>Raza:</label>
-            <input required v-model="raza">
+            <input class="input-red" required v-model="raza">
           </div>
 
-          <div class="formulario">
+          <div class="formulario-red">
             <label >Edad:</label>
-            <input v-model="edad">
+            <input class="input-red" v-model="edad">
           </div>
 
-          <div class="formulario">
+          <div class="formulario-red">
             <label> Ubicación de donde se perdio:</label>
-            <input v-model="lugar"><br>
+            <input class="input-red" v-model="lugar"><br>
           </div>
 
-          <div class="formulario">
+          <div class="formulario-red">
             <label title="tamaño recomendado: 1200x1200">Foto</label>
-            <input id ="img" @change="addImage" title="tamaño recomendado: 1200x1200" required type="file" accept="application/jpg, .jpeg, .png">
+            <input class="input-red" @change="addImage" title="tamaño recomendado: 1200x1200" required type="file" accept="application/jpg, .jpeg, .png">
           </div>
             <div >
               <h4>¡Recuerda que mientras más completa sea la información, más sencillo será buscarlo!</h4>
-              <input type="submit" class="agregar_a_la_red" value="Agregar a la RED">
+              <div class="botonRed">
+                <input type="submit" class="agregar_a_la_red" value="Agregar a la RED">
+              </div>
             </div>
         </form>
     </div>
@@ -89,5 +91,40 @@ export default {
 </script>
 
 <style scoped>
-@import "../assets/css/dogForm.css";
+form{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+.form-red-container{
+  background-color: rgba(0,0,0,0);
+  width: 60%;
+  padding: 10px 40px 40px 40px;
+  margin-top: 30px;
+
+}
+.formulario-red {
+  display: block;
+  text-align: right;
+}
+
+.input-red {
+  margin: 20px;
+  height: 20px;
+}
+
+.agregar_a_la_red {
+  width: auto;
+  color: white;
+  margin-left: 340px;
+  background-color: #820263;
+  border: solid 1px;
+  border-color: #820263;
+  border-radius: 100px;
+  padding: 20px;
+}
+.agregar_a_la_red:hover {
+  cursor: pointer;
+}
 </style>

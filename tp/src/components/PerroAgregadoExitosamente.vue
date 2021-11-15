@@ -36,5 +36,41 @@ export default {
 </script>
 
 <style scoped>
-@import "../assets/css/PerroAgregadoExitosamente.css";
+.p1 {
+  font-size: 35px;
+  color: black;
+  text-align: center;
+  display: block;
+}
+.p2 {
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  display: block;
+}
+img {
+  width: 400px;
+  height: 400px;
+}
+.botonVolver{
+  cursor:pointer;
+  align-items: center;
+  border-radius:50%;
+  text-align: center;
+  width:90px;
+  height:90px;
+  background-color: #820263;
+  color:white;
+  padding:12px;
+  margin-top:40px;
+  font-size:15px;
+}
+
+.botonVolver:hover {
+  opacity: 60%;
+}
+.boton_volv {
+  display: flex;
+  justify-content: center;
+}
 </style>

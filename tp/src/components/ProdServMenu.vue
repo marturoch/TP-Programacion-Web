@@ -27,5 +27,27 @@ export default {
 </script>
 
 <style scoped>
-@import "../assets/css/ProdServMenu.css";
+#main {
+  margin:10px;
+  align-content: center;
+  display: inline-block;
+  cursor: pointer;
+}
+h2{
+  text-transform: uppercase;
+
+}
+.producto{
+  padding:10px;
+  border:2px solid black;
+  border-radius:20px;
+  height:300px;
+  background-color: white;
+}
+.producto:hover{
+  opacity: 85%;
+  border-color: #D90368;
+  border-width: 5px;
+  cursor:pointer;
+}
 </style>

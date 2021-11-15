@@ -37,16 +37,16 @@
 .red_completa:hover {
     cursor: pointer
 }
-.botones {
+.botones-red {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.buscador {
+.buscador-red {
 
 }
-label {
+#label-red {
     color: black;
 }
 .mensaje {

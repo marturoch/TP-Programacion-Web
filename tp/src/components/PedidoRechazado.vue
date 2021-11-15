@@ -31,5 +31,14 @@ export default {
 </script>
 
 <style scoped>
-@import "../assets/css/PedidoRechazado.css";
+.botonVolver {
+  text-decoration: none;
+  color:white;
+  background-color: #820263;
+  border-radius: 20px;
+  padding:10px;
+  cursor: pointer;
+  height: 50px;
+  width: 140px
+}
 </style>

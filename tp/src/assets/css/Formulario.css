@@ -11,7 +11,6 @@
 .form-data{
     margin:20px;
 }
-
 .aqui{
     text-decoration: none;
     width: auto;
@@ -45,7 +44,6 @@ input {
     width: 50%;
     background-color: rgba(0,0,0,.04);
 }
-
 .form-data{
     margin:20px;
 
@@ -91,7 +89,6 @@ span:hover {
 #fieldset-container{
     border-radius: 5px;
 }
-
 .boton-enviar{
     width: auto;
     color: white;

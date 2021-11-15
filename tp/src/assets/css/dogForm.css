@@ -1,23 +1,17 @@
-.form-container{
+.form-red-container{
     background-color: rgba(0,0,0,0);
     width: 60%;
     padding: 10px 40px 40px 40px;
     margin-top: 30px;
 
 }
-button{
-    margin-top: 20px;
-    width: 80px;
-}
-
-.formulario {
+.formulario-red {
     display: block;
     text-align: right;
 }
 
-input {
+.input-red {
     margin-right: 100px;
-
 }
 
 .agregar_a_la_red {

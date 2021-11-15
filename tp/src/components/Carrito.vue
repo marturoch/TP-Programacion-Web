@@ -7,7 +7,7 @@
         <h2>TU CARRITO</h2>
         <div id="carrito">
           <form>
-            <table>
+            <table id="table-carrito">
               <thead>
               <thead class="encabezado">
               <tr>
@@ -51,49 +51,49 @@
         <form @submit.prevent=pedido()>
           <div id="nom_y_ap">
             <div>
-              <label for="nombre">NOMBRE<span class="required-field">*</span></label><br>
-              <input type="name" name="" required id="nombre" autocomplete v-model="name">
+              <label class="label-carrito" for="nombre">NOMBRE<span class="required-field">*</span></label><br>
+              <input class="input-carrito" type="name" name="" required id="nombre" autocomplete v-model="name">
               <br><br>
             </div>
             <div>
-              <label for="apellido">APELLIDO<span class="required-field">*</span></label><br>
-              <input type="family-name" required name="" id="apellido" autocomplete v-model="surname">
+              <label class="label-carrito"  for="apellido">APELLIDO<span class="required-field">*</span></label><br>
+              <input class="input-carrito" type="family-name" required name="" id="apellido" autocomplete v-model="surname">
               <br><br>
             </div>
           </div>
 
           <div id="direc">
-            <label for="direc">DIRECCIÓN<span class="required-field">*</span></label><br>
-            <input autocomplete type="street-address" name="" v-model="address" required placeholder="Nombre y Número de la Calle">
+            <label class="label-carrito"  for="direc">DIRECCIÓN<span class="required-field">*</span></label><br>
+            <input class="input-carrito" autocomplete type="street-address" name="" v-model="address" required placeholder="Nombre y Número de la Calle">
             <br><br>
           </div>
 
           <div id="localidad">
-            <label for="localidad">LOCALIDAD/CIUDAD<span class="required-field">*</span></label><br>
-            <input autocomplete type="text" name="" v-model="location" required>
+            <label class="label-carrito"  for="localidad">LOCALIDAD/CIUDAD<span class="required-field">*</span></label><br>
+            <input class="input-carrito" autocomplete type="text" name="" v-model="location" required>
             <br><br>
           </div>
 
           <div id="codigo_postal">
-            <label for="cp">CÓDIGO POSTAL<span class="required-field">*</span></label><br>
-            <input autocomplete type="postal-code" name="" id="cp" v-model="postalCode" required>
+            <label class="label-carrito"  for="cp">CÓDIGO POSTAL<span class="required-field">*</span></label><br>
+            <input class="input-carrito" autocomplete type="postal-code" name="" id="cp" v-model="postalCode" required>
             <br><br>
           </div>
 
           <div id="telefono">
-            <label for="tel">TELÉFONO<span class="required-field">*</span></label><br>
-            <input autocomplete type="number" name="" id="tel" v-model="phoneNumber" required>
+            <label  class="label-carrito" for="tel">TELÉFONO<span class="required-field">*</span></label><br>
+            <input class="input-carrito" autocomplete type="number" name="" id="tel" v-model="phoneNumber" required>
             <br><br>
           </div>
 
           <div id="email">
-            <label for="email">DIRECCIÓN DE CORREO ELECTRÓNICO<span class="required-field">*</span></label><br>
-            <input autocomplete type="email" required name=""  v-model="email">
+            <label class="label-carrito"  for="email">DIRECCIÓN DE CORREO ELECTRÓNICO<span class="required-field">*</span></label><br>
+            <input class="input-carrito" autocomplete type="email" required name=""  v-model="email">
             <br><br>
           </div>
           <br><br><br>
           <div id="nota">
-            <label for="nota">NOTAS DEL PEDIDO (OPCIONAL)</label><br>
+            <label class="label-carrito"  for="nota">NOTAS DEL PEDIDO (OPCIONAL)</label><br>
             <br>
             <textarea name = "comentarios" rows = "10" cols = "50" v-model="coments"></textarea>
             <br><br>
@@ -216,5 +216,114 @@ export default {
 </script>
 
 <style scoped>
-@import "../assets/css/carrito.css";
+#carrito {
+  color: black;
+  align-items: center;
+}
+#table-carrito {
+  background-color: rgba(0,0,0,.04);
+  text-align: center;
+  align-items: center;
+  width: 1200px;
+  border: #D90368;
+}
+.carrito-container {
+  display: inline-block;
+  border-width: 10px;
+  border-color: black;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: black
+}
+.encabezado {
+  background-color: lightgrey;
+  color: black;
+  font-weight: bold;
+}
+
+.label-carrito, .input-carrito {
+  flex-direction:column;
+  margin: 10px;
+  padding: 10px
+}
+.input-carrito {
+  box-sizing: border-box;
+  width: 300px;
+  line-height: 2px;
+  background-color: rgba(0,0,0,.07)
+}
+
+.informacion_cliente {
+  margin: auto;
+  width: 50%;
+  background-color: rgba(0,0,0,.04);
+}
+
+th, thead {
+  padding: 20px
+}
+tbody, td {
+  padding: 10px
+}
+
+#carrito {
+  color: black;
+  align-items: center;
+}
+.carrito-container {
+  display: inline-block;
+  border-width: 10px;
+  border-color: black;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: black
+}
+.eliminar {
+  color: red;
+  font-size: 30px;
+
+}
+.eliminar:hover {
+  cursor: pointer
+}
+
+.checkout {
+  width: auto;
+  color: white;
+  background-color: #820263;
+  border: solid 1px;
+  border-color: #820263;
+  border-radius: 5px;
+  padding: 20px;
+}
+.checkout:hover {
+  cursor: pointer;
+
+}
+
+.hacer_pedido {
+  width: auto;
+  color: white;
+  background-color: #820263;
+  border: solid 1px;
+  border-color: #820263;
+  border-radius: 5px;
+  padding: 20px;
+}
+.hacer_pedido:hover {
+  cursor: pointer;
+}
+#botonModificar{
+  color:#A82885;
+  font-weight: bold;
+  margin-left:20px;
+  text-decoration:underline;
+}
+#botonModificar:hover{
+  cursor:pointer
+}
+.input-carrito[type=number]::-webkit-inner-spin-button,
+.input-carrito[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 </style>

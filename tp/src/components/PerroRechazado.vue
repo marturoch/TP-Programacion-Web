@@ -37,5 +37,18 @@ export default {
 </script>
 
 <style scoped>
-@import "../assets/css/PerroRechazado.css";
+.reintentar {
+  text-decoration: none;
+  align-items: center;
+  color:black;
+  background-color: cornflowerblue;
+  border-radius: 100px;
+  padding:10px;
+  height: 50px;
+  width: 140px
+}
+img {
+  width: 200px;
+  height: 200px;
+}
 </style>

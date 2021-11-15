@@ -4,15 +4,15 @@
     <NavBar></NavBar>
     <br>
     <div>
-      <div class="botones">
+      <div class="botones-red">
         <p class="agregar-red" @click="mostrar=true">AGREGÁ TU MASCOTA A LA RED</p>
         <br>
         <p @click="perrosRed()" class="red_completa">VER RED COMPLETA</p>
       </div>
       <div v-if="mostrar===false">
         <br>
-        <label>Buscá a tu perro</label>
-        <input class="buscador" type="search" @keyup.enter="buscarPerro()" v-model="nombreperro">
+        <label id="label-red">Buscá a tu perro</label>
+        <input class="buscador-red" type="search" @keyup.enter="buscarPerro()" v-model="nombreperro">
         <br>
         <p class = "mensaje">{{mensaje}}</p>
         <p v-if="noRed">Por ahora no hay mascotas en la red</p>
@@ -99,7 +99,60 @@ export default {
   }
 }
 </script>
-
 <style scoped>
-@import "../assets/css/redView.css";
+
+.contenedor-red{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor-cartas{
+  display: flex;
+
+}
+.agregar-red {
+  padding: 15px;
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #D90368;
+  border-radius: 90px;
+  font-weight: bold;
+  justify-content: flex-end;
+}
+
+.agregar-red:hover {
+  cursor: pointer
+}
+.red_completa {
+  padding: 15px;
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #D90368;
+  border-radius: 90px;
+  font-weight: bold;
+  justify-content: flex-end;
+}
+
+.red_completa:hover {
+  cursor: pointer
+}
+.botones-red {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buscador-red {
+
+}
+#label-red {
+  color: black;
+}
+.mensaje {
+  color: red;
+  font-size: 15px;
+}
 </style>

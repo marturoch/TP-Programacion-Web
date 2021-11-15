@@ -12,13 +12,7 @@
     flex-direction: column;
 
 }
-
-h4{
-    margin: 10px 0;
-    padding: 0;
-}
-
-p{
+.card{
     margin: 10px 0;
 }
 .imagen_perro {
