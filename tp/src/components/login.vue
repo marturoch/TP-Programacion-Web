@@ -4,7 +4,6 @@
     <NavBar></NavBar>
     <br><br>
     <form class="form-container" @submit.prevent="login()">
-      <br>
       <div class="form-data">
         <label>MAIL <span class="required-field">*</span></label><input type="email" v-model="mail" required>
       </div>

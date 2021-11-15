@@ -1,8 +1,10 @@
 <template>
     <div class="form-red-container">
         <h3>¿Perdiste tu perro? Ingresá su información y agregalo a la RED</h3>
-        <form @submit.prevent="agregarPerro()">
-          <div class="formulario-red">
+
+      <form @submit.prevent="agregarPerro()">
+
+        <div class="formulario-red">
             <label> Nombre:</label>
             <input class="input-red" required v-model="name">
           </div>
@@ -26,12 +28,15 @@
             <label title="tamaño recomendado: 1200x1200">Foto</label>
             <input class="input-red" @change="addImage" title="tamaño recomendado: 1200x1200" required type="file" accept="application/jpg, .jpeg, .png">
           </div>
-            <div >
-              <h4>¡Recuerda que mientras más completa sea la información, más sencillo será buscarlo!</h4>
-              <div class="botonRed">
-                <input type="submit" class="agregar_a_la_red" value="Agregar a la RED">
-              </div>
-            </div>
+
+          <div>
+          <h4>¡Recuerda que mientras más completa sea la información, más sencillo será buscarlo!</h4>
+         </div>
+
+         <div class="botonRed">
+          <input type="submit" class="agregar_a_la_red" value="Agregar a la RED">
+        </div>
+
         </form>
     </div>
 </template>
@@ -96,17 +101,13 @@ form{
   flex-direction:column;
   justify-content: center;
   align-items: center;
+
 }
 .form-red-container{
   background-color: rgba(0,0,0,0);
   width: 60%;
   padding: 10px 40px 40px 40px;
   margin-top: 30px;
-
-}
-.formulario-red {
-  display: block;
-  text-align: right;
 }
 
 .input-red {
@@ -117,7 +118,6 @@ form{
 .agregar_a_la_red {
   width: auto;
   color: white;
-  margin-left: 340px;
   background-color: #820263;
   border: solid 1px;
   border-color: #820263;

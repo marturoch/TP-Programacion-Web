@@ -11,7 +11,7 @@
       </div>
       <div v-if="mostrar===false">
         <br>
-        <label id="label-red">Buscá a tu perro</label>
+        <label>Buscá a tu perro</label>
         <input class="buscador-red" type="search" @keyup.enter="buscarPerro()" v-model="nombreperro">
         <br>
         <p class = "mensaje">{{mensaje}}</p>
@@ -144,12 +144,9 @@ export default {
   justify-content: center;
   align-items: center;
 }
-
 .buscador-red {
-
-}
-#label-red {
-  color: black;
+  height:30px;
+  width: 190px;
 }
 .mensaje {
   color: red;

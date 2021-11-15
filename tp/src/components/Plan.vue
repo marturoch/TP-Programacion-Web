@@ -7,9 +7,9 @@
       </h4>
       <p class="planes-precio">${{precio}}/mes</p>
       <div class="planes-info">
-        <p>● {{item1}}</p>
-        <p>● {{item2}}</p>
-        <p>● {{item3}}</p>
+        <p> {{item1}}</p>
+        <p> {{item2}}</p>
+        <p> {{item3}}</p>
       </div>
     </div>
     <p class="seleccionar" v-on:click="agregarPlan(name, precio)">SELECCIONAR</p>

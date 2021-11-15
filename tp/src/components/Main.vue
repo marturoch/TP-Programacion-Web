@@ -7,7 +7,6 @@
     <h3 class="info-main-h3">{{info3}}</h3>
     <h3 class="info-main-h3">{{info4}}</h3>
     <h3 class="info-main-h3">{{info5}}</h3>
-
     </div>
   </div>
 </template>
