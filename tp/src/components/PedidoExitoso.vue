@@ -2,9 +2,9 @@
   <div class="aceptado">
     <Header></Header>
     <br>
-    <p>GRACIAS POR COMPRAR EN DOG-CARE</p>
+    <p class="p-gracias">GRACIAS POR COMPRAR EN DOG-CARE</p>
     <br>
-    <p>Estamos elaborando su pedido</p>
+    <p class="p-esperando">Estamos elaborando su pedido</p>
     <br>
     <img src="../assets/img/carritos/check.png">
     <br>
@@ -32,26 +32,5 @@ export default {
 </script>
 
 <style scoped>
-
-p {
-  font-size: 20px;
-  text-align: center;
-  color: black;
-  font-family: inherit;
-}
-.botonVolver {
-  width: auto;
-  color: white;
-  background-color: #820263;
-  border: solid 1px;
-  border-color: #820263;
-  border-radius: 100px;
-  padding: 20px;
-}
-.botonVolver:hover {
-  cursor: pointer;
-}
-.aceptado {
-  align-items: center;
-}
+@import "../assets/css/PedidoExitoso.css";
 </style>

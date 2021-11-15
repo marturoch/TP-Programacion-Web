@@ -208,7 +208,5 @@ export default {
 </script>
 
 <style scoped>
-
 @import "../assets/css/carrito.css";
-
 </style>

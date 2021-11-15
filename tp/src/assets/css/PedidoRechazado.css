@@ -1,10 +1,4 @@
-.p-gracias {
-    font-size: 20px;
-    text-align: center;
-    color: black;
-    font-family: inherit;
-}
-.p-esperando{
+p {
     font-size: 20px;
     text-align: center;
     color: black;
@@ -22,6 +16,6 @@
 .botonVolver:hover {
     cursor: pointer;
 }
-.aceptado {
+.rechazado {
     align-items: center;
 }

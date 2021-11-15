@@ -89,40 +89,5 @@ export default {
 </script>
 
 <style scoped>
-
-.form-container{
-    background-color: rgba(0,0,0,0);
-    width: 60%;
-    padding: 10px 40px 40px 40px;
-    margin-top: 30px;
-
-}
-button{
-    margin-top: 20px;
-    width: 80px;
-}
-
-.formulario {
-  display: block;
-  text-align: right;
-}
-
-input {
-  margin-right: 100px;
-
-}
-
-.agregar_a_la_red {
-  width: auto;
-  color: white;
-  margin-left: 340px;
-  background-color: #820263;
-  border: solid 1px;
-  border-color: #820263;
-  border-radius: 100px;
-  padding: 20px;
-}
-.agregar_a_la_red:hover {
-  cursor: pointer;
-}
+@import "../assets/css/dogForm.css";
 </style>

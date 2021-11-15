@@ -38,5 +38,4 @@ export default {
 
 <style scoped>
 @import "../assets/css/header.css";
-
 </style>

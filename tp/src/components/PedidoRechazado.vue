@@ -31,26 +31,5 @@ export default {
 </script>
 
 <style scoped>
-
-p {
-  font-size: 20px;
-  text-align: center;
-  color: black;
-  font-family: inherit;
-}
-.botonVolver {
-  width: auto;
-  color: white;
-  background-color: #820263;
-  border: solid 1px;
-  border-color: #820263;
-  border-radius: 100px;
-  padding: 20px;
-}
-.botonVolver:hover {
-  cursor: pointer;
-}
-.rechazado {
-  align-items: center;
-}
+@import "../assets/css/PedidoRechazado.css";
 </style>

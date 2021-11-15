@@ -149,5 +149,4 @@ export default {
 
 <style scoped>
 @import "../assets/css/Formulario.css";
-
 </style>
