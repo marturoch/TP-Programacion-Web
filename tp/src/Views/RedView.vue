@@ -15,6 +15,7 @@
         <input class="buscador-red" type="search" @keyup.enter="buscarPerro()" v-model="nombreperro">
         <br>
         <p class = "mensaje">{{mensaje}}</p>
+        <br>
         <p v-if="noRed">Por ahora no hay mascotas en la red</p>
       </div>
     </div>

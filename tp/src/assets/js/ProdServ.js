@@ -254,7 +254,7 @@ const higiene = [
     {
         name: "SHAMPOO ANTISEPTICO PH CONTROLADO PARA CACHORROS",
         image: "Shampoo-Antiseptico-ph-Controlado-para-Cachorros.png",
-        price: "$260",
+        price: 260,
         description: "El shampoo para cachorros sirve para la higiene en general de cachorros y animales de piel delicada, dermatitis seca descamativa. Antiséptico y desodorizante. Usado en caninos y felinos, especialmente indicado para expositores."
     },
     {
