@@ -4,7 +4,7 @@
           <img class="imagen_perro" :src="img">
         </div>
         <h4 class="card">Nombre: {{name}}</h4>
-        <p class="card">Raza: {{raza}}</p>
+        <p class="card">Tel: {{tel}}</p>
         <p class="card">Edad: {{edad}}</p>
         <p class="card">Last Seen: {{lugar}}</p>
     </div>
@@ -21,7 +21,7 @@ export default {
   },
   props: [
       "name",
-      "raza",
+      "tel",
       "edad",
       "lugar",
       "img"
@@ -41,6 +41,7 @@ export default {
 }
 .card-container {
   display: flex;
+  margin: 15px;
   flex-direction: column;
 
 }

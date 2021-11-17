@@ -123,6 +123,7 @@ export default {
           }
           else{
             this.pedidos[index].quantity = item.quantity
+            this.pedidos[index].subtotal = parseInt(item.quantity) * parseInt(item.price)
           }
         }
         else{

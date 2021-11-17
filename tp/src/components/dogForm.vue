@@ -10,13 +10,13 @@
           </div>
 
           <div class="formulario-red">
-            <label>Raza:</label>
-            <input class="input-red" required v-model="raza">
+            <label >Edad:</label>
+            <input class="input-red" v-model="edad">
           </div>
 
           <div class="formulario-red">
-            <label >Edad:</label>
-            <input class="input-red" v-model="edad">
+            <label>Teléfono de contacto:</label>
+            <input class="input-red" type="number" required v-model="tel">
           </div>
 
           <div class="formulario-red">
@@ -49,7 +49,7 @@ export default {
   data(){
     return{
       name: "",
-      raza: "",
+      tel: "",
       edad: "",
       lugar: "",
       img: "",
@@ -61,8 +61,8 @@ export default {
       axios.post("http://localhost:5000/api/v1/perros",
           {
             name: this.name,
-            raza: this.raza,
             edad: this.edad,
+            tel: this.tel,
             lugar: this.lugar,
             img: this.img
           })
@@ -73,7 +73,7 @@ export default {
           })
           .catch (error => {
             console.log("Server Error in agregarPerro()" + error)
-            this.$router.push({name: "PerroRechazado", params: {name: error.data["name"]}})
+            this.$router.push({name: "PerroRechazado"})
           })
     },
     addImage: function(e) {

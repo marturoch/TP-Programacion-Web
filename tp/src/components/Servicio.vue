@@ -114,7 +114,7 @@ export default {
       let obj = this.pedidos.find(o => o.name === this.$route.params.nombre);
       if (obj){
         this.agregado = true
-        this.eliminar = true
+        this.eliminar = false
       }
     }
   }

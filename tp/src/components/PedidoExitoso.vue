@@ -8,6 +8,8 @@
     <br>
     <img src="../assets/img/carritos/check.png">
     <br>
+    <p class="p-esperando">Dentro de la próxima hora le llegará un mail para ingresar sus datos de pago!</p>
+    <br>
     <p class="botonVolver" @click="irAlInicio()">VOLVER AL INICIO</p>
     <Footer></Footer>
   </div>

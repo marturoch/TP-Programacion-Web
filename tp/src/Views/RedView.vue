@@ -25,7 +25,7 @@
       <div class="contenedor-cartas">
         <dogCard v-for="(perro, index) in perros" v-bind:key="index"
                      v-bind:name="perro.name"
-                     v-bind:raza="perro.raza"
+                     v-bind:tel="perro.tel"
                      v-bind:edad="perro.edad"
                      v-bind:lugar="perro.lugar"
                      v-bind:img="perro.img" >
@@ -55,9 +55,9 @@ export default {
   },
   methods: {
     perrosRed() {
+      this.mensaje = ""
       axios.get("http://localhost:5000/api/v1/perros")
           .then(response => {
-            console.log(response.data)
             this.perros = response.data
             console.log(this.perros)
             this.mostrar = false
@@ -73,7 +73,6 @@ export default {
       let nombre_perro = this.nombreperro
       axios.get('http://localhost:5000/api/v1/perro?name=' + nombre_perro)
           .then(response => {
-            console.log(response.data)
             this.perros = response.data
             console.log(this.perros)
             if (this.perros.length === 0) {

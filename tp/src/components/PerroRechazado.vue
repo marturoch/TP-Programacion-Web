@@ -2,19 +2,11 @@
   <div>
     <Header></Header>
     <NavBar></NavBar>
-    <img src="../assets/img/netfail.png">
-    <p>Tu mascota no ha podido integrarse a la Red de Mascotas</p>
-    <p>Intente de nuevo más tarde</p>
-    <router-link :to="{name:'RedView'}" class="reintentar">REINTENTAR</router-link>
+    <img src="../assets/img/netfail.png"><br>
+    <p>Tu mascota no ha podido integrarse a la Red de Mascotas</p><br>
+    <p>Intente de nuevo más tarde</p><br><br>
+    <router-link :to="{name:'Red'}" class="reintentar">REINTENTAR</router-link><br>
     <br>
-    <div class="contenedor-cartas">
-      <dog-card/>
-      <dog-card/>
-      <dog-card/>
-      <dog-card/>
-      <dog-card/>
-      <dog-card/>
-    </div>
   <Footer></Footer>
   </div>
 </template>
@@ -22,7 +14,6 @@
 <script>
 import Header from "./Header";
 import NavBar from "./NavBar";
-import dogCard from "./dogCard";
 import Footer from "./Footer";
 
 export default {
@@ -30,7 +21,6 @@ export default {
   components: {
     Header,
     NavBar,
-    dogCard,
     Footer
   }
 }

@@ -2,7 +2,7 @@ const planes = [
     {
         name: "frida",
         tipo: "Básico",
-        item1: "● Contratacion microseguros en el momento puntual de necesidad respondiendo a la exigencia de contar con coberturas a medida y de facil adquisición ",
+        item1: "● Contratación microseguros en el momento puntual de necesidad respondiendo a la exigencia de contar con coberturas a medida y de facil adquisición ",
         item2: "● Se puede activar y desactivar en cualquier momento ",
         price:900
     },
@@ -19,7 +19,7 @@ const planes = [
         tipo: "Completo",
         item1: "● Servicio de asistencia veterinaria cubierta" ,
         item2: "● Servicio de paseo semanal",
-        item3: "",
+        item3: "● Cobertura de gastos por extravío y de medicamentos recetados por accidente",
         price: 1800
     },
     {

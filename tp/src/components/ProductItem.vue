@@ -5,7 +5,7 @@
       <img class="Menu-img" v-bind:src="require('../assets/img/prodServ/' + categoria + '/' + imagen)" width="100px">
       <p id="precio">${{precio}}</p>
       <div class="quantity">
-        <p class="eliminar" v-on:click="eliminarProducto()" title="eliminar">-</p>
+        <p class="eliminar" v-on:click="eliminarProducto(nombre, precio)" title="eliminar">-</p>
         <p class="cantidad">{{ cantidad }}</p>
         <p class="agregar" v-on:click="agregarProducto(nombre, precio)" title="agregar">+</p>
       </div>
@@ -50,17 +50,24 @@ export default {
       this.agregado = true
       this.eliminado = false
     },
-    eliminarProducto() {
+    eliminarProducto(nombre, precio) {
+      this.cantidad -= 1
       if (this.cantidad !== 0){
-        this.cantidad -= 1
+        this.pedido.name = nombre
         this.pedido.quantity = this.cantidad
-        this.$emit('modificarPedido', this.pedido)
+        this.pedido.price = precio
+        this.pedido.subtotal = parseInt(precio) * parseInt(this.pedido.quantity)
         this.eliminado = true
         this.agregado = false
       }
       else{
+        this.pedido.name = nombre
+        this.pedido.quantity = this.cantidad
+        this.pedido.price = precio
+        this.pedido.subtotal = parseInt(precio) * parseInt(this.pedido.quantity)
         this.eliminado = false
       }
+      this.$emit('modificarPedido', this.pedido)
     }
   },
   mounted(){
